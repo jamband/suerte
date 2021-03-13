@@ -1,0 +1,7 @@
+// Pagination
+// ----------------------------------------------
+.page-link {
+  &:hover {
+    box-shadow: $pagination-focus-box-shadow;
+  }
+}

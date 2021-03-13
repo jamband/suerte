@@ -1,0 +1,17 @@
+@import "~/styles/variables";
+
+.toast {
+  position: absolute;
+  top: 1rem;
+  z-index: $zindex-toast;
+
+  @media (max-width: $breakpoint-sm-down) {
+    left: 0;
+    margin: auto;
+    right: 0;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    right: 1rem;
+  }
+}

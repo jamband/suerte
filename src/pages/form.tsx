@@ -1,0 +1,81 @@
+import { useEffect, useRef, useState } from "react";
+import { Page } from "~/layouts/page";
+
+const View: React.VFC = () => {
+  const inputCodeRef = useRef<HTMLInputElement>(null);
+  const [code, setCode] = useState("");
+  const [input, setInput] = useState("");
+  const [error, setError] = useState("");
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  const generateCode = () => {
+    return [...Array(6)]
+      .map(() => {
+        return Math.floor(Math.random() * Math.floor(10)).toString();
+      })
+      .join("");
+  };
+
+  const refreshCode = () => {
+    setCode(generateCode());
+    setInput("");
+    setError("");
+    setIsSubmit(false);
+    inputCodeRef.current?.focus();
+  };
+
+  const submit = () => {
+    if (input === "") {
+      setError("Please enter the code.");
+    } else if (input !== code) {
+      setError("Incorrect code.");
+    } else {
+      setError("");
+    }
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    setCode(generateCode());
+    inputCodeRef.current?.focus();
+  }, []);
+
+  return (
+    <Page title="Form">
+      <h1>Form</h1>
+      <div className="my-3 display-4 text-center">
+        {code}{" "}
+        <button type="button" className="btn btn-link" onClick={refreshCode}>
+          Refresh
+        </button>
+      </div>
+      <fieldset className="row">
+        <div className="col-md-6 offset-md-3">
+          <div className="mb-3">
+            <label htmlFor="inputCode" className="form-label">
+              Code
+            </label>
+            <input
+              type="text"
+              ref={inputCodeRef}
+              id="inputCode"
+              className={`form-control ${error !== "" ? "is-invalid" : null} ${
+                error === "" && isSubmit ? "is-valid" : null
+              }`}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Please enter the above code"
+            />
+            <div className="invalid-feedback">{error}</div>
+            <div className="valid-feedback">Looks Good!</div>
+          </div>
+          <button type="button" className="btn btn-primary" onClick={submit}>
+            Submit
+          </button>
+        </div>
+      </fieldset>
+    </Page>
+  );
+};
+
+export default View;

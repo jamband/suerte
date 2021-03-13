@@ -1,0 +1,143 @@
+@use "sass:color";
+@use "sass:map";
+
+// Color system
+// ----------------------------------------------
+$black:     #000;
+$red:       #bf616a;
+$green:     #a3be8c;
+
+$primary:       #6b7279;
+
+$success:       $green;
+$danger:        $red;
+$light:         #f8f9fa;
+
+// Options
+// ----------------------------------------------
+$enable-caret:                false;
+$enable-shadow:               true;
+
+// Spacing
+// ----------------------------------------------
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+);
+
+// Body
+// ----------------------------------------------
+$body-color:                $primary;
+
+// Links
+// ----------------------------------------------
+$link-decoration:                         underline;
+$link-hover-color:                        $primary;
+
+// Grid breakpoints
+// ----------------------------------------------
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+);
+
+$breakpoint-sm:       map.get($grid-breakpoints, 'sm');
+$breakpoint-md:       map.get($grid-breakpoints, 'md');
+
+$breakpoint-sm-down:  $breakpoint-sm - 0.02;
+
+// Grid containers
+// ----------------------------------------------
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+);
+
+// Components
+// ----------------------------------------------
+$box-shadow-sm:               0 0.125rem 0.25rem color.scale($black, $lightness: 0%, $alpha: -90%);
+
+// Typography
+// ----------------------------------------------
+$font-family-sans-serif:      "Source Sans Pro", "Yu Gothic", yugothic, sans-serif;
+
+$font-size-base:              1rem;
+$font-size-sm:                $font-size-base * 0.875;
+
+$line-height-base:            1.65;
+
+$text-muted:                  color.scale($primary, $lightness: 90%);
+
+$mark-padding:                0;
+
+$list-inline-padding:         0.8rem;
+
+$mark-bg:                     orange;
+
+// Navbar
+// ----------------------------------------------
+$navbar-toggler-font-size:          $font-size-base;
+$navbar-toggler-border-radius:      1px;
+
+$navbar-light-color:                $body-color;
+$navbar-light-hover-color:          $body-color;
+$navbar-light-toggler-border-color: none;
+
+$navbar-light-brand-color:                $body-color;
+$navbar-light-brand-hover-color:          $body-color;
+
+// Forms
+$input-placeholder-color:               color.scale($primary, $lightness: 70%);
+
+// Z-index
+$zindex-toast:                    1080;
+
+// Dropdowns
+// ----------------------------------------------
+$dropdown-border-width:             0;
+$dropdown-divider-bg:               color.scale($light, $lightness: -15%);
+
+$dropdown-link-color:               $primary;
+$dropdown-link-hover-bg:            color.scale($light, $lightness: -3%);
+
+// Pagination
+// ----------------------------------------------
+$pagination-color:                  color.scale($primary, $lightness: -30%);
+$pagination-bg:                     transparent;
+
+$pagination-border-width:           0;
+
+$pagination-hover-bg:               color.scale($light, $lightness: -20%, $alpha: -80%);
+
+$pagination-disabled-color:         color.scale($primary, $lightness: 75%);
+$pagination-disabled-bg:            transparent;
+
+// Toasts
+// ----------------------------------------------
+$toast-background-color:            $light;
+$toast-border-color:                $light;
+$toast-box-shadow:                  $box-shadow-sm;
+
+$toast-header-background-color:     $light;
+$toast-header-border-color:         color.scale($light, $lightness: -5%);
+
+// Modals
+// ----------------------------------------------
+$modal-backdrop-bg:                 $primary;
+$modal-backdrop-opacity:            0.4;
+
+// Breadcrumbs
+// ----------------------------------------------
+$breadcrumb-font-size:              $font-size-sm;
+$breadcrumb-padding-x:              0;
+$breadcrumb-bg:                     none;
+$breadcrumb-divider-color:          color.scale($primary, $lightness: 65%);
+$breadcrumb-active-color:           color.scale($primary, $lightness: 45%);

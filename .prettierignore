@@ -1,0 +1,8 @@
+/.next
+/node_modules
+.babelrc
+.eslintrc
+*.css
+*.scss
+tsconfig.json
+.prettierrc
