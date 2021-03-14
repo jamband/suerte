@@ -14,7 +14,7 @@ const View: React.VFC = () => {
       </a>{" "}
       or{" "}
       <a
-        href="https://github.com/jamband/quiet-nextz/issue"
+        href="https://github.com/jamband/quiet-nextz/issues"
         rel="noopener noreferrer"
         target="_blank"
       >

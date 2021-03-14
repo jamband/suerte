@@ -9,5 +9,5 @@ export const useToast = () => {
     });
   };
 
-  return { toastRef, showToast };
+  return { toastRef, showToast } as const;
 };

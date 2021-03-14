@@ -7,8 +7,18 @@ const View: React.VFC = () => {
       <h1>About</h1>
       <p>
         {APP_NAME} is my private playground for{" "}
-        <a href="https://nextjs.org">Next.js</a> and{" "}
-        <a href="https://getbootstrap.com">Bootstrap 5</a>.
+        <a href="https://nextjs.org" rel="noopener noreferrer" target="_blank">
+          Next.js
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://getbootstrap.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Bootstrap 5
+        </a>
+        .
       </p>
       <p>
         This website is an open source project. See{" "}

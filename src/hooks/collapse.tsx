@@ -8,5 +8,5 @@ export const useCollapse = () => {
     import("bootstrap/js/dist/collapse");
   }, []);
 
-  return { isCollapsed, toggleCollapse };
+  return { isCollapsed, toggleCollapse } as const;
 };

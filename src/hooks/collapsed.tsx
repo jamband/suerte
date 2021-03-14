@@ -13,5 +13,5 @@ export const useCollapsed = () => {
     import("bootstrap/js/dist/collapse");
   });
 
-  return { collapseRef, collapsed };
+  return { collapseRef, collapsed } as const;
 };
