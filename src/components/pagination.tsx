@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useHasTouchScreen } from "~/hooks/screen";
 import { IconChevronDoubleLeft } from "~/icons/chevron-double-left";
 import { IconChevronDoubleRight } from "~/icons/chevron-double-right";
 import { IconChevronLeft } from "~/icons/chevron-left";
@@ -16,6 +17,7 @@ type Part = "first" | "prev" | "next" | "last";
 
 export const Pagination: React.VFC<Props> = (props) => {
   const router = useRouter();
+  const { hasTouchScreen } = useHasTouchScreen();
 
   const disabled = (part: Part) => {
     return ["first", "prev"].includes(part)
@@ -33,7 +35,7 @@ export const Pagination: React.VFC<Props> = (props) => {
         <li className={`page-item flex-fill ${disabledSelector("first")}`}>
           <Link href={{ pathname: router.pathname, query: { page: 1 } }}>
             <a
-              className="page-link"
+              className={`page-link ${!hasTouchScreen && styles.link}`}
               tabIndex={disabled("first") ? -1 : 0}
               aria-label="First"
               aria-disabled={disabled("first")}
@@ -50,7 +52,7 @@ export const Pagination: React.VFC<Props> = (props) => {
             }}
           >
             <a
-              className="page-link"
+              className={`page-link ${!hasTouchScreen && styles.link}`}
               tabIndex={disabled("prev") ? -1 : 0}
               aria-label="Prev"
               aria-disabled={disabled("prev")}
@@ -67,7 +69,7 @@ export const Pagination: React.VFC<Props> = (props) => {
             }}
           >
             <a
-              className="page-link"
+              className={`page-link ${!hasTouchScreen && styles.link}`}
               tabIndex={disabled("next") ? -1 : 0}
               aria-label="Next"
               aria-disabled={disabled("next")}
@@ -84,7 +86,7 @@ export const Pagination: React.VFC<Props> = (props) => {
             }}
           >
             <a
-              className="page-link"
+              className={`page-link ${!hasTouchScreen && styles.link}`}
               tabIndex={disabled("last") ? -1 : 0}
               aria-label="Last"
               aria-disabled={disabled("last")}
