@@ -11,7 +11,7 @@ jest.mock("next/head", () => {
   };
 });
 
-test("top page", async () => {
+test("top page", () => {
   render(
     <Page title="">
       <h1>Home</h1>
@@ -21,7 +21,7 @@ test("top page", async () => {
   expect(screen.getByRole("heading", { name: "Home" })).toBeInTheDocument();
 });
 
-test("foo page", async () => {
+test("foo page", () => {
   render(
     <Page title="Foo">
       <h1>Foo</h1>

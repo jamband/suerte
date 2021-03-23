@@ -1,3 +1,3 @@
-import { Props as CollapsedProps } from "~/hooks/collapsed";
+import { useCollapsed } from "~/hooks/collapsed";
 
-export type _Props = CollapsedProps;
+export type _Props = ReturnType<typeof useCollapsed>;
