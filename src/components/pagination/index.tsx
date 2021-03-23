@@ -6,7 +6,7 @@ import { IconChevronDoubleRight } from "~/icons/chevron-double-right";
 import { IconChevronLeft } from "~/icons/chevron-left";
 import { IconChevronRight } from "~/icons/chevron-right";
 import { blur } from "~/utils/functions";
-import styles from "./pagination.module.scss";
+import styles from "./style.module.scss";
 
 type Props = {
   currentPage: number;

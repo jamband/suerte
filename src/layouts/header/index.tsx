@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { APP_NAME } from "~/constants/app";
-import { HeaderNavigation } from "./header-navigation";
-import { HeaderToggleNavigation } from "./header-toggle-navigation";
+import { HeaderNavigation } from "~/layouts/header-navigation";
+import { HeaderToggleNavigation } from "~/layouts/header-toggle-navigation";
 
 export const Header: React.VFC = () => {
   return (

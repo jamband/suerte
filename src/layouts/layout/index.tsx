@@ -1,5 +1,5 @@
-import { Footer } from "./footer";
-import { Header } from "./header";
+import { Footer } from "~/layouts/footer";
+import { Header } from "~/layouts/header";
 
 export const Layout: React.FC = (props) => {
   return (
