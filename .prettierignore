@@ -2,7 +2,8 @@
 /node_modules
 .babelrc
 .eslintrc
+.prettierrc
 *.css
+*.js
 *.scss
 tsconfig.json
-.prettierrc
