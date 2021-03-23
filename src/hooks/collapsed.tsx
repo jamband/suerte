@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 
+export type Props = ReturnType<typeof useCollapsed>;
+
 export const useCollapsed = () => {
   const collapseRef = useRef<HTMLDivElement>(null);
 

@@ -1,9 +1,8 @@
 import { APP_NAME } from "~/constants/app";
+import { Component } from "./component";
 
 export const Footer: React.VFC = () => {
-  return (
-    <footer className="fixed-bottom py-3 text-center bg-light">
-      {APP_NAME}
-    </footer>
-  );
+  const appName = APP_NAME;
+
+  return <Component appName={appName} />;
 };
