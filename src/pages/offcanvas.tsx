@@ -49,7 +49,6 @@ const View: React.VFC = () => {
               </Link>
             </li>
           ))}
-          <li></li>
         </ul>
       </div>
     </Page>
