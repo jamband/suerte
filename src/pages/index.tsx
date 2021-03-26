@@ -8,6 +8,7 @@ const View: React.VFC = () => {
     { href: "/dropdown", text: "Dropdown" },
     { href: "/form", text: "Form" },
     { href: "/modal", text: "Modal" },
+    { href: "/offcanvas", text: "Offcanvas" },
     { href: "/pagination", text: "Pagination" },
     { href: "/progress", text: "Progress" },
     { href: "/ratio", text: "Ratio" },
