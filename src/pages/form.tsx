@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { useFocus } from "~/hooks/focus";
 import { Page } from "~/layouts/page";
 
 const View: React.VFC = () => {
-  const inputCodeRef = useRef<HTMLInputElement>(null);
+  const { focusRef } = useFocus();
+
   const [code, setCode] = useState("");
   const [input, setInput] = useState("");
   const [error, setError] = useState("");
@@ -21,7 +23,6 @@ const View: React.VFC = () => {
     setInput("");
     setError("");
     setIsSubmit(false);
-    inputCodeRef.current?.focus();
   };
 
   const submit = () => {
@@ -37,7 +38,6 @@ const View: React.VFC = () => {
 
   useEffect(() => {
     setCode(generateCode());
-    inputCodeRef.current?.focus();
   }, []);
 
   return (
@@ -57,7 +57,7 @@ const View: React.VFC = () => {
             </label>
             <input
               type="text"
-              ref={inputCodeRef}
+              ref={focusRef}
               id="inputCode"
               className={`form-control ${error !== "" ? "is-invalid" : null} ${
                 error === "" && isSubmit ? "is-valid" : null
