@@ -141,8 +141,5 @@ $modal-backdrop-opacity:            0.4;
 
 // Breadcrumbs
 // ----------------------------------------------
-$breadcrumb-font-size:              $font-size-sm;
-$breadcrumb-padding-x:              0;
-$breadcrumb-bg:                     none;
-$breadcrumb-divider-color:          color.scale($primary, $lightness: 65%);
-$breadcrumb-active-color:           color.scale($primary, $lightness: 45%);
+$breadcrumb-divider-color:          color.scale($primary, $lightness: 50%);
+$breadcrumb-active-color:           $breadcrumb-divider-color;
