@@ -9,7 +9,7 @@ import { _Props } from "./types";
 
 export const Component: React.VFC<_Props> = (props) => (
   <nav className="text-center" aria-label="Page navigation">
-    <ul onClick={blur} className="pagination d-flex">
+    <ul onClick={blur} className="pagination d-flex" role="presentation">
       <li className={`page-item flex-fill ${props.disabledSelector("first")}`}>
         <Link href={props.pageLink(1)}>
           <a

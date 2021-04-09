@@ -47,7 +47,7 @@ const View: React.VFC = () => {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-lg text-center">
-          <img src={src} className="img-fluid rounded" />
+          <img src={src} className="img-fluid rounded" alt="" />
         </div>
       </div>
     </Page>

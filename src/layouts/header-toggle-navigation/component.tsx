@@ -19,7 +19,11 @@ export const Component: React.VFC<_Props> = (props) => (
       className="collapse navbar-collapse"
       id="navbar"
     >
-      <ul onClick={props.collapsed} className="d-md-none navbar-nav">
+      <ul
+        onClick={props.collapsed}
+        className="d-md-none navbar-nav"
+        role="presentation"
+      >
         <li className="nav-item">
           <Link href="/contact">
             <a className="nav-link">Contact</a>
