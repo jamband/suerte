@@ -1,6 +1,6 @@
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   return (
     <Page title="Contact">
       <h1>Contact</h1>
@@ -23,6 +23,4 @@ const View: React.VFC = () => {
       .
     </Page>
   );
-};
-
-export default View;
+}

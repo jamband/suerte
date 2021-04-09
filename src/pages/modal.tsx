@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useModal } from "~/hooks/modal";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   useModal();
 
   const [src, setSrc] = useState("");
@@ -52,6 +52,4 @@ const View: React.VFC = () => {
       </div>
     </Page>
   );
-};
-
-export default View;
+}

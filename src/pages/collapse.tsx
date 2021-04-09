@@ -2,7 +2,7 @@ import { useCollapse } from "~/hooks/collapse";
 import { IconInfoCircleFill } from "~/icons/info-circle-fill";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   const { isCollapsed, toggleCollapse } = useCollapse();
 
   return (
@@ -29,6 +29,4 @@ const View: React.VFC = () => {
       </div>
     </Page>
   );
-};
-
-export default View;
+}

@@ -3,7 +3,7 @@ import { IconInfoCircleFill } from "~/icons/info-circle-fill";
 import { useAlert } from "~/hooks/alert";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   useAlert();
   const reload = () => location.reload();
 
@@ -32,6 +32,4 @@ const View: React.VFC = () => {
       </div>
     </Page>
   );
-};
-
-export default View;
+}

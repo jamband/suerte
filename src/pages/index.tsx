@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   const links = [
     { href: "/alert", text: "Alert" },
     { href: "/collapse", text: "Collapse" },
@@ -31,6 +31,4 @@ const View: React.VFC = () => {
       </nav>
     </Page>
   );
-};
-
-export default View;
+}

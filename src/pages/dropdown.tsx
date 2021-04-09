@@ -4,7 +4,7 @@ import { DropdownButtonLink } from "~/components/dropdown-button-link";
 import { DropdownDivider } from "~/components/dropdown-divider";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   const [characters, setCharacters] = useState([""]);
   const [isMatched, setIsMatched] = useState(false);
   const [searchCharacter, setSearchCharacter] = useState("");
@@ -57,6 +57,4 @@ const View: React.VFC = () => {
       </div>
     </Page>
   );
-};
-
-export default View;
+}

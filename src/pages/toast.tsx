@@ -2,7 +2,7 @@ import { useToast } from "~/hooks/toast";
 import { Page } from "~/layouts/page";
 import styles from "./toast.module.scss";
 
-const View: React.VFC = () => {
+export default function View() {
   const { toastRef, showToast } = useToast();
 
   return (
@@ -35,6 +35,4 @@ const View: React.VFC = () => {
       </div>
     </Page>
   );
-};
-
-export default View;
+}

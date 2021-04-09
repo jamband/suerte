@@ -2,7 +2,7 @@ import Link from "next/link";
 import { IconInfoCircleFill } from "~/icons/info-circle-fill";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   return (
     <Page title="Not Found">
       <h1>Not Found</h1>
@@ -15,6 +15,4 @@ const View: React.VFC = () => {
       </div>
     </Page>
   );
-};
-
-export default View;
+}

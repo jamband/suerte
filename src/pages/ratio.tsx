@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   const [ratioSelector, setRatioSelector] = useState("");
   const ratioList = ["21:9", "16:9", "4:3", "1:1"];
 
@@ -51,6 +51,4 @@ const View: React.VFC = () => {
       )}
     </Page>
   );
-};
-
-export default View;
+}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   const [isActive, setIsActive] = useState(false);
   const [bar, setBar] = useState(0);
 
@@ -62,6 +62,4 @@ const View: React.VFC = () => {
       <div className="text-center small">{bar}%</div>
     </Page>
   );
-};
-
-export default View;
+}

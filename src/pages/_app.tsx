@@ -1,13 +1,11 @@
-import { AppProps } from "next/app";
+import type { AppProps } from "next/app";
 import { Layout } from "~/layouts/layout";
 import "~/styles/app.scss";
 
-const Component: React.VFC<AppProps> = ({ Component, pageProps }) => {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Component {...pageProps} />
     </Layout>
   );
-};
-
-export default Component;
+}

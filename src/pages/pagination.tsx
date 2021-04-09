@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { Pagination } from "~/components/pagination";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   const router = useRouter();
 
   const data = ".".repeat(26);
@@ -17,6 +17,4 @@ const View: React.VFC = () => {
       <Pagination currentPage={currentPage} pageCount={pageCount} />
     </Page>
   );
-};
-
-export default View;
+}

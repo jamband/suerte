@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useFocus } from "~/hooks/focus";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   const { focusRef } = useFocus();
 
   const [code, setCode] = useState("");
@@ -76,6 +76,4 @@ const View: React.VFC = () => {
       </fieldset>
     </Page>
   );
-};
-
-export default View;
+}

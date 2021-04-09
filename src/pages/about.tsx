@@ -1,7 +1,7 @@
 import { APP_NAME } from "~/constants/app";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   return (
     <Page title="About">
       <h1>About</h1>
@@ -33,6 +33,4 @@ const View: React.VFC = () => {
       </p>
     </Page>
   );
-};
-
-export default View;
+}

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useOffcanvas } from "~/hooks/offcanvas";
 import { Page } from "~/layouts/page";
 
-const View: React.VFC = () => {
+export default function View() {
   useOffcanvas();
 
   const links = [
@@ -53,6 +53,4 @@ const View: React.VFC = () => {
       </div>
     </Page>
   );
-};
-
-export default View;
+}
