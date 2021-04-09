@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { useDropdown } from "~/hooks/dropdown";
-import { IconChevronDown } from "~/icons/chevron-down";
+import { Dropdown } from "~/components/dropdown";
+import { DropdownButtonLink } from "~/components/dropdown-button-link";
+import { DropdownDivider } from "~/components/dropdown-divider";
 import { Page } from "~/layouts/page";
 
 const View: React.VFC = () => {
-  useDropdown();
-
   const [characters, setCharacters] = useState([""]);
   const [isMatched, setIsMatched] = useState(false);
   const [searchCharacter, setSearchCharacter] = useState("");
@@ -37,46 +36,15 @@ const View: React.VFC = () => {
   return (
     <Page title="Dropdown">
       <h1>Dropdown</h1>
-      <div className="dropdown">
-        <button
-          id="dropdownSearchButton"
-          className="btn dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <span className="pe-1">Search</span>
-          <IconChevronDown className="w-3 h-3" />
-        </button>
-        <ul
-          className="dropdown-menu shadow-sm bg-light"
-          aria-labelledby="dropdownSearchButton"
-        >
-          <li>
-            <button
-              type="button"
-              className="btn btn-link dropdown-item"
-              onClick={refresh}
-            >
-              Refresh
-            </button>
-          </li>
-          <li>
-            <hr className="dropdown-divider" />
-          </li>
-          {["a", "b", "c"].map((character, index) => (
-            <li key={index}>
-              <button
-                type="button"
-                className="btn btn-link dropdown-item"
-                onClick={() => search(character)}
-              >
-                {character}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Dropdown id="dropdownSearchButton" label="Search">
+        <DropdownButtonLink onClick={refresh}>Refresh</DropdownButtonLink>
+        <DropdownDivider />
+        {["a", "b", "c"].map((character, index) => (
+          <DropdownButtonLink key={index} onClick={() => search(character)}>
+            {character}
+          </DropdownButtonLink>
+        ))}
+      </Dropdown>
       <div className="mt-3 text-center">
         {characters.map((character, index) => (
           <span
