@@ -2,6 +2,7 @@ import { APP_NAME } from "~/constants/app";
 import { IconInfoCircleFill } from "~/icons/info-circle-fill";
 import { useAlert } from "~/hooks/alert";
 import { Page } from "~/layouts/page";
+import { CloseButton } from "~/components/close-button";
 
 export default function View() {
   useAlert();
@@ -23,12 +24,7 @@ export default function View() {
         <span className="ps-1">
           {APP_NAME} is my private playground for Next.js and Bootstrap 5
         </span>
-        <button
-          type="button"
-          className="btn-close"
-          data-bs-dismiss="alert"
-          aria-label="Close"
-        />
+        <CloseButton dismiss="alert" />
       </div>
     </Page>
   );

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CloseButton } from "~/components/close-button";
 import { useOffcanvas } from "~/hooks/offcanvas";
 import { Page } from "~/layouts/page";
 
@@ -32,12 +33,7 @@ export default function View() {
       >
         <div className="offcanvas-header">
           <h5 id="offcanvasExampleLabel">Pages</h5>
-          <button
-            type="button"
-            className="btn-close text-reset"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+          <CloseButton className="text-reset" dismiss="offcanvas" />
         </div>
         <ul className="list-unstyled">
           {links.map((link) => (
