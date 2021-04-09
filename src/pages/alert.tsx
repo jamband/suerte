@@ -1,8 +1,8 @@
+import { CloseButton } from "~/components/close-button";
 import { APP_NAME } from "~/constants/app";
 import { IconInfoCircleFill } from "~/icons/info-circle-fill";
 import { useAlert } from "~/hooks/alert";
 import { Page } from "~/layouts/page";
-import { CloseButton } from "~/components/close-button";
 
 export default function View() {
   useAlert();

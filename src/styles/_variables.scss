@@ -128,12 +128,11 @@ $pagination-disabled-bg:            transparent;
 
 // Toasts
 // ----------------------------------------------
-$toast-background-color:            $light;
-$toast-border-color:                $light;
+$toast-color:                       $light;
+$toast-padding-x:                   1rem;
+$toast-font-size:                   1rem;
+$toast-background-color:            $primary;
 $toast-box-shadow:                  $box-shadow-sm;
-
-$toast-header-background-color:     $light;
-$toast-header-border-color:         color.scale($light, $lightness: -5%);
 
 // Modals
 // ----------------------------------------------

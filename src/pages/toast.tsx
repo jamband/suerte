@@ -1,38 +1,23 @@
-import { useToast } from "~/hooks/toast";
+import { useNotificationAction } from "~/hooks/notification";
 import { Page } from "~/layouts/page";
-import styles from "./toast.module.scss";
 
 export default function View() {
-  const { toastRef, showToast } = useToast();
+  const { setNotification } = useNotificationAction();
+
+  const showNotification = () => {
+    setNotification("Hello, world! This is a toast message.");
+  };
 
   return (
     <Page title="Toast">
       <h1>Toast</h1>
-      <button type="button" className="btn btn-primary" onClick={showToast}>
+      <button
+        type="button"
+        className="btn btn-primary"
+        onClick={showNotification}
+      >
         Show
       </button>
-      <div
-        className={`toast ${styles.toast}`}
-        ref={toastRef}
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div className="toast-header">
-          <strong className="me-auto">Toast</strong>
-          <small>from version 4.2</small>
-          <button
-            type="button"
-            className="btn-close"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          />
-        </div>
-        <div className="toast-body">
-          Push notifications to your visitors with a toast, a lightweight and
-          easily customizable alert message.
-        </div>
-      </div>
     </Page>
   );
 }
