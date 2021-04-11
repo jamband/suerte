@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   stories: ["../src/**/*.stories.tsx"],
   core: {
-    builder: 'webpack5',
+    builder: "webpack5",
   },
   addons: [
     "@storybook/addon-essentials",

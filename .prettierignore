@@ -3,7 +3,8 @@
 .babelrc
 .eslintrc
 .prettierrc
-*.css
-*.js
-*.scss
 tsconfig.json
+*.css
+*.html
+*.scss
+*.yml
