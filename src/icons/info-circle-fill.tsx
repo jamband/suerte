@@ -1,6 +1,7 @@
 type Props = {
   className?: string;
 };
+
 export const IconInfoCircleFill: React.VFC<Props> = (props) => (
   <svg
     viewBox="0 0 16 16"

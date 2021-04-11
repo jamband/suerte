@@ -1,10 +1,11 @@
 type Props = {
   className?: string;
 };
+
 export const IconChevronDown: React.VFC<Props> = (props) => (
   <svg
     viewBox="0 0 16 16"
-    className={`${props.className}`}
+    className={props.className}
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
   >
