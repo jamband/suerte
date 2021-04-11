@@ -7,6 +7,7 @@ QuietNextz is my private playground for Next.js and Bootstrap 5.
 - Using Next.js and Bootstrap 5
 - Using PurgeCSS
 - Not Using [React Bootstrap](https://react-bootstrap.github.io/)
+- [Storybook](https://6072ecf8d15c7c002158718a-njnoswasoj.chromatic.com)
 
 ## Related repositories
 
