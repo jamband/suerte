@@ -9,6 +9,7 @@
     "stylelint": "stylelint **/*.{css,scss}",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "clear": "rm -rf .next",
     "clean": "rm -rf .next node_modules"
   },
