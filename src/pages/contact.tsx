@@ -1,3 +1,4 @@
+import { LinkExternal } from "~/components/link-external";
 import { Page } from "~/layouts/page";
 
 export default function View() {
@@ -5,21 +6,13 @@ export default function View() {
     <Page title="Contact">
       <h1>Contact</h1>
       Please to the message via{" "}
-      <a
-        href="https://twitter.com/livejam_db"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
+      <LinkExternal href="https://twitter.com/livejam_db">
         Twitter
-      </a>{" "}
+      </LinkExternal>{" "}
       or{" "}
-      <a
-        href="https://github.com/jamband/quiet-nextz/issues"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
+      <LinkExternal href="https://github.com/jamband/quiet-nextz/issues">
         GitHub Issues
-      </a>
+      </LinkExternal>
       .
     </Page>
   );

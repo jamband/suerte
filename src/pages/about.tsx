@@ -1,4 +1,5 @@
 import { APP_NAME } from "~/constants/app";
+import { LinkExternal } from "~/components/link-external";
 import { Page } from "~/layouts/page";
 
 export default function View() {
@@ -7,28 +8,15 @@ export default function View() {
       <h1>About</h1>
       <p>
         {APP_NAME} is my private playground for{" "}
-        <a href="https://nextjs.org" rel="noopener noreferrer" target="_blank">
-          Next.js
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://getbootstrap.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Bootstrap 5
-        </a>
+        <LinkExternal href="https://nextjs.org">Next.js</LinkExternal> and{" "}
+        <LinkExternal href="https://getbootstrap.com">Bootstrap 5</LinkExternal>
         .
       </p>
       <p>
         This website is an open source project. See{" "}
-        <a
-          href="https://github.com/jamband/quiet-nextz"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <LinkExternal href="https://github.com/jamband/quiet-nextz">
           GitHub
-        </a>{" "}
+        </LinkExternal>{" "}
         for details.
       </p>
     </Page>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "~/components/button";
+import { LinkExternal } from "~/components/link-external";
 import { _Props } from "./types";
 
 export const Component: React.VFC<_Props> = (props) => (
@@ -35,14 +36,12 @@ export const Component: React.VFC<_Props> = (props) => (
           </Link>
         </li>
         <li className="nav-item">
-          <a
+          <LinkExternal
             className="nav-link"
             href="https://github.com/jamband/quiet-nextz"
-            rel="noopener noreferrer"
-            target="_blank"
           >
             GitHub
-          </a>
+          </LinkExternal>
         </li>
       </ul>
     </div>

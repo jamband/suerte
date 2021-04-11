@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LinkExternal } from "~/components/link-external";
 
 export const Component = () => (
   <div className="d-none d-md-block">
@@ -14,14 +15,12 @@ export const Component = () => (
         </Link>
       </li>
       <li className="nav-item">
-        <a
+        <LinkExternal
           className="nav-link"
           href="https://github.com/jamband/quiet-nextz"
-          rel="noopener noreferrer"
-          target="_blank"
         >
           GitHub
-        </a>
+        </LinkExternal>
       </li>
     </ul>
   </div>
