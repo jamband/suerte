@@ -1,11 +1,11 @@
 import Link from "next/link";
+import { Button } from "~/components/button";
 import { _Props } from "./types";
 
 export const Component: React.VFC<_Props> = (props) => (
   <>
-    <button
+    <Button
       className="navbar-toggler"
-      type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbar"
       aria-controls="collapse"
@@ -13,7 +13,7 @@ export const Component: React.VFC<_Props> = (props) => (
       aria-label="Toggle navigation"
     >
       <span className="navbar-toggler-icon" />
-    </button>
+    </Button>
     <div
       ref={props.collapseRef}
       className="collapse navbar-collapse"

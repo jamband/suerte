@@ -1,8 +1,8 @@
 import { useDropdown } from "~/hooks/dropdown";
-import { Props } from "./types";
 import { Component } from "./component";
+import { Props } from "./types";
 
-export const Dropdown = (props: Props) => {
+export const Dropdown: React.VFC<Props> = (props) => {
   useDropdown();
 
   let className = "btn dropdown-toggle";

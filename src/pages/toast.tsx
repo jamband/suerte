@@ -1,3 +1,4 @@
+import { Button } from "~/components/button";
 import { useNotificationAction } from "~/hooks/notification";
 import { Page } from "~/layouts/page";
 
@@ -11,13 +12,9 @@ export default function View() {
   return (
     <Page title="Toast">
       <h1>Toast</h1>
-      <button
-        type="button"
-        className="btn btn-primary"
-        onClick={showNotification}
-      >
+      <Button className="btn-primary" onClick={showNotification}>
         Show
-      </button>
+      </Button>
     </Page>
   );
 }

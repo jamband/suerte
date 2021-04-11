@@ -1,3 +1,4 @@
+import { Button } from "~/components/button";
 import { useCollapse } from "~/hooks/collapse";
 import { IconInfoCircleFill } from "~/icons/info-circle-fill";
 import { Page } from "~/layouts/page";
@@ -8,9 +9,8 @@ export default function View() {
   return (
     <Page title="Collapse">
       <h1>Collapse</h1>
-      <button
-        type="button"
-        className="btn btn-primary btn-sm w-24"
+      <Button
+        className="btn-primary btn-sm w-24"
         data-bs-toggle="collapse"
         data-bs-target="#collapseExample"
         aria-expanded="false"
@@ -18,7 +18,7 @@ export default function View() {
         onClick={toggleCollapse}
       >
         {isCollapsed ? "Show" : "Hide"}
-      </button>
+      </Button>
       <div id="collapseExample" className="collapse mt-3">
         <div className="p-3 shadow-sm bg-light rounded">
           <IconInfoCircleFill className="w-4 h-4" />

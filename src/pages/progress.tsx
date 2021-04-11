@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Button } from "~/components/button";
 import { Page } from "~/layouts/page";
 
 export default function View() {
@@ -33,20 +34,15 @@ export default function View() {
           role="group"
           aria-label="Progress"
         >
-          <button
-            type="button"
-            className="btn btn-primary flex-even"
+          <Button
+            className="btn-primary flex-even"
             onClick={() => setIsActive(!isActive)}
           >
             {isActive ? "Pause" : "Start"}
-          </button>
-          <button
-            type="button"
-            className="btn btn-primary flex-even"
-            onClick={clear}
-          >
+          </Button>
+          <Button className="btn-primary flex-even" onClick={clear}>
             Clear
-          </button>
+          </Button>
         </div>
       </div>
       <div className="progress mt-3" style={{ height: "1px" }}>

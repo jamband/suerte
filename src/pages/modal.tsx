@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "~/components/button";
 import { useModal } from "~/hooks/modal";
 import { Page } from "~/layouts/page";
 
@@ -16,10 +17,9 @@ export default function View() {
     <Page title="Modal">
       <h1>Modal</h1>
       {images.map((image) => (
-        <button
+        <Button
           key={image}
-          type="button"
-          className="btn btn-primary me-2 ps-1 pe-3 py-1 rounded-pill"
+          className="btn-primary me-2 ps-1 pe-3 py-1 rounded-pill"
           data-bs-toggle="modal"
           data-bs-target="#modalImage"
           onClick={() => showImage(image)}
@@ -37,7 +37,7 @@ export default function View() {
           >
             {image}
           </div>
-        </button>
+        </Button>
       ))}
       <div
         id="modalImage"

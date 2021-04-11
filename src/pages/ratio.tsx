@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "~/components/button";
 import { Page } from "~/layouts/page";
 
 export default function View() {
@@ -28,15 +29,14 @@ export default function View() {
           aria-label="Aspect ratio list"
         >
           {ratioList.map((ratio) => (
-            <button
+            <Button
               key={ratio}
               aria-label={ratio}
-              type="button"
-              className="btn btn-primary"
+              className="btn-primary"
               onClick={() => handleRatioSelector(ratio)}
             >
               {ratio}
-            </button>
+            </Button>
           ))}
         </p>
       </div>

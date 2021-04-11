@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Button } from "~/components/button";
 import { useFocus } from "~/hooks/focus";
 import { Page } from "~/layouts/page";
 
@@ -45,9 +46,9 @@ export default function View() {
       <h1>Form</h1>
       <div className="my-3 display-4 text-center">
         {code}{" "}
-        <button type="button" className="btn btn-link" onClick={refreshCode}>
+        <Button className="btn-link" onClick={refreshCode}>
           Refresh
-        </button>
+        </Button>
       </div>
       <fieldset className="row">
         <div className="col-md-6 offset-md-3">
@@ -69,9 +70,9 @@ export default function View() {
             <div className="invalid-feedback">{error}</div>
             <div className="valid-feedback">Looks Good!</div>
           </div>
-          <button type="button" className="btn btn-primary" onClick={submit}>
+          <Button className="btn-primary" onClick={submit}>
             Submit
-          </button>
+          </Button>
         </div>
       </fieldset>
     </Page>

@@ -1,4 +1,5 @@
 import { Alert } from "~/components/alert";
+import { Button } from "~/components/button";
 import { CloseButton } from "~/components/close-button";
 import { APP_NAME } from "~/constants/app";
 import { IconInfoCircleFill } from "~/icons/info-circle-fill";
@@ -11,9 +12,9 @@ export default function View() {
     <Page title="Alert">
       <h1>Alert</h1>
       <div className="text-end">
-        <button type="button" className="btn btn-primary" onClick={reload}>
+        <Button className="btn-primary" onClick={reload}>
           Reload
-        </button>
+        </Button>
       </div>
       <Alert className="show my-3 bg-light shadow-sm">
         <IconInfoCircleFill className="w-4 h-4" />

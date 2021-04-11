@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "~/components/button";
 import { CloseButton } from "~/components/close-button";
 import { useOffcanvas } from "~/hooks/offcanvas";
 import { Page } from "~/layouts/page";
@@ -15,15 +16,14 @@ export default function View() {
   return (
     <Page title="Offcanvas">
       <h1>Offcanvas</h1>
-      <button
-        className="btn btn-primary"
-        type="button"
+      <Button
+        className="btn-primary"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasExample"
         aria-controls="offcanvasExample"
       >
         Go to pages
-      </button>
+      </Button>
 
       <div
         className="offcanvas offcanvas-end"
