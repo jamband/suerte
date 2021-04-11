@@ -15,7 +15,7 @@ export const Pagination: React.VFC<Props> = (props) => {
   };
 
   const disabled = (part: Part) => {
-    return ["first", "prev"].includes(part)
+    return ["first", "previous"].includes(part)
       ? props.currentPage < 2
       : props.currentPage >= props.pageCount;
   };

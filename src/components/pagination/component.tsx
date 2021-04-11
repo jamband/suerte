@@ -29,7 +29,7 @@ export const Component: React.VFC<_Props> = (props) => (
           <a
             className={`page-link ${!props.hasTouchScreen && styles.link}`}
             tabIndex={props.disabled("previous") ? -1 : 0}
-            aria-label="Prev"
+            aria-label="Previous"
             aria-disabled={props.disabled("previous")}
           >
             <IconChevronLeft className="w-3 h-3" />
