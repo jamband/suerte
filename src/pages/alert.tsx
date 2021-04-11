@@ -1,11 +1,10 @@
+import { Alert } from "~/components/alert";
 import { CloseButton } from "~/components/close-button";
 import { APP_NAME } from "~/constants/app";
 import { IconInfoCircleFill } from "~/icons/info-circle-fill";
-import { useAlert } from "~/hooks/alert";
 import { Page } from "~/layouts/page";
 
 export default function View() {
-  useAlert();
   const reload = () => location.reload();
 
   return (
@@ -16,16 +15,13 @@ export default function View() {
           Reload
         </button>
       </div>
-      <div
-        className="alert alert-dismissible show fade my-3 bg-light shadow-sm"
-        role="alert"
-      >
+      <Alert className="show my-3 bg-light shadow-sm">
         <IconInfoCircleFill className="w-4 h-4" />
         <span className="ps-1">
           {APP_NAME} is my private playground for Next.js and Bootstrap 5
         </span>
         <CloseButton dismiss="alert" />
-      </div>
+      </Alert>
     </Page>
   );
 }
