@@ -1,7 +1,5 @@
-import type { _Props } from "./types";
+import { APP_NAME } from "~/constants/app";
 
-export const Component: React.VFC<_Props> = (props) => (
-  <footer className="fixed-bottom py-3 text-center bg-light">
-    {props.appName}
-  </footer>
+export const Component: React.VFC = () => (
+  <footer className="fixed-bottom py-3 text-center bg-light">{APP_NAME}</footer>
 );
