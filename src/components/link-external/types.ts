@@ -1,7 +1,5 @@
-import { AnchorHTMLAttributes } from "react";
-
-export type Props = {
+export type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
-} & AnchorHTMLAttributes<HTMLAnchorElement>;
+};
 
 export type _Props = Props;

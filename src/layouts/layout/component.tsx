@@ -1,6 +1,6 @@
 import { Footer } from "~/layouts/footer";
 import { Header } from "~/layouts/header";
-import { _Props } from "./types";
+import type { _Props } from "./types";
 
 export const Component: React.VFC<_Props> = (props) => (
   <div className="d-flex flex-column min-vh-100 py-7">

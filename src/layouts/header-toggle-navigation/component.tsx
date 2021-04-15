@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "~/components/button";
 import { LinkExternal } from "~/components/link-external";
-import { _Props } from "./types";
+import type { _Props } from "./types";
 
 export const Component: React.VFC<_Props> = (props) => (
   <>

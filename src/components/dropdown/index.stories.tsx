@@ -2,7 +2,7 @@ import { Meta, Story } from "@storybook/react";
 import { DropdownButtonLink } from "~/components/dropdown-button-link";
 import { DropdownDivider } from "~/components/dropdown-divider";
 import { Dropdown as Component } from ".";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export default {
   title: `components/${Component.name}`,

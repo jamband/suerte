@@ -1,4 +1,4 @@
-import { _Props } from "./types";
+import type { _Props } from "./types";
 
 /* eslint-disable react/jsx-no-target-blank */
 export const Component: React.VFC<_Props> = (props) => (

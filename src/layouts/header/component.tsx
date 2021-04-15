@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { HeaderNavigation } from "~/layouts/header-navigation";
 import { HeaderToggleNavigation } from "~/layouts/header-toggle-navigation";
-import { _Props } from "./types";
+import type { _Props } from "./types";
 
 export const Component: React.VFC<_Props> = (props) => (
   <header>

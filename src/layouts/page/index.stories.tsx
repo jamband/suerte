@@ -1,7 +1,7 @@
 import { Meta, Story } from "@storybook/react";
 import { withNextRouter } from "storybook-addon-next-router";
 import { Page as Component } from ".";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export default {
   title: `layouts/${Component.name}`,

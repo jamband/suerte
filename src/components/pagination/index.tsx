@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useHasTouchScreen } from "~/hooks/screen";
 import { Component } from "./component";
-import { Props, Part } from "./types";
+import type { Props, Part } from "./types";
 
 export const Pagination: React.VFC<Props> = (props) => {
   const router = useRouter();

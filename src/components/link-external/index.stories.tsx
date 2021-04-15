@@ -1,6 +1,6 @@
 import { Meta, Story } from "@storybook/react";
 import { LinkExternal as Component } from ".";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export default {
   title: `components/${Component.name}`,

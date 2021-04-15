@@ -1,7 +1,7 @@
 import { Meta, Story } from "@storybook/react";
 import { CloseButton } from "~/components/close-button";
 import { Alert as Component } from ".";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export default {
   title: `components/${Component.name}`,

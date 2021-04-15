@@ -1,5 +1,5 @@
 import { Component } from "./component";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export const LinkExternal: React.VFC<Props> = (props) => {
   let rel = "noopener noreferrer";

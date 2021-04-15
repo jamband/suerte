@@ -3,7 +3,7 @@ import { Alert } from "~/components/alert";
 import { Notification } from "~/components/notification";
 import { StateContext as NotificationStateContext } from "~/contexts/notification";
 import { CloseButton as Component } from ".";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export default {
   title: `components/${Component.name}`,

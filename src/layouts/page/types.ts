@@ -3,6 +3,6 @@ export type Props = {
   children: React.ReactNode;
 };
 
-export type _Props = {
+export type _Props = Props & {
   title: string;
-} & Props;
+};

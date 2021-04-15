@@ -1,6 +1,6 @@
 import { IconChevronDown } from "~/icons/chevron-down";
 import { Button } from "~/components/button";
-import { _Props } from "./types";
+import type { _Props } from "./types";
 
 export const Component: React.VFC<_Props> = (props) => (
   <div className="btn-group">

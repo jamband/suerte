@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { Component } from "./component";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export const Breadcrumb: React.VFC<Props> = (props) => {
   const router = useRouter();

@@ -1,6 +1,6 @@
 import { useAlert } from "~/hooks/alert";
 import { Component } from "./component";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export const Alert: React.VFC<Props> = (props) => {
   useAlert();

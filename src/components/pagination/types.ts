@@ -3,11 +3,11 @@ export type Props = {
   pageCount: number;
 };
 
-export type _Props = {
+export type _Props = Props & {
   hasTouchScreen: boolean;
   pageLink: (page: number) => { pathname: string; query: { page: number } };
   disabled: (part: Part) => boolean;
   disabledSelector: (part: Part) => "disabled" | "";
-} & Props;
+};
 
 export type Part = "first" | "previous" | "next" | "last";

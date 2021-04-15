@@ -4,6 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "tsc": "tsc",
     "eslint": "eslint .",
     "prettier": "prettier --check .",
     "stylelint": "stylelint **/*.{css,scss}",
