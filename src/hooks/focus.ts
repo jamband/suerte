@@ -5,7 +5,7 @@ export const useFocus = () => {
 
   useEffect(() => {
     focusRef.current?.focus();
-  }, []);
+  }, [focusRef]);
 
   return { focusRef } as const;
 };
