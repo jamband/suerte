@@ -11,17 +11,6 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
 
-// Colors
-$colors: (
-);
-
-$theme-colors: (
-  "primary": $primary,
-  "success": $success,
-  "danger": $danger,
-  "light": $light,
-);
-
 // Layout & components
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
@@ -52,3 +41,14 @@ $theme-colors: (
 
 // Utilities
 @import "~bootstrap/scss/utilities/api";
+
+// Colors
+$colors: (
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "success": $success,
+  "danger": $danger,
+  "light": $light,
+);
