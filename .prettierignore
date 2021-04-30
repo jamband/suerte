@@ -1,9 +1,5 @@
 /.next
 /node_modules
-.babelrc
-.eslintrc
-.prettierrc
-tsconfig.json
 *.css
 *.html
 *.scss
