@@ -30,17 +30,17 @@ export default function View() {
       <h1>Progress</h1>
       <div className="row">
         <div
-          className="btn-group btn-group-sm d-flex my-3 col-6 col-md-4"
+          className="btn-group btn-group-sm my-3 col-6 col-md-4"
           role="group"
           aria-label="Progress"
         >
           <Button
-            className="btn-primary flex-even"
+            className="btn-primary w-100p"
             onClick={() => setIsActive(!isActive)}
           >
             {isActive ? "Pause" : "Start"}
           </Button>
-          <Button className="btn-primary flex-even" onClick={clear}>
+          <Button className="btn-primary w-100p" onClick={clear}>
             Clear
           </Button>
         </div>

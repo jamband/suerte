@@ -19,8 +19,14 @@ module.exports = {
             "@fullhuman/postcss-purgecss",
             {
               content: [
+                "./node_modules/bootstrap/js/dist/alert.js",
+                "./node_modules/bootstrap/js/dist/button.js",
+                "./node_modules/bootstrap/js/dist/collapse.js",
+                "./node_modules/bootstrap/js/dist/dropdown.js",
+                "./node_modules/bootstrap/js/dist/modal.js",
+                "./node_modules/bootstrap/js/dist/offcanvas.js",
+                "./node_modules/bootstrap/js/dist/toast.js",
                 "./src/**/*.tsx",
-                "./node_modules/bootstrap/dist/js/bootstrap.js",
               ],
               defaultExtractor: (content) =>
                 content.match(/[\w-/:]+(?<!:)/g) || [],

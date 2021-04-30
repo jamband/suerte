@@ -1,70 +1,64 @@
-$utilities: (
-  "float": null,
-  "overflow": null,
-  "border": null,
-  "border-top": null,
-  "border-right": null,
-  "border-bottom": null,
-  "border-left": null,
-  "border-color": null,
-  "flex": (
-    responsive: true,
-    property: flex,
-    values: (
-      fill: 1 1 auto,
-      even: 1 1 0,
+@use "sass:map";
+
+$-width-and-height-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  16: 4rem,
+  20: 5rem,
+  24: 6rem,
+  32: 8rem,
+  40: 10rem,
+  48: 12rem,
+  56: 14rem,
+  64: 16rem,
+  auto: auto,
+);
+
+// Modify utilities
+$-height-utility: map.merge(
+  map.get($utilities, "height"),
+  (
+    values: map.merge(
+      map.get(map.get($utilities, "height"), "values"),
+      $-width-and-height-values
     )
-  ),
-  "height": (
-    property: height,
-    class: h,
-    values: (
-      0: 0,
-      1: 0.25rem,
-      2: 0.5rem,
-      3: 0.75rem,
-      4: 1rem,
-      5: 1.25rem,
-      6: 1.5rem,
-      8: 2rem,
-      10: 2.5rem,
-      12: 3rem,
-      16: 4rem,
-      20: 5rem,
-      24: 6rem,
-      32: 8rem,
-      40: 10rem,
-      48: 12rem,
-      56: 14rem,
-      64: 16rem,
-      px: 1px,
-      auto: auto,
+  )
+);
+
+$-width-utility: map.merge(
+  map.get($utilities, "width"),
+  (
+    values: map.merge(
+      map.get(map.get($utilities, "width"), "values"),
+      map.merge(
+        $-width-and-height-values,
+        (100p: 100%)
+      )
     )
-  ),
-  "width": (
-    property: width,
-    class: w,
-    values: (
-      0: 0,
-      1: 0.25rem,
-      2: 0.5rem,
-      3: 0.75rem,
-      4: 1rem,
-      5: 1.25rem,
-      6: 1.5rem,
-      8: 2rem,
-      10: 2.5rem,
-      12: 3rem,
-      16: 4rem,
-      20: 5rem,
-      24: 6rem,
-      32: 8rem,
-      40: 10rem,
-      48: 12rem,
-      56: 14rem,
-      64: 16rem,
-      px: 1px,
-      auto: auto,
-    )
+  )
+);
+
+// Utilities
+$utilities: map.merge(
+  $utilities,
+  (
+    "border": null,
+    "border-bottom": null,
+    "border-color": null,
+    "border-left": null,
+    "border-right": null,
+    "border-top": null,
+    "float": null,
+    "height": $-height-utility,
+    "overflow": null,
+    "width": $-width-utility,
   )
 );

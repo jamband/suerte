@@ -3,24 +3,31 @@
 
 // Color system
 // ----------------------------------------------
-$black:     #000;
-$red:       #bf616a;
-$green:     #a3be8c;
-
 $primary:       #6b7279;
-
-$success:       $green;
-$danger:        $red;
+$success:       #a3be8c;
+$danger:        #bf616a;
 $light:         #f8f9fa;
+
+$colors: (
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "success": $success,
+  "danger": $danger,
+  "light": $light,
+);
 
 // Options
 // ----------------------------------------------
 $enable-caret:                false;
 $enable-shadow:               true;
+$enable-smooth-scroll:        false;
 
 // Spacing
 // ----------------------------------------------
 $spacer: 1rem;
+
 $spacers: (
   0: 0,
   1: $spacer / 4,
@@ -63,7 +70,7 @@ $container-max-widths: (
 
 // Components
 // ----------------------------------------------
-$box-shadow-sm:               0 0.125rem 0.25rem color.scale($black, $lightness: 0%, $alpha: -90%);
+$box-shadow-sm:               0 0.125rem 0.25rem color.scale(black, $lightness: 0%, $alpha: -90%);
 
 // Typography
 // ----------------------------------------------
