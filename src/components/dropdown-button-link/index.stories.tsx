@@ -23,7 +23,7 @@ export const WithIcon = _.bind({});
 WithIcon.args = {
   children: (
     <>
-      <IconInfoCircleFill className="w-4 h-4" /> foo
+      <IconInfoCircleFill /> foo
     </>
   ),
 };

@@ -11,7 +11,7 @@ export const Component: React.VFC<_Props> = (props) => (
       aria-expanded={false}
     >
       <span className="pe-1">{props.label}</span>
-      <IconChevronDown className="w-3 h-3" />
+      <IconChevronDown size="0.8em" />
     </Button>
     <div className="dropdown-menu shadow-sm" aria-labelledby={props.id}>
       {props.children}

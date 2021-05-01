@@ -18,7 +18,7 @@ export const Component: React.VFC<_Props> = (props) => (
             aria-label="First"
             aria-disabled={props.disabled("first")}
           >
-            <IconChevronDoubleLeft className="w-3 h-3" />
+            <IconChevronDoubleLeft size="0.8em" />
           </a>
         </Link>
       </li>
@@ -32,7 +32,7 @@ export const Component: React.VFC<_Props> = (props) => (
             aria-label="Previous"
             aria-disabled={props.disabled("previous")}
           >
-            <IconChevronLeft className="w-3 h-3" />
+            <IconChevronLeft size="0.8em" />
           </a>
         </Link>
       </li>
@@ -44,7 +44,7 @@ export const Component: React.VFC<_Props> = (props) => (
             aria-label="Next"
             aria-disabled={props.disabled("next")}
           >
-            <IconChevronRight className="w-3 h-3" />
+            <IconChevronRight size="0.8em" />
           </a>
         </Link>
       </li>
@@ -56,7 +56,7 @@ export const Component: React.VFC<_Props> = (props) => (
             aria-label="Last"
             aria-disabled={props.disabled("last")}
           >
-            <IconChevronDoubleRight className="w-3 h-3" />
+            <IconChevronDoubleRight size="0.8em" />
           </a>
         </Link>
       </li>

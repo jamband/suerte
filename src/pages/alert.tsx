@@ -17,7 +17,7 @@ export default function View() {
         </Button>
       </div>
       <Alert className="show my-3 bg-light shadow-sm">
-        <IconInfoCircleFill className="w-4 h-4" />
+        <IconInfoCircleFill />
         <span className="ps-1">
           {APP_NAME} is my private playground for Next.js and Bootstrap 5
         </span>

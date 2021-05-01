@@ -1,13 +1,15 @@
 type Props = {
-  className?: string;
+  size?: `${number}em`;
 };
 
 export const IconChevronDoubleRight: React.VFC<Props> = (props) => (
   <svg
-    viewBox="0 0 16 16"
-    className={props.className}
-    fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
+    width={props.size || "1em"}
+    height="1em"
+    fill="currentColor"
+    viewBox="0 0 16 16"
+    style={{ display: "inline-block", verticalAlign: "-0.125em" }}
   >
     <path
       fillRule="evenodd"

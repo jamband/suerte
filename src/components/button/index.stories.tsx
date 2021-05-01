@@ -47,7 +47,7 @@ WithIcon.args = {
   className: "btn-primary",
   children: (
     <>
-      <IconInfoCircleFill className="w-4 h-4" />
+      <IconInfoCircleFill />
       <span className="ps-2">foo</span>
     </>
   ),
