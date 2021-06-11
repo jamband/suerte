@@ -1,8 +1,8 @@
 /** @jest-environment jsdom */
 import { render, screen } from "@testing-library/react";
+import { useRouter } from "next/router";
 import { APP_NAME } from "~/constants/app";
 import { Page } from ".";
-import { useRouter } from "next/router";
 
 jest.mock("next/head", () => {
   return {
@@ -14,14 +14,19 @@ jest.mock("next/head", () => {
 });
 
 jest.mock("next/router", () => ({
-  __esModule: true,
   useRouter: jest.fn(),
 }));
 
+const router = useRouter as jest.Mock;
+
+beforeEach(() => {
+  router.mockReset();
+});
+
 test("top page", () => {
-  (useRouter as jest.Mock).mockImplementation(() => ({
+  router.mockReturnValue({
     pathname: "/",
-  }));
+  });
 
   render(
     <Page title="">
@@ -35,9 +40,9 @@ test("top page", () => {
 });
 
 test("foo page", () => {
-  (useRouter as jest.Mock).mockImplementation(() => ({
+  router.mockReturnValue({
     pathname: "/foo",
-  }));
+  });
 
   render(
     <Page title="Foo">

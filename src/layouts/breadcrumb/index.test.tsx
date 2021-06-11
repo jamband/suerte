@@ -4,14 +4,19 @@ import { useRouter } from "next/router";
 import { Breadcrumb } from ".";
 
 jest.mock("next/router", () => ({
-  __esModule: true,
   useRouter: jest.fn(),
 }));
 
+const router = useRouter as jest.Mock;
+
+beforeEach(() => {
+  router.mockReset();
+});
+
 test("top page", () => {
-  (useRouter as jest.Mock).mockImplementation(() => ({
+  router.mockReturnValue({
     pathname: "/",
-  }));
+  });
 
   render(<Breadcrumb text="" />);
 
@@ -23,9 +28,9 @@ test("top page", () => {
 });
 
 test("foo page", () => {
-  (useRouter as jest.Mock).mockImplementation(() => ({
+  router.mockReturnValue({
     pathname: "/foo",
-  }));
+  });
 
   render(<Breadcrumb text="Foo · Bar" />);
 
