@@ -7,7 +7,7 @@ export type State = {
 type Action =
   | {
       type: "show";
-      message: string;
+      payload: string;
     }
   | { type: "clear" };
 
@@ -25,22 +25,19 @@ export const NotificationProvider: React.VFC<Props> = (props) => {
     message: "",
   };
 
-  const [notification, dispatch] = useReducer(
-    (state: State, action: Action) => {
-      switch (action.type) {
-        case "show":
-          return { message: action.message };
-        case "clear":
-          return { message: initialState.message };
-        default:
-          return state;
-      }
-    },
-    initialState
-  );
+  const [state, dispatch] = useReducer((state: State, action: Action) => {
+    switch (action.type) {
+      case "show":
+        return { message: action.payload };
+      case "clear":
+        return initialState;
+      default:
+        return state;
+    }
+  }, initialState);
 
   return (
-    <StateContext.Provider value={notification}>
+    <StateContext.Provider value={state}>
       <DispatchContext.Provider value={dispatch}>
         {props.children}
       </DispatchContext.Provider>

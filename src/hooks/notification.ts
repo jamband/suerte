@@ -10,7 +10,10 @@ export const useNotification = () => {
     });
   };
 
-  return { notificationRef, showNotification } as const;
+  return {
+    notificationRef,
+    showNotification,
+  } as const;
 };
 
 export const useNotificationState = () => {
@@ -20,19 +23,19 @@ export const useNotificationState = () => {
 export const useNotificationAction = () => {
   const dispatch = useContext(DispatchContext);
 
-  const setNotification = useCallback(
-    (message: string) => {
-      dispatch({
-        type: "show",
-        message: message,
-      });
-    },
-    [dispatch]
-  );
+  const setNotification = (message: string) =>
+    dispatch({
+      type: "show",
+      payload: message,
+    });
 
-  const clearNotification = useCallback(() => {
-    dispatch({ type: "clear" });
-  }, [dispatch]);
+  const clearNotification = () =>
+    dispatch({
+      type: "clear",
+    });
 
-  return { setNotification, clearNotification } as const;
+  return {
+    setNotification: useCallback(setNotification, [dispatch]),
+    clearNotification: useCallback(clearNotification, [dispatch]),
+  } as const;
 };
