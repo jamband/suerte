@@ -1,3 +1,4 @@
+/** @jest-environment jsdom */
 import { render, screen } from "@testing-library/react";
 import { useRouter } from "next/router";
 import { Breadcrumb } from ".";
