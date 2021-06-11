@@ -4,12 +4,7 @@ export default class extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          <link
-            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
