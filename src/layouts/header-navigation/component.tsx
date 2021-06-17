@@ -17,7 +17,7 @@ export const Component = () => (
       <li className="nav-item">
         <LinkExternal
           className="nav-link"
-          href="https://github.com/jamband/quiet-nextz"
+          href="https://github.com/jamband/suerte"
         >
           GitHub
         </LinkExternal>

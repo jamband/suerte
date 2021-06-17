@@ -5,7 +5,7 @@ import type { Props } from "./types";
 export default {
   title: `components/${Component.name}`,
   args: {
-    href: "https://github.com/jamband/quiet-nextz",
+    href: "https://github.com/jamband/suerte",
   },
 } as Meta;
 

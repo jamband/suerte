@@ -10,7 +10,7 @@ export default function View() {
         Twitter
       </LinkExternal>{" "}
       or{" "}
-      <LinkExternal href="https://github.com/jamband/quiet-nextz/issues">
+      <LinkExternal href="https://github.com/jamband/suerte/issues">
         GitHub Issues
       </LinkExternal>
       .

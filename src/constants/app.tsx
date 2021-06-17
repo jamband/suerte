@@ -1,1 +1,1 @@
-export const APP_NAME = "QuietNextz" as const;
+export const APP_NAME = "Suerte" as const;

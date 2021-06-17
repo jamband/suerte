@@ -14,7 +14,7 @@ export default function View() {
       </p>
       <p>
         This website is an open source project. See{" "}
-        <LinkExternal href="https://github.com/jamband/quiet-nextz">
+        <LinkExternal href="https://github.com/jamband/suerte">
           GitHub
         </LinkExternal>{" "}
         for details.
