@@ -25,7 +25,7 @@ export default function View() {
           onClick={() => showImage(image)}
         >
           <img
-            src={`/${image}.jpg`}
+            src={`/${image}-thumb.jpg`}
             width="30"
             height="30"
             className="me-2 rounded-pill"
