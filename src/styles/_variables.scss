@@ -63,7 +63,7 @@ $box-shadow-sm:               0 0.125rem 0.25rem color.scale(black, $lightness: 
 $font-size-base:              1rem;
 $font-size-sm:                $font-size-base * 0.875;
 $line-height-base:            1.65;
-$text-muted:                  color.scale($primary, $lightness: 90%);
+$text-muted:                  color.scale($primary, $lightness: 60%);
 $mark-padding:                0;
 $list-inline-padding:         0.8rem;
 $mark-bg:                     orange;
@@ -95,9 +95,9 @@ $pagination-color:                  color.scale($primary, $lightness: -30%);
 $pagination-bg:                     transparent;
 $pagination-border-width:           0;
 $pagination-focus-bg:               color.scale($light, $lightness: -20%, $alpha: -80%);
-$pagination-hover-color:            $primary;
-$pagination-hover-bg:               $pagination-bg;
-$pagination-disabled-color:         color.scale($primary, $lightness: 75%);
+$pagination-hover-color:            $link-hover-color;
+$pagination-hover-bg:               transparent;
+$pagination-disabled-color:         $text-muted;
 $pagination-disabled-bg:            transparent;
 
 // Toasts
