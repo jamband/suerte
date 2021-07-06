@@ -9,7 +9,7 @@ test("layouts", () => {
     </Layout>
   );
   expect(screen.getByRole("banner")).toBeInTheDocument();
-  expect(screen.getByRole("navigation")).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: "Home" })).toBeInTheDocument();
   expect(screen.getByRole("contentinfo")).toBeInTheDocument();
+  expect(screen.getByRole("navigation")).toBeInTheDocument();
 });
