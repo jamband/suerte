@@ -1,11 +1,9 @@
 import { Meta, Story } from "@storybook/react";
-import { withNextRouter } from "storybook-addon-next-router";
 import { Pagination as Component } from ".";
 import type { Props } from "./types";
 
 export default {
   title: `components/${Component.name}`,
-  decorators: [withNextRouter],
 } as Meta;
 
 const _: Story<Props> = (args) => <Component {...args} />;

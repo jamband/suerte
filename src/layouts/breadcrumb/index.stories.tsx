@@ -1,11 +1,9 @@
 import { Meta, Story } from "@storybook/react";
-import { withNextRouter } from "storybook-addon-next-router";
 import { Breadcrumb as Component } from ".";
 import type { Props } from "./types";
 
 export default {
   title: `layouts/${Component.name}`,
-  decorators: [withNextRouter],
 } as Meta;
 
 const _: Story<Props> = (args) => <Component {...args} />;

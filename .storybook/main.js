@@ -17,6 +17,7 @@ module.exports = {
         },
       },
     },
+    "storybook-addon-next-router",
   ],
   webpackFinal: async (config) => {
     config.resolve.alias = {
