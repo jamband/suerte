@@ -1,5 +1,4 @@
 /.next
-/node_modules
 *.css
 *.html
 *.scss
