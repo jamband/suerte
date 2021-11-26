@@ -10,8 +10,8 @@ export default function View() {
   const [searchCharacter, setSearchCharacter] = useState("");
 
   const generateCharacters = () => {
-    return [...Array(15)].map(() => {
-      return ["a", "b", "c"][Math.floor(Math.random() * Math.floor(3))];
+    return [...Array(10)].map(() => {
+      return ["A", "B", "C"][Math.floor(Math.random() * Math.floor(3))];
     });
   };
 
@@ -39,21 +39,27 @@ export default function View() {
       <Dropdown id="dropdownSearchButton" label="Search">
         <DropdownButtonLink onClick={refresh}>Refresh</DropdownButtonLink>
         <DropdownDivider />
-        {["a", "b", "c"].map((character, index) => (
+        {["A", "B", "C"].map((character, index) => (
           <DropdownButtonLink key={index} onClick={() => search(character)}>
             {character}
           </DropdownButtonLink>
         ))}
       </Dropdown>
       <div className="mt-3 text-center">
-        {characters.map((character, index) => (
-          <span
-            key={index}
-            className={`me-2 ${isMatchedCharacter(character) ? "mark" : null}`}
-          >
-            {character}
-          </span>
-        ))}
+        {characters.map((character, index) =>
+          isMatchedCharacter(character) ? (
+            <mark
+              key={index}
+              className="me-2 p-1 fw-bold font-monospace text-primary"
+            >
+              {character}
+            </mark>
+          ) : (
+            <span key={index} className="me-2 p-1 fw-bold font-monospace">
+              {character}
+            </span>
+          )
+        )}
       </div>
     </Page>
   );
