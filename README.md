@@ -2,12 +2,15 @@
 
  Suerte is my private playground for Next.js and Bootstrap 5.
 
+ - [Suerte](https://suerte.vercel.app/)
+ - [Storybook](https://6072ecf8d15c7c002158718a-jzesxphwir.chromatic.com/)
+
 ## Features
 
 - Using Next.js and Bootstrap 5
 - Using PurgeCSS
 - Not Using [React Bootstrap](https://react-bootstrap.github.io/)
-- [Storybook](https://main--6072ecf8d15c7c002158718a.chromatic.com/)
+- Storybook
 
 ## Related repositories
 
