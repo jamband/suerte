@@ -1,6 +1,9 @@
 const path = require("path");
 
 module.exports = {
+  typescript: {
+    reactDocgen: false,
+  },
   stories: ["../src/**/*.stories.tsx"],
   core: {
     builder: "webpack5",
