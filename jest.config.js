@@ -1,12 +1,17 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const nextJest = require("next/jest");
+
+const createJestConfig = nextJest({
+  dir: "./",
+});
+
 /** @type {import("@jest/types").Config.InitialOptions} */
-module.exports = {
+const customJestConfig = {
   roots: ["<rootDir>/src/"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-  transform: {
-    "^.+\\.(ts|tsx)$": ["babel-jest", { presets: ["next/babel"] }],
-  },
   moduleNameMapper: {
-    "~/(.*)$": "<rootDir>src/$1",
-    "\\.(css|scss)$": "identity-obj-proxy",
+    "^~/(.*)$": "<rootDir>/src/$1",
   },
 };
+
+module.exports = createJestConfig(customJestConfig);
