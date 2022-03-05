@@ -32,7 +32,7 @@ export default function View() {
             <Button
               key={ratio}
               aria-label={ratio}
-              className="btn-primary"
+              className="btn-primary font-monospace"
               onClick={() => handleRatioSelector(ratio)}
             >
               {ratio}

@@ -55,7 +55,7 @@ export default function View() {
           aria-valuemax={100}
         />
       </div>
-      <div className="text-center small">{bar}%</div>
+      <div className="font-monospace text-center small">{bar}%</div>
     </Page>
   );
 }

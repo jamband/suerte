@@ -45,7 +45,7 @@ export default function View() {
     <Page title="Form">
       <h1>Form</h1>
       <div className="my-3 display-4 text-center">
-        {code}{" "}
+        <span className="font-monospace">{code}</span>{" "}
         <Button className="btn-link" onClick={refreshCode}>
           Refresh
         </Button>
