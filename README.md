@@ -3,7 +3,7 @@
  Suerte is my private playground for Next.js and Bootstrap 5.
 
  - [Suerte](https://suerte.vercel.app/)
- - [Storybook](https://6072ecf8d15c7c002158718a-jzesxphwir.chromatic.com/)
+ - [Storybook](https://main--6072ecf8d15c7c002158718a.chromatic.com)
 
 ## Features
 
