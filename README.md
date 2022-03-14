@@ -15,6 +15,7 @@
 ## Related repositories
 
 - [jamband/quietz](https://github.com/jamband/quietz) - Nuxt.js + Bootstrap 5
+- [jamband/blissable](https://github.com/jamband/blissable) - SvelteKit + Bootstrap 5
 
 ## License
 
