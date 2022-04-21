@@ -8,9 +8,9 @@ export default function View() {
   useOffcanvas();
 
   const links = [
-    { pathname: "/", text: "Home" },
-    { pathname: "/contact", text: "Contact" },
-    { pathname: "/about", text: "About" },
+    { href: "/", text: "Home" },
+    { href: "/contact", text: "Contact" },
+    { href: "/about", text: "About" },
   ];
 
   return (
@@ -24,7 +24,6 @@ export default function View() {
       >
         Go to pages
       </Button>
-
       <div
         className="offcanvas offcanvas-end"
         tabIndex={-1}
@@ -37,11 +36,13 @@ export default function View() {
         </div>
         <ul className="list-unstyled">
           {links.map((link) => (
-            <li className="nav-item" key={link.pathname}>
-              <Link href={link.pathname}>
-                <a className="nav-link" data-bs-dismiss="offcanvas">
-                  {link.text}
-                </a>
+            <li
+              className="nav-item"
+              key={link.href}
+              data-bs-dismiss="offcanvas"
+            >
+              <Link href={link.href}>
+                <a className="nav-link">{link.text}</a>
               </Link>
             </li>
           ))}
