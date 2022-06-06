@@ -6,45 +6,30 @@ import type { State } from "./types";
 
 export const Loading: React.VFC = () => {
   const [state, setState] = useState<State>("initial");
-  const router = useRouter();
+  const { events } = useRouter();
 
   let className = styles.initial;
-  if (state === "start") {
-    className += ` ${styles.start}`;
-  }
-  if (state === "complete") {
-    className += ` ${styles.complete}`;
-  }
+  if (state === "start") className += ` ${styles.start}`;
+  if (state === "complete") className += ` ${styles.complete}`;
 
   useEffect(() => {
-    const start = (url: string) => {
-      if (router.asPath !== url) {
-        setState("start");
-      }
+    const start = () => setState("start");
+
+    const complete = () => {
+      setTimeout(() => setState("complete"), 100);
+      setTimeout(() => setState("initial"), 500);
     };
 
-    const complete = (url: string) => {
-      if (router.asPath !== url) {
-        setTimeout(() => {
-          setState("complete");
-        }, 100);
-
-        setTimeout(() => {
-          setState("initial");
-        }, 500);
-      }
-    };
-
-    router.events.on("routeChangeStart", start);
-    router.events.on("routeChangeComplete", complete);
-    router.events.on("routeChangeError", complete);
+    events.on("routeChangeStart", start);
+    events.on("routeChangeComplete", complete);
+    events.on("routeChangeError", complete);
 
     return () => {
-      router.events.off("routeChangeStart", start);
-      router.events.off("routeChangeComplete", complete);
-      router.events.off("routeChangeError", complete);
+      events.off("routeChangeStart", start);
+      events.off("routeChangeComplete", complete);
+      events.off("routeChangeError", complete);
     };
-  }, [router]);
+  }, [events]);
 
   return <Component className={className} />;
 };
