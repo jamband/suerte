@@ -2,9 +2,9 @@ import Link from "next/link";
 import { Button } from "../components/button";
 import { CloseButton } from "../components/close-button";
 import { useOffcanvas } from "../hooks/offcanvas";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   useOffcanvas();
 
   const links = [
@@ -14,7 +14,7 @@ export default function View() {
   ];
 
   return (
-    <Page title="Offcanvas">
+    <>
       <h1>Offcanvas</h1>
       <Button
         className="btn-primary"
@@ -48,6 +48,10 @@ export default function View() {
           ))}
         </ul>
       </div>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Offcanvas">{page}</Layout>
+);

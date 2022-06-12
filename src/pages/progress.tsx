@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Button } from "../components/button";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   const [isActive, setIsActive] = useState(false);
   const [bar, setBar] = useState(0);
 
@@ -26,7 +26,7 @@ export default function View() {
   }, [isActive, bar]);
 
   return (
-    <Page title="Progress">
+    <>
       <h1>Progress</h1>
       <div className="row">
         <div
@@ -56,6 +56,10 @@ export default function View() {
         />
       </div>
       <div className="font-monospace text-center small">{bar}%</div>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Progress">{page}</Layout>
+);

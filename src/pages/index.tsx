@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   const links = [
     { href: "/alert", text: "Alert" },
     { href: "/collapse", text: "Collapse" },
@@ -16,7 +16,7 @@ export default function View() {
   ];
 
   return (
-    <Page title="">
+    <>
       <nav aria-label="Main navigation">
         <ul className="list-unstyled">
           {links.map((link) => (
@@ -28,6 +28,8 @@ export default function View() {
           ))}
         </ul>
       </nav>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => <Layout title="">{page}</Layout>;

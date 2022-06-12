@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { Pagination } from "../components/pagination";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   const router = useRouter();
 
   const data = ".".repeat(26);
@@ -11,10 +11,14 @@ export default function View() {
   const content = data.slice(0, currentPage);
 
   return (
-    <Page title="Pagination">
+    <>
       <h1>Pagination</h1>
       <p className="text-center">{content}</p>
       <Pagination currentPage={currentPage} pageCount={pageCount} />
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Pagination">{page}</Layout>
+);

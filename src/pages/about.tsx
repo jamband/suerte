@@ -1,10 +1,10 @@
 import { LinkExternal } from "../components/link-external";
 import { APP_NAME } from "../constants/app";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   return (
-    <Page title="About">
+    <>
       <h1>About</h1>
       <p>
         {APP_NAME} is my private playground for{" "}
@@ -19,6 +19,10 @@ export default function View() {
         </LinkExternal>{" "}
         for details.
       </p>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="About">{page}</Layout>
+);

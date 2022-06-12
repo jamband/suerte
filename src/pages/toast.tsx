@@ -1,8 +1,8 @@
 import { Button } from "../components/button";
 import { useNotificationAction } from "../hooks/notification";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   const { setNotification } = useNotificationAction();
 
   const showNotification = () => {
@@ -10,11 +10,15 @@ export default function View() {
   };
 
   return (
-    <Page title="Toast">
+    <>
       <h1>Toast</h1>
       <Button className="btn-primary" onClick={showNotification}>
         Show
       </Button>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Toast">{page}</Layout>
+);

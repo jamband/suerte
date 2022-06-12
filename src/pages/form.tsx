@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Button } from "../components/button";
 import { useFocus } from "../hooks/focus";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   const { focusRef } = useFocus();
 
   const [code, setCode] = useState("");
@@ -42,7 +42,7 @@ export default function View() {
   }, []);
 
   return (
-    <Page title="Form">
+    <>
       <h1>Form</h1>
       <div className="my-3 display-4 text-center">
         <span className="font-monospace">{code}</span>{" "}
@@ -75,6 +75,10 @@ export default function View() {
           </Button>
         </div>
       </fieldset>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Form">{page}</Layout>
+);

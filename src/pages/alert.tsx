@@ -3,13 +3,13 @@ import { Button } from "../components/button";
 import { CloseButton } from "../components/close-button";
 import { APP_NAME } from "../constants/app";
 import { IconInfoCircleFill } from "../icons/info-circle-fill";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   const reload = () => location.reload();
 
   return (
-    <Page title="Alert">
+    <>
       <h1>Alert</h1>
       <div className="text-end">
         <Button className="btn-primary" onClick={reload}>
@@ -23,6 +23,10 @@ export default function View() {
         </span>
         <CloseButton dismiss="alert" />
       </Alert>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Alert">{page}</Layout>
+);

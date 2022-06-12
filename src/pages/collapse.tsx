@@ -1,13 +1,13 @@
 import { Button } from "../components/button";
 import { useCollapse } from "../hooks/collapse";
 import { IconInfoCircleFill } from "../icons/info-circle-fill";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   const { isCollapsed, toggleCollapse } = useCollapse();
 
   return (
-    <Page title="Collapse">
+    <>
       <h1>Collapse</h1>
       <Button
         className="btn-primary btn-sm w-25"
@@ -27,6 +27,10 @@ export default function View() {
           </span>
         </div>
       </div>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Collapse">{page}</Layout>
+);

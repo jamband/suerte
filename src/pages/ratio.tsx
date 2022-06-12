@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Button } from "../components/button";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   const [ratioSelector, setRatioSelector] = useState("");
   const ratioList = ["21:9", "16:9", "4:3", "1:1"];
 
@@ -20,7 +20,7 @@ export default function View() {
   };
 
   return (
-    <Page title="Ratio">
+    <>
       <h1>Ratio</h1>
       <div className="mb-3 row justify-content-center">
         <div
@@ -61,6 +61,10 @@ export default function View() {
           </svg>
         </div>
       )}
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Ratio">{page}</Layout>
+);

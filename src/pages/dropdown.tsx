@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Dropdown } from "../components/dropdown";
 import { DropdownButtonLink } from "../components/dropdown-button-link";
 import { DropdownDivider } from "../components/dropdown-divider";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   const [characters, setCharacters] = useState([""]);
   const [isMatched, setIsMatched] = useState(false);
   const [searchCharacter, setSearchCharacter] = useState("");
@@ -34,7 +34,7 @@ export default function View() {
   }, []);
 
   return (
-    <Page title="Dropdown">
+    <>
       <h1>Dropdown</h1>
       <Dropdown id="dropdownSearchButton" label="Search">
         <DropdownButtonLink onClick={refresh}>Refresh</DropdownButtonLink>
@@ -61,6 +61,10 @@ export default function View() {
           )
         )}
       </div>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Dropdown">{page}</Layout>
+);

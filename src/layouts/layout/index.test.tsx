@@ -2,9 +2,21 @@
 import { render, screen } from "@testing-library/react";
 import { Layout } from ".";
 
+jest.mock("../loading", () => ({
+  Loading: jest.fn(() => null),
+}));
+
+jest.mock("../../components/notification", () => ({
+  Notification: jest.fn(() => null),
+}));
+
+jest.mock("../breadcrumb", () => ({
+  Breadcrumb: jest.fn(() => null),
+}));
+
 test("layouts", () => {
   render(
-    <Layout>
+    <Layout title="">
       <h1>Home</h1>
     </Layout>
   );

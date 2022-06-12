@@ -2,9 +2,9 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../components/button";
 import { useModal } from "../hooks/modal";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   useModal();
 
   const [src, setSrc] = useState("");
@@ -15,7 +15,7 @@ export default function View() {
   };
 
   return (
-    <Page title="Modal">
+    <>
       <h1>Modal</h1>
       {images.map((image) => (
         <Button
@@ -56,6 +56,10 @@ export default function View() {
           )}
         </div>
       </div>
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Modal">{page}</Layout>
+);

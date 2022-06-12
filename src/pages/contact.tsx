@@ -1,9 +1,9 @@
 import { LinkExternal } from "../components/link-external";
-import { Page } from "../layouts/page";
+import { Layout } from "../layouts/layout";
 
-export default function View() {
+export default function Page() {
   return (
-    <Page title="Contact">
+    <>
       <h1>Contact</h1>
       Please to the message via{" "}
       <LinkExternal href="https://twitter.com/livejam_db">
@@ -14,6 +14,10 @@ export default function View() {
         GitHub Issues
       </LinkExternal>
       .
-    </Page>
+    </>
   );
 }
+
+Page.getLayout = (page: React.ReactElement) => (
+  <Layout title="Contact">{page}</Layout>
+);

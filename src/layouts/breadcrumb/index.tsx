@@ -6,14 +6,13 @@ export const Breadcrumb: React.FC<Props> = (props) => {
   const router = useRouter();
 
   const items = () => {
-    const text = props.text.substring(0, props.text.indexOf("·")).trim();
     const links = [{ pathname: "/", text: "Home" }];
 
-    if (text === "") {
+    if (props.text === "") {
       return links;
     }
 
-    links.push({ pathname: router.pathname, text });
+    links.push({ pathname: router.pathname, text: props.text });
     return links;
   };
 
