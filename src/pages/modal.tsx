@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../components/button";
 import { useModal } from "../hooks/modal";
@@ -19,22 +20,19 @@ export default function View() {
       {images.map((image) => (
         <Button
           key={image}
-          className="btn-primary me-2 ps-1 pe-3 py-1 rounded-pill"
+          className="me-2 d-inline-flex items-center btn-primary rounded-pill"
           data-bs-toggle="modal"
           data-bs-target="#modalImage"
           onClick={() => showImage(image)}
         >
-          <img
+          <Image
             src={`/${image}-thumb.jpg`}
-            width="30"
-            height="30"
-            className="me-2 rounded-pill"
+            width={30}
+            height={30}
+            className="rounded-pill"
             alt=""
           />
-          <div
-            className="position-relative d-inline-block"
-            style={{ top: "2px" }}
-          >
+          <div className="position-relative ms-1" style={{ top: "0.15em" }}>
             {image}
           </div>
         </Button>
@@ -47,7 +45,15 @@ export default function View() {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-lg text-center">
-          <img src={src} className="img-fluid rounded" alt="" />
+          {src !== "" && (
+            <Image
+              src={src}
+              width={800}
+              height={533}
+              className="img-fluid rounded"
+              alt=""
+            />
+          )}
         </div>
       </div>
     </Page>
