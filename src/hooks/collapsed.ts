@@ -5,7 +5,9 @@ export const useCollapsed = () => {
 
   const collapsed = () => {
     import("bootstrap/js/dist/collapse").then((module) => {
-      new module.default(collapseRef.current!).hide();
+      if (collapseRef.current) {
+        new module.default(collapseRef.current).hide();
+      }
     });
   };
 

@@ -6,7 +6,9 @@ export const useNotification = () => {
 
   const showNotification = () => {
     import("bootstrap/js/dist/toast").then((module) => {
-      new module.default(notificationRef.current!).show();
+      if (notificationRef.current) {
+        new module.default(notificationRef.current).show();
+      }
     });
   };
 
