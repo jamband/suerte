@@ -2,7 +2,7 @@ import {
   useNotification,
   useNotificationAction,
   useNotificationState,
-} from "~/hooks/notification";
+} from "../../hooks/notification";
 import { Component } from "./component";
 
 export const Notification: React.FC = () => {

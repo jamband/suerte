@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LinkExternal } from "~/components/link-external";
+import { LinkExternal } from "../../components/link-external";
 
 export const Component = () => (
   <div className="d-none d-md-block">

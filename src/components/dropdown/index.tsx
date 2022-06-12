@@ -1,4 +1,4 @@
-import { useDropdown } from "~/hooks/dropdown";
+import { useDropdown } from "../../hooks/dropdown";
 import { Component } from "./component";
 import type { Props } from "./types";
 

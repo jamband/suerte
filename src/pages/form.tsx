@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Button } from "~/components/button";
-import { useFocus } from "~/hooks/focus";
-import { Page } from "~/layouts/page";
+import { Button } from "../components/button";
+import { useFocus } from "../hooks/focus";
+import { Page } from "../layouts/page";
 
 export default function View() {
   const { focusRef } = useFocus();

@@ -1,6 +1,6 @@
 import { Meta, Story } from "@storybook/react";
-import { IconInfoCircleFill } from "~/icons/info-circle-fill";
 import { DropdownButtonLink as Component } from ".";
+import { IconInfoCircleFill } from "../../icons/info-circle-fill";
 import type { Props } from "./types";
 
 export default {

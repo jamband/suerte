@@ -1,10 +1,10 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Notification } from "~/components/notification";
-import { NotificationProvider } from "~/contexts/notification";
-import { Layout } from "~/layouts/layout";
-import { Loading } from "~/layouts/loading";
-import "~/styles/app.scss";
+import { Notification } from "../components/notification";
+import { NotificationProvider } from "../contexts/notification";
+import { Layout } from "../layouts/layout";
+import { Loading } from "../layouts/loading";
+import "../styles/app.scss";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

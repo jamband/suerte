@@ -1,5 +1,5 @@
-import { LinkExternal } from "~/components/link-external";
-import { Page } from "~/layouts/page";
+import { LinkExternal } from "../components/link-external";
+import { Page } from "../layouts/page";
 
 export default function View() {
   return (

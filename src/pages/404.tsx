@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { IconInfoCircleFill } from "~/icons/info-circle-fill";
-import { Page } from "~/layouts/page";
+import { IconInfoCircleFill } from "../icons/info-circle-fill";
+import { Page } from "../layouts/page";
 
 export default function View() {
   return (

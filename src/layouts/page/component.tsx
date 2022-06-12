@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Breadcrumb } from "~/layouts/breadcrumb";
+import { Breadcrumb } from "../breadcrumb";
 import type { _Props } from "./types";
 
 export const Component: React.FC<_Props> = (props) => (

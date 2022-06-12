@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Button } from "~/components/button";
-import { CloseButton } from "~/components/close-button";
-import { useOffcanvas } from "~/hooks/offcanvas";
-import { Page } from "~/layouts/page";
+import { Button } from "../components/button";
+import { CloseButton } from "../components/close-button";
+import { useOffcanvas } from "../hooks/offcanvas";
+import { Page } from "../layouts/page";
 
 export default function View() {
   useOffcanvas();

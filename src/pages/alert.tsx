@@ -1,9 +1,9 @@
-import { Alert } from "~/components/alert";
-import { Button } from "~/components/button";
-import { CloseButton } from "~/components/close-button";
-import { APP_NAME } from "~/constants/app";
-import { IconInfoCircleFill } from "~/icons/info-circle-fill";
-import { Page } from "~/layouts/page";
+import { Alert } from "../components/alert";
+import { Button } from "../components/button";
+import { CloseButton } from "../components/close-button";
+import { APP_NAME } from "../constants/app";
+import { IconInfoCircleFill } from "../icons/info-circle-fill";
+import { Page } from "../layouts/page";
 
 export default function View() {
   const reload = () => location.reload();

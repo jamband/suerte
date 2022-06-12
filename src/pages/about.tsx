@@ -1,6 +1,6 @@
-import { APP_NAME } from "~/constants/app";
-import { LinkExternal } from "~/components/link-external";
-import { Page } from "~/layouts/page";
+import { LinkExternal } from "../components/link-external";
+import { APP_NAME } from "../constants/app";
+import { Page } from "../layouts/page";
 
 export default function View() {
   return (

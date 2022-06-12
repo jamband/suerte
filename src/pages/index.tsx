@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Page } from "~/layouts/page";
+import { Page } from "../layouts/page";
 
 export default function View() {
   const links = [

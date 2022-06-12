@@ -1,4 +1,4 @@
-import { CloseButton } from "~/components/close-button";
+import { CloseButton } from "../close-button";
 import styles from "./styles.module.scss";
 import type { _Props } from "./types";
 

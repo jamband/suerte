@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Button } from "~/components/button";
-import { useModal } from "~/hooks/modal";
-import { Page } from "~/layouts/page";
+import { useState } from "react";
+import { Button } from "../components/button";
+import { useModal } from "../hooks/modal";
+import { Page } from "../layouts/page";
 
 export default function View() {
   useModal();

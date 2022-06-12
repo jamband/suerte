@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { Button } from "~/components/button";
-import { Page } from "~/layouts/page";
+import { useEffect, useState } from "react";
+import { Button } from "../components/button";
+import { Page } from "../layouts/page";
 
 export default function View() {
   const [isActive, setIsActive] = useState(false);

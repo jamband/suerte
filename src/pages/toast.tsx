@@ -1,6 +1,6 @@
-import { Button } from "~/components/button";
-import { useNotificationAction } from "~/hooks/notification";
-import { Page } from "~/layouts/page";
+import { Button } from "../components/button";
+import { useNotificationAction } from "../hooks/notification";
+import { Page } from "../layouts/page";
 
 export default function View() {
   const { setNotification } = useNotificationAction();
