@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 import { Notification } from ".";
 import { StateContext as NotificationStateContext } from "../../contexts/notification";
 

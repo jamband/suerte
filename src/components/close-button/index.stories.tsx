@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 import { CloseButton } from ".";
 import { StateContext as NotificationStateContext } from "../../contexts/notification";
 import { Alert } from "../alert";

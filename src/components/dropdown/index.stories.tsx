@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 import { Dropdown } from ".";
 import { DropdownButtonLink } from "../dropdown-button-link";
 import { DropdownDivider } from "../dropdown-divider";

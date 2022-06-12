@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import type { Meta, Story } from "@storybook/react";
 import { Button } from ".";
 import { IconInfoCircleFill } from "../../icons/info-circle-fill";
 import type { Props } from "./types";
