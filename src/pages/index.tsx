@@ -17,12 +17,13 @@ export default function View() {
 
   return (
     <Page title="">
-      <h1>Home</h1>
       <nav aria-label="Main navigation">
-        <ul className="list-inline">
+        <ul className="list-unstyled">
           {links.map((link) => (
-            <li key={link.href} className="list-inline-item">
-              <Link href={link.href}>{link.text}</Link>
+            <li key={link.href} className="mb-3">
+              <h2>
+                <Link href={link.href}>{link.text}</Link>
+              </h2>
             </li>
           ))}
         </ul>
