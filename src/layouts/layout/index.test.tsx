@@ -6,7 +6,7 @@ jest.mock("../loading", () => ({
   Loading: jest.fn(() => null),
 }));
 
-jest.mock("../../components/notification", () => ({
+jest.mock("../notification", () => ({
   Notification: jest.fn(() => null),
 }));
 

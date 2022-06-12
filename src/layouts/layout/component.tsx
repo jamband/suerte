@@ -1,10 +1,10 @@
 import Head from "next/head";
-import { Notification } from "../../components/notification";
 import { NotificationProvider } from "../../contexts/notification";
 import { Breadcrumb } from "../breadcrumb";
 import { Footer } from "../footer";
 import { Header } from "../header";
 import { Loading } from "../loading";
+import { Notification } from "../notification";
 import { Title } from "../title";
 import type { _Props } from "./types";
 
