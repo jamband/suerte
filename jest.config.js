@@ -8,10 +8,7 @@ const createJestConfig = nextJest({
 /** @type {import("@jest/types").Config.InitialOptions} */
 const customJestConfig = {
   roots: ["<rootDir>/src/"],
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-  moduleNameMapper: {
-    "^~/(.*)$": "<rootDir>/src/$1",
-  },
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 };
 
 module.exports = createJestConfig(customJestConfig);
