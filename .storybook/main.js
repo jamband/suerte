@@ -1,5 +1,3 @@
-const path = require("path");
-
 module.exports = {
   typescript: {
     reactDocgen: false,
@@ -22,12 +20,4 @@ module.exports = {
     },
     "storybook-addon-next-router",
   ],
-  webpackFinal: async (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "~": path.resolve(__dirname, "../src"),
-    };
-
-    return config;
-  },
 };
