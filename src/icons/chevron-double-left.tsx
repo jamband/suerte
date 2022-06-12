@@ -2,7 +2,7 @@ type Props = {
   size?: `${number}em`;
 };
 
-export const IconChevronDoubleLeft: React.VFC<Props> = (props) => (
+export const IconChevronDoubleLeft: React.FC<Props> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={props.size || "1em"}

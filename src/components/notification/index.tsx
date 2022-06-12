@@ -5,7 +5,7 @@ import {
 } from "~/hooks/notification";
 import { Component } from "./component";
 
-export const Notification: React.VFC = () => {
+export const Notification: React.FC = () => {
   const { notificationRef, showNotification } = useNotification();
   const { message } = useNotificationState();
   const { clearNotification } = useNotificationAction();

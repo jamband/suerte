@@ -2,7 +2,7 @@ import { CloseButton } from "~/components/close-button";
 import styles from "./styles.module.scss";
 import type { _Props } from "./types";
 
-export const Component: React.VFC<_Props> = (props) => (
+export const Component: React.FC<_Props> = (props) => (
   <div
     ref={props.notificationRef}
     className={`toast align-items-center ${styles.toast}`}

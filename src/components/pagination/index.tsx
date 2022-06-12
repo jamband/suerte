@@ -4,7 +4,7 @@ import { Component } from "./component";
 import type { Props, Part } from "./types";
 import styles from "./style.module.scss";
 
-export const Pagination: React.VFC<Props> = (props) => {
+export const Pagination: React.FC<Props> = (props) => {
   const router = useRouter();
   const { hasTouchScreen } = useHasTouchScreen();
 

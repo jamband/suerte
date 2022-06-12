@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { APP_NAME } from "~/constants/app";
 
-export const Component: React.VFC = () => (
+export const Component: React.FC = () => (
   <header className="fixed-top py-3 bg-light">
     <div className="container text-center">
       <Link href="/">

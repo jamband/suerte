@@ -2,7 +2,7 @@ type Props = {
   size?: `${number}em`;
 };
 
-export const IconInfoCircleFill: React.VFC<Props> = (props) => (
+export const IconInfoCircleFill: React.FC<Props> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={props.size || "1em"}

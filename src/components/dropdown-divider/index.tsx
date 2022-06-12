@@ -1,5 +1,5 @@
 import { Component } from "./component";
 
-export const DropdownDivider: React.VFC = () => {
+export const DropdownDivider: React.FC = () => {
   return <Component />;
 };

@@ -1,1 +1,1 @@
-export const Component: React.VFC = () => <hr className="dropdown-divider" />;
+export const Component: React.FC = () => <hr className="dropdown-divider" />;

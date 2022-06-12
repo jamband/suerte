@@ -4,7 +4,7 @@ import { Component } from "./component";
 import styles from "./style.module.scss";
 import type { State } from "./types";
 
-export const Loading: React.VFC = () => {
+export const Loading: React.FC = () => {
   const [state, setState] = useState<State>("initial");
   const { events } = useRouter();
 

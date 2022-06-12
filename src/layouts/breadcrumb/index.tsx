@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { Component } from "./component";
 import type { Props } from "./types";
 
-export const Breadcrumb: React.VFC<Props> = (props) => {
+export const Breadcrumb: React.FC<Props> = (props) => {
   const router = useRouter();
 
   const items = () => {

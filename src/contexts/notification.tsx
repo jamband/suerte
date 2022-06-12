@@ -20,7 +20,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const NotificationProvider: React.VFC<Props> = (props) => {
+export const NotificationProvider: React.FC<Props> = (props) => {
   const initialState: State = {
     message: "",
   };
