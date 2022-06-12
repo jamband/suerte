@@ -1,17 +1,17 @@
 import { Meta, Story } from "@storybook/react";
-import { Dropdown as Component } from ".";
+import { Dropdown } from ".";
 import { DropdownButtonLink } from "../dropdown-button-link";
 import { DropdownDivider } from "../dropdown-divider";
 import type { Props } from "./types";
 
 export default {
-  title: `components/${Component.name}`,
+  title: `components/${Dropdown.name}`,
   args: {
-    label: Component.name,
+    label: Dropdown.name,
   },
 } as Meta;
 
-const _: Story<Props> = (args) => <Component {...args} />;
+const _: Story<Props> = (args) => <Dropdown {...args} />;
 
 export const Default = _.bind({});
 

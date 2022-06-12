@@ -1,10 +1,10 @@
 import { Meta, Story } from "@storybook/react";
-import { DropdownDivider as Component } from ".";
+import { DropdownDivider } from ".";
 
 export default {
-  title: `components/${Component.name}`,
+  title: `components/${DropdownDivider.name}`,
 } as Meta;
 
-const _: Story = () => <Component />;
+const _: Story = () => <DropdownDivider />;
 
 export const Default = _.bind({});

@@ -1,12 +1,12 @@
 import { Meta, Story } from "@storybook/react";
-import { Page as Component } from ".";
+import { Page } from ".";
 import type { Props } from "./types";
 
 export default {
-  title: `layouts/${Component.name}`,
+  title: `layouts/${Page.name}`,
 } as Meta;
 
-const _: Story<Props> = (args) => <Component {...args} />;
+const _: Story<Props> = (args) => <Page {...args} />;
 
 export const OnTop = _.bind({});
 OnTop.args = {

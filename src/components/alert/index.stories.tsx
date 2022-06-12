@@ -1,16 +1,16 @@
 import { Meta, Story } from "@storybook/react";
-import { Alert as Component } from ".";
+import { Alert } from ".";
 import { CloseButton } from "../close-button";
 import type { Props } from "./types";
 
 export default {
-  title: `components/${Component.name}`,
+  title: `components/${Alert.name}`,
   args: {
     className: "alert-primary show",
   },
 } as Meta;
 
-const _: Story<Props> = (args) => <Component {...args} />;
+const _: Story<Props> = (args) => <Alert {...args} />;
 
 export const Default = _.bind({});
 Default.args = {

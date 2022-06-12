@@ -1,11 +1,11 @@
 import { Meta, Story } from "@storybook/react";
-import { Loading as Component } from ".";
+import { Loading } from ".";
 
 export default {
-  title: `layouts/${Component.name}`,
+  title: `layouts/${Loading.name}`,
 } as Meta;
 
-const _: Story = (args) => <Component {...args} />;
+const _: Story = (args) => <Loading {...args} />;
 
 export const Default = _.bind({});
 

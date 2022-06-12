@@ -1,12 +1,12 @@
 import { Meta, Story } from "@storybook/react";
-import { CloseButton as Component } from ".";
+import { CloseButton } from ".";
 import { StateContext as NotificationStateContext } from "../../contexts/notification";
 import { Alert } from "../alert";
 import { Notification } from "../notification";
 import type { Props } from "./types";
 
 export default {
-  title: `components/${Component.name}`,
+  title: `components/${CloseButton.name}`,
   argTypes: {
     onClick: {
       action: "clicked",
@@ -24,7 +24,7 @@ export default {
   },
 } as Meta;
 
-const _: Story<Props> = (args) => <Component {...args} />;
+const _: Story<Props> = (args) => <CloseButton {...args} />;
 
 export const Default = _.bind({});
 

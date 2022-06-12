@@ -1,15 +1,15 @@
 import { Meta, Story } from "@storybook/react";
-import { LinkExternal as Component } from ".";
+import { LinkExternal } from ".";
 import type { Props } from "./types";
 
 export default {
-  title: `components/${Component.name}`,
+  title: `components/${LinkExternal.name}`,
   args: {
     href: "https://github.com/jamband/suerte",
   },
 } as Meta;
 
-const _: Story<Props> = (args) => <Component {...args} />;
+const _: Story<Props> = (args) => <LinkExternal {...args} />;
 
 export const Default = _.bind({});
 Default.args = {

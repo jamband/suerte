@@ -1,10 +1,10 @@
 import { Meta, Story } from "@storybook/react";
-import { Footer as Component } from ".";
+import { Footer } from ".";
 
 export default {
-  title: `layouts/${Component.name}`,
+  title: `layouts/${Footer.name}`,
 } as Meta;
 
-const _: Story = (args) => <Component {...args} />;
+const _: Story = (args) => <Footer {...args} />;
 
 export const Default = _.bind({});

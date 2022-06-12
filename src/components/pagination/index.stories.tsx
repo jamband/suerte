@@ -1,12 +1,12 @@
 import { Meta, Story } from "@storybook/react";
-import { Pagination as Component } from ".";
+import { Pagination } from ".";
 import type { Props } from "./types";
 
 export default {
-  title: `components/${Component.name}`,
+  title: `components/${Pagination.name}`,
 } as Meta;
 
-const _: Story<Props> = (args) => <Component {...args} />;
+const _: Story<Props> = (args) => <Pagination {...args} />;
 
 export const Default = _.bind({});
 Default.args = {

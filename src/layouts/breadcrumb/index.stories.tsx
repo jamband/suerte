@@ -1,12 +1,12 @@
 import { Meta, Story } from "@storybook/react";
-import { Breadcrumb as Component } from ".";
+import { Breadcrumb } from ".";
 import type { Props } from "./types";
 
 export default {
-  title: `layouts/${Component.name}`,
+  title: `layouts/${Breadcrumb.name}`,
 } as Meta;
 
-const _: Story<Props> = (args) => <Component {...args} />;
+const _: Story<Props> = (args) => <Breadcrumb {...args} />;
 
 export const OnTopPage = _.bind({});
 OnTopPage.args = {
