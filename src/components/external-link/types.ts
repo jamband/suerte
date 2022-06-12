@@ -1,4 +1,6 @@
-export type Props = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+export type Props = {
+  href: string;
+  className?: string;
   children: React.ReactNode;
 };
 

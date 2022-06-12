@@ -15,9 +15,3 @@ export const Default = _.bind({});
 Default.args = {
   children: "foo",
 };
-
-export const WithSomeAttributes = _.bind({});
-WithSomeAttributes.args = {
-  children: "foo",
-  rel: "author",
-};

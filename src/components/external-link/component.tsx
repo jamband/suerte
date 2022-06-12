@@ -1,8 +1,12 @@
 import type { _Props } from "./types";
 
-/* eslint-disable react/jsx-no-target-blank */
 export const Component: React.FC<_Props> = (props) => (
-  <a href={props.href} rel={props.rel} {...props} target="_blank">
+  <a
+    href={props.href}
+    className={props.className}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
     {props.children}
   </a>
 );
