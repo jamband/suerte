@@ -41,8 +41,8 @@ export default function View() {
               key={link.href}
               data-bs-dismiss="offcanvas"
             >
-              <Link href={link.href}>
-                <a className="nav-link">{link.text}</a>
+              <Link href={link.href} className="nav-link">
+                {link.text}
               </Link>
             </li>
           ))}

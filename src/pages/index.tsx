@@ -22,9 +22,7 @@ export default function View() {
         <ul className="list-inline">
           {links.map((link) => (
             <li key={link.href} className="list-inline-item">
-              <Link href={link.href}>
-                <a>{link.text}</a>
-              </Link>
+              <Link href={link.href}>{link.text}</Link>
             </li>
           ))}
         </ul>

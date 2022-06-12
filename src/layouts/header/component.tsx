@@ -4,8 +4,8 @@ import { APP_NAME } from "../../constants/app";
 export const Component: React.FC = () => (
   <header className="fixed-top py-3 bg-light">
     <div className="container text-center">
-      <Link href="/">
-        <a className="px-3 py-2 text-decoration-none">{APP_NAME}</a>
+      <Link href="/" className="px-3 py-2 text-decoration-none">
+        {APP_NAME}
       </Link>
     </div>
   </header>
