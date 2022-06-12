@@ -10,7 +10,7 @@ const _: Story<Props> = (args) => <Breadcrumb {...args} />;
 
 export const OnTopPage = _.bind({});
 OnTopPage.args = {
-  text: "App",
+  text: "",
 };
 OnTopPage.parameters = {
   nextRouter: {
@@ -20,7 +20,7 @@ OnTopPage.parameters = {
 
 export const OnFooPage = _.bind({});
 OnFooPage.args = {
-  text: "Foo · App",
+  text: "Foo",
 };
 OnFooPage.parameters = {
   nextRouter: {

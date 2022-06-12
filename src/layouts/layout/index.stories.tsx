@@ -10,5 +10,6 @@ const _: Story<Props> = (args) => <Layout {...args} />;
 
 export const Default = _.bind({});
 Default.args = {
+  title: "",
   children: <h1>Foo</h1>,
 };
