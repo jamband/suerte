@@ -1,4 +1,4 @@
-import { LinkExternal } from "../components/link-external";
+import { ExternalLink } from "../components/external-link";
 import { Layout } from "../layouts/layout";
 
 export default function Page() {
@@ -6,13 +6,13 @@ export default function Page() {
     <>
       <h1>Contact</h1>
       Please to the message via{" "}
-      <LinkExternal href="https://twitter.com/livejam_db">
+      <ExternalLink href="https://twitter.com/livejam_db">
         Twitter
-      </LinkExternal>{" "}
+      </ExternalLink>{" "}
       or{" "}
-      <LinkExternal href="https://github.com/jamband/suerte/issues">
+      <ExternalLink href="https://github.com/jamband/suerte/issues">
         GitHub Issues
-      </LinkExternal>
+      </ExternalLink>
       .
     </>
   );

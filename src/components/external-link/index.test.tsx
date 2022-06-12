@@ -1,9 +1,9 @@
 /** @jest-environment jsdom */
 import { render, screen } from "@testing-library/react";
-import { LinkExternal } from ".";
+import { ExternalLink } from ".";
 
 test("minimal", () => {
-  render(<LinkExternal href="https://example.com">foo</LinkExternal>);
+  render(<ExternalLink href="https://example.com">foo</ExternalLink>);
 
   const link = screen.getByRole("link");
   expect(link).toBeInTheDocument();
@@ -14,9 +14,9 @@ test("minimal", () => {
 
 test("rel: author", () => {
   render(
-    <LinkExternal href="https://example.com" rel="author">
+    <ExternalLink href="https://example.com" rel="author">
       foo
-    </LinkExternal>
+    </ExternalLink>
   );
 
   const link = screen.getByRole("link");

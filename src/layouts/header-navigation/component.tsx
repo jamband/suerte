@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LinkExternal } from "../../components/link-external";
+import { ExternalLink } from "../../components/external-link";
 
 export const Component = () => (
   <div className="d-none d-md-block">
@@ -15,12 +15,12 @@ export const Component = () => (
         </Link>
       </li>
       <li className="nav-item">
-        <LinkExternal
+        <ExternalLink
           className="nav-link"
           href="https://github.com/jamband/suerte"
         >
           GitHub
-        </LinkExternal>
+        </ExternalLink>
       </li>
     </ul>
   </div>
