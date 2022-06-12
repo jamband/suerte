@@ -9,7 +9,7 @@ export default function Page() {
   const reload = () => location.reload();
 
   return (
-    <>
+    <div>
       <h1>Alert</h1>
       <div className="text-end">
         <Button className="btn-primary" onClick={reload}>
@@ -25,7 +25,7 @@ export default function Page() {
         </span>
         <CloseButton dismiss="alert" />
       </Alert>
-    </>
+    </div>
   );
 }
 
