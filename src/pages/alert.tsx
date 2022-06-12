@@ -12,7 +12,7 @@ export default function Page() {
     <div>
       <h1>Alert</h1>
       <div className="text-end">
-        <Button className="btn-primary" onClick={reload}>
+        <Button type="button" className="btn-primary" onClick={reload}>
           Reload
         </Button>
       </div>

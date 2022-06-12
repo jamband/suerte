@@ -14,12 +14,14 @@ const _: Story<Props> = (args) => <Button {...args} />;
 
 export const Default = _.bind({});
 Default.args = {
+  type: "button",
   className: "btn-primary",
   children: "foo",
 };
 
 export const Sizings = _.bind({});
 Sizings.args = {
+  type: "button",
   className: "btn-primary",
   children: "foo",
 };
@@ -38,12 +40,14 @@ Sizings.argTypes = {
 
 export const Link = _.bind({});
 Link.args = {
+  type: "button",
   className: "btn-link",
   children: "foo",
 };
 
 export const WithIcon = _.bind({});
 WithIcon.args = {
+  type: "button",
   className: "btn-primary",
   children: (
     <>
@@ -57,6 +61,7 @@ WithIcon.args = {
 
 export const Disabled = _.bind({});
 Disabled.args = {
+  type: "button",
   className: "btn-primary",
   disabled: true,
   children: "foo",

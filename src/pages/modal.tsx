@@ -20,6 +20,7 @@ export default function Page() {
       {images.map((image) => (
         <Button
           key={image}
+          type="button"
           className="me-2 d-inline-flex items-center btn-primary rounded-pill"
           data-bs-toggle="modal"
           data-bs-target="#modalImage"

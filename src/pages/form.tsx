@@ -46,7 +46,7 @@ export default function Page() {
       <h1>Form</h1>
       <div className="my-3 display-4 text-center">
         <span className="font-monospace">{code}</span>{" "}
-        <Button className="btn-link" onClick={refreshCode}>
+        <Button type="button" className="btn-link" onClick={refreshCode}>
           Refresh
         </Button>
       </div>
@@ -70,7 +70,7 @@ export default function Page() {
             <div className="invalid-feedback">{error}</div>
             <div className="valid-feedback">Looks Good!</div>
           </div>
-          <Button className="btn-primary" onClick={submit}>
+          <Button type="button" className="btn-primary" onClick={submit}>
             Submit
           </Button>
         </div>

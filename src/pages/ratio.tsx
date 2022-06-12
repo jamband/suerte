@@ -31,6 +31,7 @@ export default function Page() {
           {ratioList.map((ratio) => (
             <Button
               key={ratio}
+              type="button"
               aria-label={ratio}
               className="btn-primary font-monospace"
               onClick={() => handleRatioSelector(ratio)}

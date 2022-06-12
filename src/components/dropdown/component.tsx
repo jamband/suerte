@@ -5,6 +5,7 @@ import type { _Props } from "./types";
 export const Component: React.FC<_Props> = (props) => (
   <div className="btn-group">
     <Button
+      type="button"
       id={props.id}
       className={props.className}
       data-bs-toggle="dropdown"

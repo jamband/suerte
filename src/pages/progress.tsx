@@ -35,12 +35,13 @@ export default function Page() {
           aria-label="Progress"
         >
           <Button
+            type="button"
             className="btn-primary w-25"
             onClick={() => setIsActive(!isActive)}
           >
             {isActive ? "Pause" : "Start"}
           </Button>
-          <Button className="btn-primary w-25" onClick={clear}>
+          <Button type="button" className="btn-primary w-25" onClick={clear}>
             Clear
           </Button>
         </div>

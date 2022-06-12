@@ -10,6 +10,7 @@ export default function Page() {
     <>
       <h1>Collapse</h1>
       <Button
+        type="button"
         className="btn-primary btn-sm w-25"
         data-bs-toggle="collapse"
         data-bs-target="#collapseExample"

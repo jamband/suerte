@@ -6,6 +6,7 @@ import type { _Props } from "./types";
 export const Component: React.FC<_Props> = (props) => (
   <>
     <Button
+      type="button"
       className="navbar-toggler"
       data-bs-toggle="collapse"
       data-bs-target="#navbar"

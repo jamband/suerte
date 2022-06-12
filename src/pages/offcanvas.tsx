@@ -17,6 +17,7 @@ export default function Page() {
     <>
       <h1>Offcanvas</h1>
       <Button
+        type="button"
         className="btn-primary"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasExample"

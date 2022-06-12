@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <h1>Toast</h1>
-      <Button className="btn-primary" onClick={showNotification}>
+      <Button type="button" className="btn-primary" onClick={showNotification}>
         Show
       </Button>
     </>
