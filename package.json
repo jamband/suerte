@@ -10,8 +10,8 @@
     "test": "jest -i",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "clear": "rm -rf .next",
-    "clean": "rm -rf .next node_modules storybook-static tsconfig.tsbuildinfo"
+    "clear": "node scripts/clear.mjs",
+    "clean": "node scripts/clean.mjs"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.5",
