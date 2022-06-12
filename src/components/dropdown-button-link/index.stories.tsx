@@ -23,7 +23,10 @@ export const WithIcon = _.bind({});
 WithIcon.args = {
   children: (
     <>
-      <IconInfoCircleFill /> foo
+      <IconInfoCircleFill
+        style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
+      />{" "}
+      foo
     </>
   ),
 };

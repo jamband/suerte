@@ -18,7 +18,9 @@ export const Component: React.FC<_Props> = (props) => (
           aria-disabled={props.disabled("first")}
           onClickCapture={props.blur}
         >
-          <IconChevronDoubleLeft size="0.8em" />
+          <IconChevronDoubleLeft
+            style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
+          />
         </Link>
       </li>
       <li className={props.itemClass("previous")}>
@@ -30,7 +32,9 @@ export const Component: React.FC<_Props> = (props) => (
           aria-disabled={props.disabled("previous")}
           onClickCapture={props.blur}
         >
-          <IconChevronLeft size="0.8em" />
+          <IconChevronLeft
+            style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
+          />
         </Link>
       </li>
       <li className={props.itemClass("next")}>
@@ -42,7 +46,9 @@ export const Component: React.FC<_Props> = (props) => (
           aria-disabled={props.disabled("next")}
           onClickCapture={props.blur}
         >
-          <IconChevronRight size="0.8em" />
+          <IconChevronRight
+            style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
+          />
         </Link>
       </li>
       <li className={props.itemClass("last")}>
@@ -54,7 +60,9 @@ export const Component: React.FC<_Props> = (props) => (
           aria-disabled={props.disabled("last")}
           onClickCapture={props.blur}
         >
-          <IconChevronDoubleRight size="0.8em" />
+          <IconChevronDoubleRight
+            style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
+          />
         </Link>
       </li>
     </ul>

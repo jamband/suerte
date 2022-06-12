@@ -11,7 +11,9 @@ export const Component: React.FC<_Props> = (props) => (
       aria-expanded={false}
     >
       <span className="pe-1">{props.label}</span>
-      <IconChevronDown size="0.8em" />
+      <IconChevronDown
+        style={{ height: "0.75em", width: "0.75em", verticalAlign: "0em" }}
+      />
     </Button>
     <div className="dropdown-menu shadow-sm" aria-labelledby={props.id}>
       {props.children}

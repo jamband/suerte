@@ -47,8 +47,10 @@ WithIcon.args = {
   className: "btn-primary",
   children: (
     <>
-      <IconInfoCircleFill />
-      <span className="ps-2">foo</span>
+      <IconInfoCircleFill
+        style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
+      />
+      <span className="ms-2">foo</span>
     </>
   ),
 };

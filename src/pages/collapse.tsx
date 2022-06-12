@@ -21,8 +21,10 @@ export default function Page() {
       </Button>
       <div id="collapseExample" className="collapse mt-3">
         <div className="p-3 shadow-sm bg-light rounded">
-          <IconInfoCircleFill />
-          <span className="ps-1">
+          <IconInfoCircleFill
+            style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
+          />
+          <span className="ms-1">
             Toggle the visibility of content across your project.
           </span>
         </div>
