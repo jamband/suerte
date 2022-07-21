@@ -32,22 +32,23 @@ export default function Page() {
         aria-labelledby="offcanvasExampleLabel"
       >
         <div className="offcanvas-header">
-          <h5 id="offcanvasExampleLabel">Pages</h5>
+          <h5 id="offcanvasExampleLabel" className="offcanvas-title">
+            Pages
+          </h5>
           <CloseButton className="text-reset" dismiss="offcanvas" />
         </div>
-        <ul className="list-unstyled">
+        <div className="list-group list-group-flush">
           {links.map((link) => (
-            <li
-              className="nav-item"
-              key={link.href}
-              data-bs-dismiss="offcanvas"
-            >
-              <Link href={link.href} className="nav-link">
+            <div key={link.href} data-bs-dismiss="offcanvas">
+              <Link
+                href={link.href}
+                className="list-group-item list-group-item-action"
+              >
                 {link.text}
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </>
   );

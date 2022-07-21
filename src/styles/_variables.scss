@@ -111,10 +111,12 @@ $toast-box-shadow:                  $box-shadow-sm;
 $modal-backdrop-bg:                 $primary;
 $modal-backdrop-opacity:            0.4;
 
+// List group
+$list-group-border-color:           none;
+
 // Breadcrumbs
 $breadcrumb-divider-color:          color.scale($primary, $lightness: 50%);
 $breadcrumb-active-color:           $breadcrumb-divider-color;
 
 // Offcanvas
 $offcanvas-border-width:            0;
-$offcanvas-bg-color:                $light;

@@ -36,7 +36,11 @@ export default function Page() {
   return (
     <>
       <h1>Dropdown</h1>
-      <Dropdown id="dropdownSearchButton" label="Search">
+      <Dropdown
+        id="dropdownSearchButton"
+        label="Search"
+        className="btn btn-primary"
+      >
         <DropdownButtonLink onClick={refresh}>Refresh</DropdownButtonLink>
         <DropdownDivider />
         {["A", "B", "C"].map((character, index) => (

@@ -24,7 +24,7 @@ export default function Page() {
       <h1>Ratio</h1>
       <div className="mb-3 row justify-content-center">
         <div
-          className="btn btn-group btn-group-sm col-8"
+          className="w-100 btn-group btn-group-sm col-8"
           role="group"
           aria-label="Aspect ratio list"
         >
