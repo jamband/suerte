@@ -9,7 +9,9 @@ export default function Page() {
       <IconInfoCircleFill />
       <span className="ps-1">Page not fonud.</span>
       <div className="mt-5 text-center">
-        <Link href="/">Back to Home</Link>
+        <Link href="/">
+          <a>Back to Home</a>
+        </Link>
       </div>
     </>
   );

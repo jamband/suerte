@@ -5,13 +5,13 @@ export const Component = () => (
   <div className="d-none d-md-block">
     <ul className="navbar-nav ms-auto">
       <li className="nav-item">
-        <Link href="/contact" className="nav-link">
-          Contact
+        <Link href="/contact">
+          <a className="nav-link">Contact</a>
         </Link>
       </li>
       <li className="nav-item">
-        <Link href="/about" className="nav-link">
-          About
+        <Link href="/about">
+          <a className="nav-link">About</a>
         </Link>
       </li>
       <li className="nav-item">

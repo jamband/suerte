@@ -40,11 +40,10 @@ export default function Page() {
         <div className="list-group list-group-flush">
           {links.map((link) => (
             <div key={link.href} data-bs-dismiss="offcanvas">
-              <Link
-                href={link.href}
-                className="list-group-item list-group-item-action"
-              >
-                {link.text}
+              <Link href={link.href}>
+                <a className="list-group-item list-group-item-action">
+                  {link.text}
+                </a>
               </Link>
             </div>
           ))}

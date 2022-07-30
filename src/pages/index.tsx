@@ -22,7 +22,9 @@ export default function Page() {
           {links.map((link) => (
             <li key={link.href} className="mb-3">
               <h2>
-                <Link href={link.href}>{link.text}</Link>
+                <Link href={link.href}>
+                  <a>{link.text}</a>
+                </Link>
               </h2>
             </li>
           ))}

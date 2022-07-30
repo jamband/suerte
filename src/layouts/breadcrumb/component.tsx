@@ -15,7 +15,9 @@ export const Component: React.FC<_Props> = (props) => (
           {props.isCurrent(item.pathname) ? (
             item.text
           ) : (
-            <Link href={item.pathname}>{item.text}</Link>
+            <Link href={item.pathname}>
+              <a>{item.text}</a>
+            </Link>
           )}
         </li>
       ))}
