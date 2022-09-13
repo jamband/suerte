@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "../../components/button";
-import { ExternalLink } from "../../components/external-link";
+import { Button } from "~/components/button";
+import { ExternalLink } from "~/components/external-link";
 import type { _Props } from "./types";
 
 export const Component: React.FC<_Props> = (props) => (

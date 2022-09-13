@@ -1,5 +1,5 @@
 import { useCallback, useContext, useRef } from "react";
-import { DispatchContext, StateContext } from "../contexts/notification";
+import { DispatchContext, StateContext } from "~/contexts/notification";
 
 export const useNotification = () => {
   const notificationRef = useRef<HTMLDivElement>(null);

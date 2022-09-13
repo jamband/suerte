@@ -1,6 +1,6 @@
 /** @jest-environment jsdom */
 import { act, renderHook } from "@testing-library/react";
-import { NotificationProvider } from "../contexts/notification";
+import { NotificationProvider } from "~/contexts/notification";
 import { useNotificationAction, useNotificationState } from "./notification";
 
 const wrapper = ({ children }: { children: React.ReactNode }) => (

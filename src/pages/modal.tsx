@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
-import { Button } from "../components/button";
-import { useModal } from "../hooks/modal";
-import { Layout } from "../layouts/layout";
+import { Button } from "~/components/button";
+import { useModal } from "~/hooks/modal";
+import { Layout } from "~/layouts/layout";
 
 export default function Page() {
   useModal();

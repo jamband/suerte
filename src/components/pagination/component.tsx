@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { IconChevronDoubleLeft } from "../../icons/chevron-double-left";
-import { IconChevronDoubleRight } from "../../icons/chevron-double-right";
-import { IconChevronLeft } from "../../icons/chevron-left";
-import { IconChevronRight } from "../../icons/chevron-right";
+import { IconChevronDoubleLeft } from "~/icons/chevron-double-left";
+import { IconChevronDoubleRight } from "~/icons/chevron-double-right";
+import { IconChevronLeft } from "~/icons/chevron-left";
+import { IconChevronRight } from "~/icons/chevron-right";
 import styles from "./style.module.scss";
 import type { _Props } from "./types";
 

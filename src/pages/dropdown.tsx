@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Dropdown } from "../components/dropdown";
-import { DropdownButtonLink } from "../components/dropdown-button-link";
-import { DropdownDivider } from "../components/dropdown-divider";
-import { Layout } from "../layouts/layout";
+import { Dropdown } from "~/components/dropdown";
+import { DropdownButtonLink } from "~/components/dropdown-button-link";
+import { DropdownDivider } from "~/components/dropdown-divider";
+import { Layout } from "~/layouts/layout";
 
 export default function Page() {
   const [characters, setCharacters] = useState([""]);

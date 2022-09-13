@@ -1,4 +1,4 @@
-import { useAlert } from "../../hooks/alert";
+import { useAlert } from "~/hooks/alert";
 import { Component } from "./component";
 import type { Props } from "./types";
 

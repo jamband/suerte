@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useHasTouchScreen } from "../../hooks/screen";
+import { useHasTouchScreen } from "~/hooks/screen";
 import { Component } from "./component";
 import styles from "./style.module.scss";
 import type { Part, Props } from "./types";

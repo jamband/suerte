@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import { Pagination } from "../components/pagination";
-import { Layout } from "../layouts/layout";
+import { Pagination } from "~/components/pagination";
+import { Layout } from "~/layouts/layout";
 
 export default function Page() {
   const router = useRouter();

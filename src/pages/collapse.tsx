@@ -1,7 +1,7 @@
-import { Button } from "../components/button";
-import { useCollapse } from "../hooks/collapse";
-import { IconInfoCircleFill } from "../icons/info-circle-fill";
-import { Layout } from "../layouts/layout";
+import { Button } from "~/components/button";
+import { useCollapse } from "~/hooks/collapse";
+import { IconInfoCircleFill } from "~/icons/info-circle-fill";
+import { Layout } from "~/layouts/layout";
 
 export default function Page() {
   const { isCollapsed, toggleCollapse } = useCollapse();

@@ -1,6 +1,6 @@
 import type { Meta, Story } from "@storybook/react";
+import { StateContext as NotificationStateContext } from "~/contexts/notification";
 import { Notification } from ".";
-import { StateContext as NotificationStateContext } from "../../contexts/notification";
 
 export default {
   title: `components/${Notification.name}`,

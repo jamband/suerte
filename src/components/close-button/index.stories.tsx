@@ -1,7 +1,7 @@
 import type { Meta, Story } from "@storybook/react";
+import { StateContext as NotificationStateContext } from "~/contexts/notification";
+import { Notification } from "~/layouts/notification";
 import { CloseButton } from ".";
-import { StateContext as NotificationStateContext } from "../../contexts/notification";
-import { Notification } from "../../layouts/notification";
 import { Alert } from "../alert";
 import type { Props } from "./types";
 

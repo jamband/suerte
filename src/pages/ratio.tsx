@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Button } from "../components/button";
-import { Layout } from "../layouts/layout";
+import { Button } from "~/components/button";
+import { Layout } from "~/layouts/layout";
 
 export default function Page() {
   const [ratioSelector, setRatioSelector] = useState("");

@@ -1,6 +1,6 @@
-import { ExternalLink } from "../components/external-link";
-import { APP_NAME } from "../constants/app";
-import { Layout } from "../layouts/layout";
+import { ExternalLink } from "~/components/external-link";
+import { APP_NAME } from "~/constants/app";
+import { Layout } from "~/layouts/layout";
 
 export default function Page() {
   return (

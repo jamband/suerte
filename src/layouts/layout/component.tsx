@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { NotificationProvider } from "../../contexts/notification";
+import { NotificationProvider } from "~/contexts/notification";
 import { Breadcrumb } from "../breadcrumb";
 import { Footer } from "../footer";
 import { Header } from "../header";

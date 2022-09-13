@@ -1,4 +1,4 @@
-import { useCollapsed } from "../../hooks/collapsed";
+import { useCollapsed } from "~/hooks/collapsed";
 import { Component } from "./component";
 
 export const HeaderToggleNavigation: React.FC = () => {

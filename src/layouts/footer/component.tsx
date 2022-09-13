@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ExternalLink } from "../../components/external-link";
+import { ExternalLink } from "~/components/external-link";
 import styles from "./style.module.scss";
 
 export const Component: React.FC = () => (

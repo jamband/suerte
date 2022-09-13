@@ -1,5 +1,5 @@
-import { ExternalLink } from "../components/external-link";
-import { Layout } from "../layouts/layout";
+import { ExternalLink } from "~/components/external-link";
+import { Layout } from "~/layouts/layout";
 
 export default function Page() {
   return (
