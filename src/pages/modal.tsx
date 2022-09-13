@@ -3,8 +3,9 @@ import { useState } from "react";
 import { Button } from "~/components/button";
 import { useModal } from "~/hooks/modal";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   useModal();
 
   const [src, setSrc] = useState("");
@@ -59,8 +60,8 @@ export default function Page() {
       </div>
     </>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => (
-  <Layout title="Modal">{page}</Layout>
-);
+Page.getLayout = (page) => <Layout title="Modal">{page}</Layout>;
+
+export default Page;

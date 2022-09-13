@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { Button } from "~/components/button";
 import { useFocus } from "~/hooks/focus";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   const { focusRef } = useFocus();
 
   const [code, setCode] = useState("");
@@ -77,8 +78,8 @@ export default function Page() {
       </fieldset>
     </>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => (
-  <Layout title="Form">{page}</Layout>
-);
+Page.getLayout = (page) => <Layout title="Form">{page}</Layout>;
+
+export default Page;

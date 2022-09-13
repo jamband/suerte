@@ -1,8 +1,9 @@
 import { Button } from "~/components/button";
 import { useNotificationAction } from "~/hooks/notification";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   const { setNotification } = useNotificationAction();
 
   const showNotification = () => {
@@ -17,8 +18,8 @@ export default function Page() {
       </Button>
     </>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => (
-  <Layout title="Toast">{page}</Layout>
-);
+Page.getLayout = (page) => <Layout title="Toast">{page}</Layout>;
+
+export default Page;

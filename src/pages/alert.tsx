@@ -4,8 +4,9 @@ import { CloseButton } from "~/components/close-button";
 import { APP_NAME } from "~/constants/app";
 import { IconInfoCircleFill } from "~/icons/info-circle-fill";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   const reload = () => location.reload();
 
   return (
@@ -27,8 +28,8 @@ export default function Page() {
       </Alert>
     </div>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => (
-  <Layout title="Alert">{page}</Layout>
-);
+Page.getLayout = (page) => <Layout title="Alert">{page}</Layout>;
+
+export default Page;

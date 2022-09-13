@@ -1,8 +1,9 @@
 import { useRouter } from "next/router";
 import { Pagination } from "~/components/pagination";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   const router = useRouter();
 
   const data = ".".repeat(26);
@@ -17,8 +18,8 @@ export default function Page() {
       <Pagination currentPage={currentPage} pageCount={pageCount} />
     </>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => (
-  <Layout title="Pagination">{page}</Layout>
-);
+Page.getLayout = (page) => <Layout title="Pagination">{page}</Layout>;
+
+export default Page;

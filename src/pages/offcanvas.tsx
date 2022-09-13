@@ -3,8 +3,9 @@ import { Button } from "~/components/button";
 import { CloseButton } from "~/components/close-button";
 import { useOffcanvas } from "~/hooks/offcanvas";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   useOffcanvas();
 
   const links = [
@@ -51,8 +52,8 @@ export default function Page() {
       </div>
     </>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => (
-  <Layout title="Offcanvas">{page}</Layout>
-);
+Page.getLayout = (page) => <Layout title="Offcanvas">{page}</Layout>;
+
+export default Page;

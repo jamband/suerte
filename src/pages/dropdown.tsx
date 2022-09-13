@@ -3,8 +3,9 @@ import { Dropdown } from "~/components/dropdown";
 import { DropdownButtonLink } from "~/components/dropdown-button-link";
 import { DropdownDivider } from "~/components/dropdown-divider";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   const [characters, setCharacters] = useState([""]);
   const [isMatched, setIsMatched] = useState(false);
   const [searchCharacter, setSearchCharacter] = useState("");
@@ -67,8 +68,8 @@ export default function Page() {
       </div>
     </>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => (
-  <Layout title="Dropdown">{page}</Layout>
-);
+Page.getLayout = (page) => <Layout title="Dropdown">{page}</Layout>;
+
+export default Page;

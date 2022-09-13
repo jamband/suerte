@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Button } from "~/components/button";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   const [ratioSelector, setRatioSelector] = useState("");
   const ratioList = ["21:9", "16:9", "4:3", "1:1"];
 
@@ -64,8 +65,8 @@ export default function Page() {
       )}
     </>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => (
-  <Layout title="Ratio">{page}</Layout>
-);
+Page.getLayout = (page) => <Layout title="Ratio">{page}</Layout>;
+
+export default Page;

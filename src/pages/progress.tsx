@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Button } from "~/components/button";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   const [isActive, setIsActive] = useState(false);
   const [bar, setBar] = useState(0);
 
@@ -59,8 +60,8 @@ export default function Page() {
       <div className="font-monospace text-center small">{bar}%</div>
     </>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => (
-  <Layout title="Progress">{page}</Layout>
-);
+Page.getLayout = (page) => <Layout title="Progress">{page}</Layout>;
+
+export default Page;

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Layout } from "~/layouts/layout";
+import type { PageComponent } from "./_app";
 
-export default function Page() {
+const Page: PageComponent = () => {
   const links = [
     { href: "/alert", text: "Alert" },
     { href: "/collapse", text: "Collapse" },
@@ -32,6 +33,8 @@ export default function Page() {
       </nav>
     </>
   );
-}
+};
 
-Page.getLayout = (page: React.ReactElement) => <Layout title="">{page}</Layout>;
+Page.getLayout = (page) => <Layout title="">{page}</Layout>;
+
+export default Page;
