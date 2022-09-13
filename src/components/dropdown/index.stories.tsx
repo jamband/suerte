@@ -11,7 +11,9 @@ export default {
   },
 } as Meta;
 
-const _: Story<Props> = (args) => <Dropdown {...args} />;
+const _: Story<Props> = (args) => (
+  <Dropdown {...args} className="btn btn-primary" />
+);
 
 export const Default = _.bind({});
 
