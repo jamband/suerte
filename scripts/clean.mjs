@@ -7,6 +7,7 @@ const options = {
 };
 
 rmSync(".next", options);
+rmSync(".swc", options);
 rmSync("node_modules", options);
 rmSync("storybook-static", options);
 rmSync("tsconfig.tsbuildinfo", options);

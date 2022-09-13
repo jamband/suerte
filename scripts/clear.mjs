@@ -7,3 +7,4 @@ const options = {
 };
 
 rmSync(".next", options);
+rmSync(".swc", options);
