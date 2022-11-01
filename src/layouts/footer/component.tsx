@@ -7,13 +7,13 @@ export const Component: React.FC = () => (
     <nav className={styles.contents} aria-label="Footer navigation">
       <ul className="list-inline m-0">
         <li className="list-inline-item">
-          <Link href="/about">
-            <a className="px-3 py-2">About</a>
+          <Link href="/about" className="px-3 py-2">
+            About
           </Link>
         </li>
         <li className="list-inline-item">
-          <Link href="/contact">
-            <a className="px-3 py-2">Contact</a>
+          <Link href="/contact" className="px-3 py-2">
+            Contact
           </Link>
         </li>
         <li className="list-inline-item">

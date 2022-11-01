@@ -10,9 +10,7 @@ const Page: PageComponent = () => {
       <IconInfoCircleFill />
       <span className="ps-1">Page not fonud.</span>
       <div className="mt-5 text-center">
-        <Link href="/">
-          <a>Back to Home</a>
-        </Link>
+        <Link href="/">Back to Home</Link>
       </div>
     </>
   );

@@ -27,13 +27,13 @@ export const Component: React.FC<_Props> = (props) => (
         role="presentation"
       >
         <li className="nav-item">
-          <Link href="/contact">
-            <a className="nav-link">Contact</a>
+          <Link href="/contact" className="nav-link">
+            Contact
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/about">
-            <a className="nav-link">About</a>
+          <Link href="/about" className="nav-link">
+            About
           </Link>
         </li>
         <li className="nav-item">
