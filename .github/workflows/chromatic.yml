@@ -1,18 +1,21 @@
-name: "Chromatic"
+name: chromatic
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  chromatic-deployment:
+  deploy:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Install dependencies
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install dependencies
         run: yarn
-      - name: Publish to Chromatic
+
+      - name: publish to chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
