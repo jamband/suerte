@@ -3,7 +3,7 @@ import { ExternalLink } from "~/components/external-link";
 import styles from "./style.module.scss";
 
 export const Component: React.FC = () => (
-  <footer className="fixed-bottom py-3 text-center bg-light">
+  <footer className="fixed-bottom py-3 text-center bg-light border-top border-dark">
     <nav className={styles.contents} aria-label="Footer navigation">
       <ul className="list-inline m-0">
         <li className="list-inline-item">
