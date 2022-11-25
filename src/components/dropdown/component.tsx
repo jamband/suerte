@@ -10,10 +10,15 @@ export const Component: React.FC<_Props> = (props) => (
       className={props.className}
       data-bs-toggle="dropdown"
       aria-expanded={false}
+      disabled={!props.ready}
     >
       <span className="pe-1">{props.label}</span>
       <IconChevronDown
-        style={{ height: "0.75em", width: "0.75em", verticalAlign: "0em" }}
+        style={{
+          height: "0.75em",
+          width: "0.75em",
+          verticalAlign: "0em",
+        }}
       />
     </Button>
     <div className="dropdown-menu shadow-sm" aria-labelledby={props.id}>
