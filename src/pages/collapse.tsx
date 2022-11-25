@@ -5,7 +5,7 @@ import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {
-  const { isCollapsed, toggleCollapse } = useCollapse();
+  const collapse = useCollapse();
 
   return (
     <>
@@ -17,11 +17,12 @@ const Page: PageComponent = () => {
         data-bs-target="#collapseExample"
         aria-expanded="false"
         aria-controls="collapse"
-        onClick={toggleCollapse}
+        onClick={collapse.toggle}
+        disabled={collapse.disabled || !collapse.ready}
       >
-        {isCollapsed ? "Show" : "Hide"}
+        {collapse.isCollapsed ? "Show" : "Hide"}
       </Button>
-      <div id="collapseExample" className="collapse mt-3">
+      <div ref={collapse.ref} id="collapseExample" className="collapse mt-3">
         <div className="p-3 shadow-sm bg-light rounded">
           <IconInfoCircleFill
             style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
