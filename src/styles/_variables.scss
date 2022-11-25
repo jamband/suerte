@@ -2,12 +2,13 @@
 @use "sass:map";
 
 // Color system
-$primary:       #6b7279;
-$success:       #a3be8c;
-$danger:        #bf616a;
-$light:         #f8f9fa;
-$colors: (
-);
+$primary: #6b7279;
+$success: #a3be8c;
+$danger: #bf616a;
+$light: #f8f9fa;
+
+$colors: ();
+
 $theme-colors: (
   "primary": $primary,
   "success": $success,
@@ -16,9 +17,9 @@ $theme-colors: (
 );
 
 // Options
-$enable-caret:                false;
-$enable-shadow:               true;
-$enable-smooth-scroll:        false;
+$enable-caret: false;
+$enable-shadow: true;
+$enable-smooth-scroll: false;
 
 // Spacing
 $spacer: 1rem;
@@ -34,11 +35,11 @@ $spacers: (
 );
 
 // Body
-$body-color:                $primary;
+$body-color: $primary;
 
 // Links
-$link-decoration:                         underline;
-$link-hover-color:                        $primary;
+$link-decoration: underline;
+$link-hover-color: $primary;
 
 // Grid breakpoints
 $grid-breakpoints: (
@@ -57,66 +58,67 @@ $container-max-widths: (
 $container-padding-x: 1.5rem;
 
 // Components
-$box-shadow-sm:               0 0.125rem 0.25rem color.scale(black, $lightness: 0%, $alpha: -90%);
+$box-shadow-sm: 0 0.125rem 0.25rem
+  color.scale(black, $lightness: 0%, $alpha: -90%);
 
 // Typography
-$font-size-base:              1rem;
-$font-size-sm:                $font-size-base * 0.875;
-$line-height-base:            1.65;
-$text-muted:                  color.scale($primary, $lightness: 60%);
-$mark-padding:                0;
-$list-inline-padding:         0.8rem;
-$mark-bg:                     orange;
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.875;
+$line-height-base: 1.65;
+$text-muted: color.scale($primary, $lightness: 60%);
+$mark-padding: 0;
+$list-inline-padding: 0.8rem;
+$mark-bg: orange;
 
 // Navbar
-$navbar-toggler-font-size:          $font-size-base;
-$navbar-toggler-border-radius:      1px;
-$navbar-light-color:                $body-color;
-$navbar-light-hover-color:          $body-color;
+$navbar-toggler-font-size: $font-size-base;
+$navbar-toggler-border-radius: 1px;
+$navbar-light-color: $body-color;
+$navbar-light-hover-color: $body-color;
 $navbar-light-toggler-border-color: none;
-$navbar-light-brand-color:                $body-color;
-$navbar-light-brand-hover-color:          $body-color;
+$navbar-light-brand-color: $body-color;
+$navbar-light-brand-hover-color: $body-color;
 
 // Forms
-$input-placeholder-color:               color.scale($primary, $lightness: 70%);
+$input-placeholder-color: color.scale($primary, $lightness: 70%);
 
 // Z-index
-$zindex-toast:                    1080;
+$zindex-toast: 1080;
 
 // Dropdowns
-$dropdown-bg:                       $light;
-$dropdown-border-width:             0;
-$dropdown-divider-bg:               color.scale($light, $lightness: -15%);
-$dropdown-link-color:               $primary;
-$dropdown-link-hover-bg:            color.scale($light, $lightness: -3%);
+$dropdown-bg: $light;
+$dropdown-border-width: 0;
+$dropdown-divider-bg: color.scale($light, $lightness: -15%);
+$dropdown-link-color: $primary;
+$dropdown-link-hover-bg: color.scale($light, $lightness: -3%);
 
 // Pagination
-$pagination-color:                  color.scale($primary, $lightness: -30%);
-$pagination-bg:                     transparent;
-$pagination-border-width:           0;
-$pagination-focus-bg:               color.scale($light, $lightness: -20%, $alpha: -80%);
-$pagination-hover-color:            $link-hover-color;
-$pagination-hover-bg:               transparent;
-$pagination-disabled-color:         $text-muted;
-$pagination-disabled-bg:            transparent;
+$pagination-color: color.scale($primary, $lightness: -30%);
+$pagination-bg: transparent;
+$pagination-border-width: 0;
+$pagination-focus-bg: color.scale($light, $lightness: -20%, $alpha: -80%);
+$pagination-hover-color: $link-hover-color;
+$pagination-hover-bg: transparent;
+$pagination-disabled-color: $text-muted;
+$pagination-disabled-bg: transparent;
 
 // Toasts
-$toast-color:                       $light;
-$toast-padding-x:                   1rem;
-$toast-font-size:                   1rem;
-$toast-background-color:            $primary;
-$toast-box-shadow:                  $box-shadow-sm;
+$toast-color: $light;
+$toast-padding-x: 1rem;
+$toast-font-size: 1rem;
+$toast-background-color: $primary;
+$toast-box-shadow: $box-shadow-sm;
 
 // Modals
-$modal-backdrop-bg:                 $primary;
-$modal-backdrop-opacity:            0.4;
+$modal-backdrop-bg: $primary;
+$modal-backdrop-opacity: 0.4;
 
 // List group
-$list-group-border-color:           none;
+$list-group-border-color: none;
 
 // Breadcrumbs
-$breadcrumb-divider-color:          color.scale($primary, $lightness: 50%);
-$breadcrumb-active-color:           $breadcrumb-divider-color;
+$breadcrumb-divider-color: color.scale($primary, $lightness: 50%);
+$breadcrumb-active-color: $breadcrumb-divider-color;
 
 // Offcanvas
-$offcanvas-border-width:            0;
+$offcanvas-border-width: 0;
