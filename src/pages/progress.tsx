@@ -29,23 +29,27 @@ const Page: PageComponent = () => {
   return (
     <>
       <h1>Progress</h1>
-      <div className="row">
-        <div
-          className="btn-group btn-group-sm my-3 col-6 col-md-4"
-          role="group"
-          aria-label="Progress"
+      <div
+        className="btn-group btn-group-sm my-3 w-50"
+        role="group"
+        aria-label="Progress"
+      >
+        <Button
+          type="button"
+          className="btn-primary w-50"
+          onClick={() => setIsActive(!isActive)}
+          disabled={bar === 100}
         >
-          <Button
-            type="button"
-            className="btn-primary w-25"
-            onClick={() => setIsActive(!isActive)}
-          >
-            {isActive ? "Pause" : "Start"}
-          </Button>
-          <Button type="button" className="btn-primary w-25" onClick={clear}>
-            Clear
-          </Button>
-        </div>
+          {isActive ? "Pause" : "Start"}
+        </Button>
+        <Button
+          type="button"
+          className="btn-primary w-50"
+          onClick={clear}
+          disabled={bar === 0}
+        >
+          Clear
+        </Button>
       </div>
       <div className="progress mt-3" style={{ height: "1px" }}>
         <div

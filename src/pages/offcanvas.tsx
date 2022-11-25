@@ -43,7 +43,7 @@ const Page: PageComponent = () => {
             <div key={link.href} data-bs-dismiss="offcanvas">
               <Link
                 href={link.href}
-                className="list-group-item list-group-item-action"
+                className="list-group-item list-group-item-action text-primary"
               >
                 {link.text}
               </Link>

@@ -7,19 +7,19 @@ export const Component: React.FC = () => (
     <nav className={styles.contents} aria-label="Footer navigation">
       <ul className="list-inline m-0">
         <li className="list-inline-item">
-          <Link href="/about" className="px-3 py-2">
+          <Link href="/about" className="px-3 py-2 text-decoration-none">
             About
           </Link>
         </li>
         <li className="list-inline-item">
-          <Link href="/contact" className="px-3 py-2">
+          <Link href="/contact" className="px-3 py-2 text-decoration-none">
             Contact
           </Link>
         </li>
         <li className="list-inline-item">
           <ExternalLink
             href="https://github.com/jamband/suerte"
-            className="px-3 py-2"
+            className="px-3 py-2 text-decoration-none"
           >
             GitHub
           </ExternalLink>
