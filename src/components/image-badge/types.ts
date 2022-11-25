@@ -5,6 +5,7 @@ export type Props = {
   dataBsToggle: string;
   dataBsTarget: `#${string}`;
   onClick: () => void;
+  disabled: boolean;
 };
 
 export type _Props = Props;

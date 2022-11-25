@@ -11,7 +11,7 @@ type Image = {
 };
 
 const Page: PageComponent = () => {
-  useModal();
+  const modal = useModal();
 
   const [image, setImage] = useState<Image>({
     color: "#ed7c7c",
@@ -41,6 +41,7 @@ const Page: PageComponent = () => {
             dataBsToggle="modal"
             dataBsTarget="#modalImage"
             onClick={() => showImage(image)}
+            disabled={!modal.ready}
           />
         ))}
       </div>

@@ -10,6 +10,7 @@ export const Component: React.FC<_Props> = (props) => (
     data-bs-toggle={props.dataBsToggle}
     data-bs-target={props.dataBsTarget}
     onClick={props.onClick}
+    disabled={props.disabled}
   >
     <svg
       className="rounded-pill"
