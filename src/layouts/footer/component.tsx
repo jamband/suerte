@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ExternalLink } from "~/components/external-link";
 import styles from "./style.module.scss";
 
 export const Component: React.FC = () => (
@@ -17,12 +16,14 @@ export const Component: React.FC = () => (
           </Link>
         </li>
         <li className="list-inline-item">
-          <ExternalLink
+          <a
             href="https://github.com/jamband/suerte"
             className="px-3 py-2 text-decoration-none"
+            target="_blank"
+            rel="noreferrer"
           >
             GitHub
-          </ExternalLink>
+          </a>
         </li>
       </ul>
     </nav>

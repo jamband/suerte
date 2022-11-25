@@ -1,4 +1,4 @@
-import { ExternalLink } from "~/components/external-link";
+import { IconBoxArrowUpRight } from "~/icons/box-arrow-up-right";
 import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
@@ -7,13 +7,33 @@ const Page: PageComponent = () => {
     <>
       <h1>Contact</h1>
       Please to the message via{" "}
-      <ExternalLink href="https://twitter.com/livejam_db">
+      <a href="https://twitter.com/livejam_db" target="_blank" rel="noreferrer">
         Twitter
-      </ExternalLink>{" "}
+        <IconBoxArrowUpRight
+          style={{
+            marginLeft: "0.2rem",
+            height: "0.8em",
+            width: "0.8em",
+            verticalAlign: "0em",
+          }}
+        />
+      </a>{" "}
       or{" "}
-      <ExternalLink href="https://github.com/jamband/suerte/issues">
+      <a
+        href="https://github.com/jamband/suerte/issues"
+        target="_blank"
+        rel="noreferrer"
+      >
         GitHub Issues
-      </ExternalLink>
+        <IconBoxArrowUpRight
+          style={{
+            marginLeft: "0.2rem",
+            height: "0.8em",
+            width: "0.8em",
+            verticalAlign: "0em",
+          }}
+        />
+      </a>
       .
     </>
   );
