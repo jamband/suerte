@@ -6,7 +6,7 @@ import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {
-  useOffcanvas();
+  const offcanvas = useOffcanvas();
 
   const links = [
     { href: "/", text: "Home" },
@@ -23,6 +23,7 @@ const Page: PageComponent = () => {
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasExample"
         aria-controls="offcanvasExample"
+        disabled={!offcanvas.ready}
       >
         Go to pages
       </Button>
