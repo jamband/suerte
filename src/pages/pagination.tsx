@@ -13,8 +13,8 @@ const Page: PageComponent = () => {
 
   return (
     <>
-      <h1>Pagination</h1>
-      <p className="text-center">{content}</p>
+      <h1 className="mb-6">Pagination</h1>
+      <p className="mb-6 text-center">{content}</p>
       <Pagination currentPage={currentPage} pageCount={pageCount} />
     </>
   );
