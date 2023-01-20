@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: install dependencies
-        run: yarn
+        run: pnpm install
 
       - name: publish to chromatic
         uses: chromaui/action@v1
