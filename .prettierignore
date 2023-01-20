@@ -1,3 +1,4 @@
 /.next
 *.html
 *.md
+pnpm-lock.yaml
