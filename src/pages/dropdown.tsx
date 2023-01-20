@@ -1,8 +1,8 @@
+import { Dropdown } from "@/components/dropdown";
+import { DropdownButtonLink } from "@/components/dropdown-button-link";
+import { DropdownDivider } from "@/components/dropdown-divider";
+import { Layout } from "@/layouts/layout";
 import { useEffect, useState } from "react";
-import { Dropdown } from "~/components/dropdown";
-import { DropdownButtonLink } from "~/components/dropdown-button-link";
-import { DropdownDivider } from "~/components/dropdown-divider";
-import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {

@@ -1,4 +1,4 @@
-const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   typescript: {
@@ -24,12 +24,10 @@ module.exports = {
     "storybook-addon-next-router",
   ],
   webpackFinal: async (config) => {
-    config.resolve.plugins = [
-      ...(config.resolve.plugins || []),
-      new TsconfigPathsPlugin({
-        extensions: config.resolve.extensions,
-      }),
-    ];
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": path.resolve(__dirname, "../src"),
+    };
     return config;
   },
 };

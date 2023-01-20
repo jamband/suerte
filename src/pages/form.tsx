@@ -1,7 +1,7 @@
+import { Button } from "@/components/button";
+import { useFocus } from "@/hooks/focus";
+import { Layout } from "@/layouts/layout";
 import { useEffect, useState } from "react";
-import { Button } from "~/components/button";
-import { useFocus } from "~/hooks/focus";
-import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {

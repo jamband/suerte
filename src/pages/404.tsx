@@ -1,6 +1,6 @@
+import { IconInfoCircleFill } from "@/icons/info-circle-fill";
+import { Layout } from "@/layouts/layout";
 import Link from "next/link";
-import { IconInfoCircleFill } from "~/icons/info-circle-fill";
-import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {

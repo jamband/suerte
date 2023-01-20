@@ -1,9 +1,9 @@
-import { Alert } from "~/components/alert";
-import { Button } from "~/components/button";
-import { CloseButton } from "~/components/close-button";
-import { APP_NAME } from "~/constants/app";
-import { IconInfoCircleFill } from "~/icons/info-circle-fill";
-import { Layout } from "~/layouts/layout";
+import { Alert } from "@/components/alert";
+import { Button } from "@/components/button";
+import { CloseButton } from "@/components/close-button";
+import { APP_NAME } from "@/constants/app";
+import { IconInfoCircleFill } from "@/icons/info-circle-fill";
+import { Layout } from "@/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {

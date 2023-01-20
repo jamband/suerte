@@ -1,6 +1,6 @@
+import { Button } from "@/components/button";
+import { Layout } from "@/layouts/layout";
 import { useState } from "react";
-import { Button } from "~/components/button";
-import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {

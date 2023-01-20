@@ -1,4 +1,4 @@
-import { IconChevronDown } from "~/icons/chevron-down";
+import { IconChevronDown } from "@/icons/chevron-down";
 import { Button } from "../button";
 import type { _Props } from "./types";
 

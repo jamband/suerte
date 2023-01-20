@@ -1,8 +1,8 @@
+import { ImageBadge } from "@/components/image-badge";
+import { ImagePlaceholder } from "@/components/image-placeholder";
+import { useModal } from "@/hooks/modal";
+import { Layout } from "@/layouts/layout";
 import { useState } from "react";
-import { ImageBadge } from "~/components/image-badge";
-import { ImagePlaceholder } from "~/components/image-placeholder";
-import { useModal } from "~/hooks/modal";
-import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
 type Image = {

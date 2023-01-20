@@ -1,6 +1,6 @@
-import { APP_NAME } from "~/constants/app";
-import { IconBoxArrowUpRight } from "~/icons/box-arrow-up-right";
-import { Layout } from "~/layouts/layout";
+import { APP_NAME } from "@/constants/app";
+import { IconBoxArrowUpRight } from "@/icons/box-arrow-up-right";
+import { Layout } from "@/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {

@@ -1,6 +1,6 @@
+import "@/styles/app.scss";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
-import "~/styles/app.scss";
 
 export type PageComponent<P = Record<string, unknown>> = NextPage<P> & {
   getLayout: (page: React.ReactElement) => React.ReactNode;

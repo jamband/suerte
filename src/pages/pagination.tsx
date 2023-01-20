@@ -1,6 +1,6 @@
+import { Pagination } from "@/components/pagination";
+import { Layout } from "@/layouts/layout";
 import { useRouter } from "next/router";
-import { Pagination } from "~/components/pagination";
-import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {

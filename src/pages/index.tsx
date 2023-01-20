@@ -1,6 +1,6 @@
+import { IconChevronRight } from "@/icons/chevron-right";
+import { Layout } from "@/layouts/layout";
 import Link from "next/link";
-import { IconChevronRight } from "~/icons/chevron-right";
-import { Layout } from "~/layouts/layout";
 import type { PageComponent } from "./_app";
 
 const Page: PageComponent = () => {

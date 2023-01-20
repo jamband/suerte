@@ -1,5 +1,5 @@
+import { APP_NAME } from "@/constants/app";
 import Link from "next/link";
-import { APP_NAME } from "~/constants/app";
 
 export const Component: React.FC = () => (
   <header className="fixed-top py-3 bg-light border-bottom border-dark">
