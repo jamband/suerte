@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "typecheck": "tsc",
     "lint": "next lint",
     "format": "prettier --check .",
     "storybook": "start-storybook -p 6006",
