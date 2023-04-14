@@ -1,15 +1,24 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { Layout } from ".";
-import type { Props } from "./types";
 
-export default {
-  title: `layouts/${Layout.name}`,
-} as Meta;
+const meta = {
+  title: "layouts/Layout",
+  component: Layout,
+} satisfies Meta<typeof Layout>;
 
-const _: Story<Props> = (args) => <Layout {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
-Default.args = {
-  title: "",
-  children: <h1>Foo</h1>,
+export const Default: Story = {
+  args: {
+    title: "Foo",
+    children: <h1>Foo</h1>,
+  },
+  parameters: {
+    nextjs: {
+      router: {
+        pathname: "/foo",
+      },
+    },
+  },
 };

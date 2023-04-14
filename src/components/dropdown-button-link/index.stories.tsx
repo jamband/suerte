@@ -1,32 +1,35 @@
 import { IconInfoCircleFill } from "@/icons/info-circle-fill";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { DropdownButtonLink } from ".";
-import type { Props } from "./types";
 
-export default {
-  title: `components/${DropdownButtonLink.name}`,
+const meta = {
+  title: "components/DropdownButtonLink",
+  component: DropdownButtonLink,
   argTypes: {
     onClick: {
       action: "clicked",
     },
   },
-} as Meta;
+} satisfies Meta<typeof DropdownButtonLink>;
 
-const _: Story<Props> = (args) => <DropdownButtonLink {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
-Default.args = {
-  children: "foo",
+export const Default: Story = {
+  args: {
+    children: "foo",
+  },
 };
 
-export const WithIcon = _.bind({});
-WithIcon.args = {
-  children: (
-    <>
-      <IconInfoCircleFill
-        style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
-      />{" "}
-      foo
-    </>
-  ),
+export const WithIcon: Story = {
+  args: {
+    children: (
+      <>
+        <IconInfoCircleFill
+          style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
+        />{" "}
+        foo
+      </>
+    ),
+  },
 };

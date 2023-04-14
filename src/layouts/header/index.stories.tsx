@@ -1,10 +1,12 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { Header } from ".";
 
-export default {
-  title: `layouts/${Header.name}`,
-} as Meta;
+const meta = {
+  title: "layouts/Header",
+  component: Header,
+} satisfies Meta<typeof Header>;
 
-const _: Story = (args) => <Header {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
+export const Default: Story = {};

@@ -1,10 +1,12 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { DropdownDivider } from ".";
 
-export default {
-  title: `components/${DropdownDivider.name}`,
-} as Meta;
+const meta = {
+  title: "components/DropdownDivider",
+  component: DropdownDivider,
+} satisfies Meta<typeof DropdownDivider>;
 
-const _: Story = () => <DropdownDivider />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
+export const Default: Story = {};

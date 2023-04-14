@@ -1,22 +1,24 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { ImageBadge } from ".";
-import type { Props } from "./types";
 
-export default {
-  title: `components/${ImageBadge.name}`,
+const meta = {
+  title: "components/ImageBadge",
+  component: ImageBadge,
   argTypes: {
     onClick: { action: "clicked" },
   },
-} as Meta;
+} satisfies Meta<typeof ImageBadge>;
 
-const _: Story<Props> = (args) => <ImageBadge {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
-Default.args = {
-  className: "btn-primary shadow-sm",
-  text: "foo",
-  color: "#4b9c69",
-  dataBsToggle: "foo",
-  dataBsTarget: "#bar",
-  disabled: false,
+export const Default: Story = {
+  args: {
+    className: "btn-primary shadow-sm",
+    text: "foo",
+    color: "#4b9c69",
+    dataBsToggle: "foo",
+    dataBsTarget: "#bar",
+    disabled: false,
+  },
 };

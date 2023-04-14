@@ -1,39 +1,40 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { Dropdown } from ".";
 import { DropdownButtonLink } from "../dropdown-button-link";
 import { DropdownDivider } from "../dropdown-divider";
-import type { Props } from "./types";
 
-export default {
-  title: `components/${Dropdown.name}`,
+const meta = {
+  title: "components/Dropdown",
+  component: Dropdown,
   args: {
+    id: "foo",
     label: Dropdown.name,
+    className: "btn btn-primary",
   },
-} as Meta;
+} satisfies Meta<typeof Dropdown>;
 
-const _: Story<Props> = (args) => (
-  <Dropdown {...args} className="btn btn-primary" />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
-
-export const WithButtonLink = _.bind({});
-WithButtonLink.args = {
-  children: (
-    <>
-      <DropdownButtonLink>Foo</DropdownButtonLink>
-      <DropdownButtonLink>Bar</DropdownButtonLink>
-    </>
-  ),
+export const Default: Story = {
+  args: {
+    children: (
+      <>
+        <DropdownButtonLink>Foo</DropdownButtonLink>
+        <DropdownButtonLink>Bar</DropdownButtonLink>
+      </>
+    ),
+  },
 };
 
-export const WithButtonLinkAndDivider = _.bind({});
-WithButtonLinkAndDivider.args = {
-  children: (
-    <>
-      <DropdownButtonLink>Foo</DropdownButtonLink>
-      <DropdownDivider />
-      <DropdownButtonLink>Bar</DropdownButtonLink>
-    </>
-  ),
+export const WithDivider: Story = {
+  args: {
+    children: (
+      <>
+        <DropdownButtonLink>Foo</DropdownButtonLink>
+        <DropdownDivider />
+        <DropdownButtonLink>Bar</DropdownButtonLink>
+      </>
+    ),
+  },
 };

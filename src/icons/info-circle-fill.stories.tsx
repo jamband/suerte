@@ -1,40 +1,44 @@
-import type { Meta, Story } from "@storybook/react";
-import type { Props } from "./base/types";
+import type { Meta, StoryObj } from "@storybook/react";
 import { IconInfoCircleFill } from "./info-circle-fill";
 
-export default {
-  title: `icons/${IconInfoCircleFill.name}`,
-} as Meta;
+const meta = {
+  title: "icons/IconInfoCircleFill",
+  component: IconInfoCircleFill,
+} satisfies Meta<typeof IconInfoCircleFill>;
 
-const _: Story<Props> = (args) => <IconInfoCircleFill {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
-Default.args = {
-  style: { height: "1em", width: "1em", verticalAlign: "-0.125em" },
+export const Default: Story = {
+  args: {
+    style: { height: "1em", width: "1em", verticalAlign: "-0.125em" },
+  },
 };
 
-export const withText = _.bind({});
-withText.args = {
-  style: { height: "1em", width: "1em", verticalAlign: "-0.125em" },
+export const withText: Story = {
+  args: {
+    style: { height: "1em", width: "1em", verticalAlign: "-0.125em" },
+  },
+  decorators: [
+    (Story) => (
+      <>
+        <Story />
+        <span className="ms-1">Foo</span>
+      </>
+    ),
+  ],
 };
-withText.decorators = [
-  (story) => (
-    <>
-      {story()}
-      <span className="ms-1">Foo</span>
-    </>
-  ),
-];
 
-export const withLargeText = _.bind({});
-withLargeText.args = {
-  style: { height: "1em", width: "1em", verticalAlign: "-0.125em" },
+export const withLargeText: Story = {
+  args: {
+    style: { height: "1em", width: "1em", verticalAlign: "-0.125em" },
+  },
+  decorators: [
+    (Story) => (
+      <div className="display-1">
+        <Story />
+        <span className="ms-1">Foo</span>
+      </div>
+    ),
+  ],
 };
-withLargeText.decorators = [
-  (story) => (
-    <div className="display-1">
-      {story()}
-      <span className="ms-1">Foo</span>
-    </div>
-  ),
-];

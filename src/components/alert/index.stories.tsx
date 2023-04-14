@@ -1,30 +1,31 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { Alert } from ".";
 import { CloseButton } from "../close-button";
-import type { Props } from "./types";
 
-export default {
-  title: `components/${Alert.name}`,
+const meta = {
+  title: "components/Alert",
+  component: Alert,
   args: {
     className: "alert-primary show",
   },
-} as Meta;
+} satisfies Meta<typeof Alert>;
 
-const _: Story<Props> = (args) => <Alert {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
-Default.args = {
-  children: "foo",
+export const Default: Story = {
+  args: {
+    children: "foo",
+  },
 };
 
-export const Stylings = _.bind({});
-Stylings.args = {
-  children: "foo",
-};
-Stylings.argTypes = {
-  className: {
-    control: {
-      type: "select",
+export const Stylings: Story = {
+  args: {
+    children: "foo",
+  },
+  argTypes: {
+    className: {
+      control: "select",
       options: {
         normal: "alert-primary show",
         success: "alert-success show",
@@ -35,12 +36,13 @@ Stylings.argTypes = {
   },
 };
 
-export const WithDismiss = _.bind({});
-WithDismiss.args = {
-  children: (
-    <>
-      foo
-      <CloseButton dismiss="alert" />
-    </>
-  ),
+export const WithDismiss: Story = {
+  args: {
+    children: (
+      <>
+        foo
+        <CloseButton dismiss="alert" />
+      </>
+    ),
+  },
 };

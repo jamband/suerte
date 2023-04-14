@@ -1,58 +1,59 @@
 import { StateContext as NotificationStateContext } from "@/contexts/notification";
 import { Notification } from "@/layouts/notification";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { CloseButton } from ".";
 import { Alert } from "../alert";
-import type { Props } from "./types";
 
-export default {
-  title: `components/${CloseButton.name}`,
+const meta = {
+  title: "components/CloseButton",
+  component: CloseButton,
   argTypes: {
     onClick: {
       action: "clicked",
     },
     dismiss: {
-      control: {
-        type: "select",
-        options: {
-          alert: "alert",
-          offcanvas: "offcanvas",
-          toast: "toast",
-        },
+      control: "select",
+      options: {
+        alert: "alert",
+        offcanvas: "offcanvas",
+        toast: "toast",
       },
     },
   },
-} as Meta;
+} satisfies Meta<typeof CloseButton>;
 
-const _: Story<Props> = (args) => <CloseButton {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
+export const Default: Story = {};
 
-export const WithAlert = _.bind({});
-WithAlert.args = {
-  dismiss: "alert",
-};
-WithAlert.decorators = [
-  (story) => (
-    <Alert className="bg-light shadow-sm show">
-      foo
-      {story()}
-    </Alert>
-  ),
-];
-
-export const WithNotification = _.bind({});
-WithNotification.args = {
-  className: "me-3 m-auto btn-close-white",
-  dismiss: "toast",
-};
-WithNotification.decorators = [
-  (story) => {
-    return (
-      <NotificationStateContext.Provider value={{ message: "foo" }}>
-        <Notification />
-        {story()}
-      </NotificationStateContext.Provider>
-    );
+export const WithAlert: Story = {
+  args: {
+    dismiss: "alert",
   },
-];
+  decorators: [
+    (Story) => (
+      <Alert className="bg-light shadow-sm show">
+        foo
+        <Story />
+      </Alert>
+    ),
+  ],
+};
+
+export const WithNotification: Story = {
+  args: {
+    className: "me-3 m-auto btn-close-white",
+    dismiss: "toast",
+  },
+  decorators: [
+    (Story) => {
+      return (
+        <NotificationStateContext.Provider value={{ message: "foo" }}>
+          <Notification />
+          <Story />
+        </NotificationStateContext.Provider>
+      );
+    },
+  ],
+};

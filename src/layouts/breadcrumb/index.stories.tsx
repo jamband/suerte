@@ -1,29 +1,36 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { Breadcrumb } from ".";
-import type { Props } from "./types";
 
-export default {
-  title: `layouts/${Breadcrumb.name}`,
-} as Meta;
+const meta = {
+  title: "layouts/Breadcrumb",
+  component: Breadcrumb,
+} satisfies Meta<typeof Breadcrumb>;
 
-const _: Story<Props> = (args) => <Breadcrumb {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const OnTopPage = _.bind({});
-OnTopPage.args = {
-  text: "",
-};
-OnTopPage.parameters = {
-  nextRouter: {
-    pathname: "/",
+export const OnTopPage: Story = {
+  args: {
+    text: "",
+  },
+  parameters: {
+    nextjs: {
+      router: {
+        pathname: "/",
+      },
+    },
   },
 };
 
-export const OnFooPage = _.bind({});
-OnFooPage.args = {
-  text: "Foo",
-};
-OnFooPage.parameters = {
-  nextRouter: {
-    pathname: "/foo",
+export const OnFooPage: Story = {
+  args: {
+    text: "Foo",
+  },
+  parameters: {
+    nextjs: {
+      router: {
+        pathname: "/foo",
+      },
+    },
   },
 };

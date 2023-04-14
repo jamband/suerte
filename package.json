@@ -6,20 +6,17 @@
     "typecheck": "tsc",
     "lint": "next lint",
     "format": "prettier --check .",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook:dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
     "clear": "node scripts/clear.mjs",
     "clean": "node scripts/clean.mjs"
   },
   "dependencies": {
-    "@babel/core": "^7.21.4",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@popperjs/core": "^2.11.7",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/builder-webpack5": "^6.5.16",
-    "@storybook/manager-webpack5": "^6.5.16",
-    "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.5.16",
+    "@storybook/addon-essentials": "^7.0.4",
+    "@storybook/nextjs": "^7.0.4",
+    "@storybook/react": "^7.0.4",
     "@types/bootstrap": "^5.2.6",
     "@types/node": "^16.18.23",
     "@types/react": "^18.0.35",
@@ -38,8 +35,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.62.0",
-    "sass-loader": "^13.2.2",
-    "storybook-addon-next-router": "^4.0.2",
+    "storybook": "^7.0.4",
     "typescript": "^5.0.4"
   }
 }

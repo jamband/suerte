@@ -1,18 +1,21 @@
 import { StateContext as NotificationStateContext } from "@/contexts/notification";
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { Notification } from ".";
 
-export default {
-  title: `components/${Notification.name}`,
-} as Meta;
+const meta = {
+  title: "components/Notification",
+  component: Notification,
+} satisfies Meta<typeof Notification>;
 
-const _: Story = (args) => <Notification {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
-Default.decorators = [
-  (story) => (
-    <NotificationStateContext.Provider value={{ message: Notification.name }}>
-      {story()}
-    </NotificationStateContext.Provider>
-  ),
-];
+export const Default: Story = {
+  decorators: [
+    (Story) => (
+      <NotificationStateContext.Provider value={{ message: Notification.name }}>
+        <Story />
+      </NotificationStateContext.Provider>
+    ),
+  ],
+};

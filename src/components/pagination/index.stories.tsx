@@ -1,28 +1,32 @@
-import type { Meta, Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import { Pagination } from ".";
-import type { Props } from "./types";
 
-export default {
-  title: `components/${Pagination.name}`,
-} as Meta;
+const meta = {
+  title: "components/Pagination",
+  component: Pagination,
+} satisfies Meta<typeof Pagination>;
 
-const _: Story<Props> = (args) => <Pagination {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = _.bind({});
-Default.args = {
-  currentPage: 1,
-  pageCount: 5,
-};
-Default.argTypes = {
-  currentPage: {
-    control: {
-      type: "select",
-      options: [1, 2, 3, 4, 5],
+export const Default: Story = {
+  args: {
+    currentPage: 1,
+    pageCount: 5,
+  },
+  argTypes: {
+    currentPage: {
+      control: {
+        type: "select",
+        options: [1, 2, 3, 4, 5],
+      },
     },
   },
-};
-Default.parameters = {
-  nextRouter: {
-    pathname: "/",
+  parameters: {
+    nextjs: {
+      router: {
+        pathname: "/",
+      },
+    },
   },
 };
