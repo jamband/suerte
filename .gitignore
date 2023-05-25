@@ -1,5 +1,6 @@
 /.next
 /.swc
 /node_modules
+/out
 /storybook-static
 *.tsbuildinfo
