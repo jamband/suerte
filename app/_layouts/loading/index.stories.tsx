@@ -12,16 +12,20 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   parameters: {
     nextjs: {
-      router: {
-        asPath: "/",
-        events: {
-          on: (_: string, callback: (pathname: string) => void) => {
-            callback("/foo");
-          },
-          off: () => {
-            //
-          },
-        },
+      appDirectory: true,
+      navigation: {
+        pathname: "/",
+      },
+    },
+  },
+};
+
+export const FooPage: Story = {
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+      navigation: {
+        pathname: "/foo",
       },
     },
   },

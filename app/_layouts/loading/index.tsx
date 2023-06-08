@@ -1,35 +1,37 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Component } from "./component";
 import styles from "./style.module.scss";
 import type { State } from "./types";
 
 export const Loading: React.FC = () => {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [state, setState] = useState<State>("initial");
-  const { events } = useRouter();
 
   let className = styles.initial;
-  if (state === "start") className += ` ${styles.start}`;
-  if (state === "complete") className += ` ${styles.complete}`;
+
+  if (state === "start") {
+    className += ` ${styles.start}`;
+  }
+
+  if (state === "complete") {
+    className += ` ${styles.complete}`;
+  }
 
   useEffect(() => {
-    const start = () => setState("start");
+    setState("start");
 
-    const complete = () => {
-      setTimeout(() => setState("complete"), 100);
-      setTimeout(() => setState("initial"), 500);
-    };
+    setTimeout(() => {
+      setState("complete");
+    }, 300);
 
-    events.on("routeChangeStart", start);
-    events.on("routeChangeComplete", complete);
-    events.on("routeChangeError", complete);
-
-    return () => {
-      events.off("routeChangeStart", start);
-      events.off("routeChangeComplete", complete);
-      events.off("routeChangeError", complete);
-    };
-  }, [events]);
+    setTimeout(() => {
+      setState("initial");
+    }, 600);
+  }, [pathname, searchParams]);
 
   return <Component className={className} />;
 };
