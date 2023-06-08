@@ -26,7 +26,7 @@ module.exports = {
                 "./node_modules/bootstrap/js/dist/modal.js",
                 "./node_modules/bootstrap/js/dist/offcanvas.js",
                 "./node_modules/bootstrap/js/dist/toast.js",
-                "./src/**/*.tsx",
+                "./app/**/*.tsx",
               ],
               defaultExtractor: (content) =>
                 content.match(/[\w-/:]+(?<!:)/g) || [],
