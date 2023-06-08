@@ -1,5 +1,5 @@
+import { Breadcrumb } from "@/_components/breadcrumb";
 import { IconBoxArrowUpRight } from "@/_icons/box-arrow-up-right";
-import { Breadcrumb } from "@/_layouts/breadcrumb";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 import Link from "next/link";
+import { Breadcrumb } from "./_components/breadcrumb";
 import { IconChevronRight } from "./_icons/chevron-right";
-import { Breadcrumb } from "./_layouts/breadcrumb";
 
 export default function Page() {
   const links = [

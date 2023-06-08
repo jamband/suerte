@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumb } from "./_components/breadcrumb";
 import { IconInfoCircleFill } from "./_icons/info-circle-fill";
 
 /**
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <>
+      <Breadcrumb text="Not Found" />
       <h1>Not Found</h1>
       <IconInfoCircleFill
         style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}

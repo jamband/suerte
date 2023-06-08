@@ -1,6 +1,6 @@
+import { Breadcrumb } from "@/_components/breadcrumb";
 import { APP_NAME } from "@/_constants/app";
 import { IconBoxArrowUpRight } from "@/_icons/box-arrow-up-right";
-import { Breadcrumb } from "@/_layouts/breadcrumb";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

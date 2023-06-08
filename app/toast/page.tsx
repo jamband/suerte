@@ -1,4 +1,4 @@
-import { Breadcrumb } from "@/_layouts/breadcrumb";
+import { Breadcrumb } from "@/_components/breadcrumb";
 import type { Metadata } from "next";
 import { ActionButton } from "./_components/action-button";
 

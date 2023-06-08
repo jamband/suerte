@@ -1,10 +1,10 @@
+import { Breadcrumb } from "@/_components/breadcrumb";
 import { CloseButton } from "@/_components/close-button";
 import { APP_NAME } from "@/_constants/app";
 import { IconInfoCircleFill } from "@/_icons/info-circle-fill";
 import type { Metadata } from "next";
 import { Alert } from "./_components/alert";
 import { ReloadButton } from "./_components/reload-button";
-import { Breadcrumb } from "@/_layouts/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Alert",

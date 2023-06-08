@@ -1,5 +1,5 @@
+import { Breadcrumb } from "@/_components/breadcrumb";
 import { CloseButton } from "@/_components/close-button";
-import { Breadcrumb } from "@/_layouts/breadcrumb";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GoToButton } from "./_components/go-to-button";
