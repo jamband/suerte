@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { CloseButton } from ".";
 
 const meta = {
-  title: "components/CloseButton",
+  title: "_components/CloseButton",
   component: CloseButton,
   argTypes: {
     onClick: {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { IconInfoCircleFill } from "./info-circle-fill";
 
 const meta = {
-  title: "icons/IconInfoCircleFill",
+  title: "_icons/IconInfoCircleFill",
   component: IconInfoCircleFill,
 } satisfies Meta<typeof IconInfoCircleFill>;
 

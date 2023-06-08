@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Loading } from ".";
 
 const meta = {
-  title: "layouts/Loading",
+  title: "_layouts/Loading",
   component: Loading,
 } satisfies Meta<typeof Loading>;
 
