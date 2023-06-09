@@ -15,7 +15,8 @@ export const OnTopPage: Story = {
   },
   parameters: {
     nextjs: {
-      router: {
+      appDirectory: true,
+      navigation: {
         pathname: "/",
       },
     },
@@ -28,7 +29,8 @@ export const OnFooPage: Story = {
   },
   parameters: {
     nextjs: {
-      router: {
+      appDirectory: true,
+      navigation: {
         pathname: "/foo",
       },
     },
