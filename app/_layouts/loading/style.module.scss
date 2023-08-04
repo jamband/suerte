@@ -18,6 +18,8 @@
 
 .complete {
   opacity: 0;
-  transition: width 0.1s ease-out, opacity 0.5s ease 0.2s;
+  transition:
+    width 0.1s ease-out,
+    opacity 0.5s ease 0.2s;
   width: 100%;
 }

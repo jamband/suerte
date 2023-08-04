@@ -17,7 +17,7 @@ export const Content: React.FC<Props> = (props) => {
     ];
 
     setRatioSelector(
-      ratios.find((_) => _.ratio === ratio)?.selector || ratioSelector
+      ratios.find((_) => _.ratio === ratio)?.selector || ratioSelector,
     );
   };
 

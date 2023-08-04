@@ -31,7 +31,7 @@ export const Component: React.FC<_Props> = (props) => (
           <span key={index} className="me-2 p-1 fw-bold font-monospace">
             {character}
           </span>
-        )
+        ),
       )}
     </div>
   </>
