@@ -3,10 +3,6 @@ import Link from "next/link";
 import { Breadcrumb } from "./_components/breadcrumb";
 import { IconInfoCircleFill } from "./_icons/info-circle-fill";
 
-/**
- * note: metadata for this file is not working yet
- * next.js version: 13.4.4
- */
 export const metadata: Metadata = {
   title: "Not Found",
 };
