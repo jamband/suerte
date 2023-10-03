@@ -19,8 +19,8 @@ export default function Page() {
           <IconBoxArrowUpRight
             style={{
               marginLeft: "0.2rem",
-              height: "0.8em",
-              width: "0.8em",
+              height: "1rem",
+              width: "1rem",
               verticalAlign: "0em",
             }}
           />
@@ -31,8 +31,8 @@ export default function Page() {
           <IconBoxArrowUpRight
             style={{
               marginLeft: "0.2rem",
-              height: "0.8em",
-              width: "0.8em",
+              height: "1rem",
+              width: "1rem",
               verticalAlign: "0em",
             }}
           />
@@ -50,8 +50,8 @@ export default function Page() {
           <IconBoxArrowUpRight
             style={{
               marginLeft: "0.2rem",
-              height: "0.8em",
-              width: "0.8em",
+              height: "1rem",
+              width: "1rem",
               verticalAlign: "0em",
             }}
           />
