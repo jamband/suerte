@@ -13,7 +13,7 @@ export default function Page() {
       <h1>Contact</h1>
       Please to the message via{" "}
       <a href="https://twitter.com/livejam_db" target="_blank" rel="noreferrer">
-        Twitter
+        X
         <IconBoxArrowUpRight
           style={{
             marginLeft: "0.2rem",
