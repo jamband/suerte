@@ -20,5 +20,6 @@ export const Default: Story = {
     dataBsToggle: "foo",
     dataBsTarget: "#bar",
     disabled: false,
+    onClick: () => {},
   },
 };
