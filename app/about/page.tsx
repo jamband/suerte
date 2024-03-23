@@ -26,8 +26,8 @@ export default function Page() {
           />
         </a>{" "}
         and{" "}
-        <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
-          Bootstrap 5
+        <a href="https://storybook.js.org" target="_blank" rel="noreferrer">
+          Storybook
           <IconBoxArrowUpRight
             style={{
               marginLeft: "0.2rem",

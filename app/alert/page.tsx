@@ -23,7 +23,7 @@ export default function Page() {
           style={{ height: "1em", width: "1em", verticalAlign: "-0.125em" }}
         />
         <span className="ms-1">
-          {APP_NAME} is my private playground for Next.js and Bootstrap 5
+          {APP_NAME} is my private playground for Next.js and Storybook.
         </span>
         <CloseButton dismiss="alert" />
       </Alert>
