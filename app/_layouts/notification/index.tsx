@@ -8,29 +8,29 @@ import { useEffect, useRef } from "react";
 import { Component } from "./component";
 
 export const Notification: React.FC = () => {
-  const { message } = useNotificationState();
-  const { clearNotification } = useNotificationAction();
+  const notification = useNotificationState();
+  const { resetNotification } = useNotificationAction();
   const containerRef = useRef<HTMLDivElement>(null);
 
   const onClick = () => {
     const container = containerRef.current;
     if (container) {
       container.style.opacity = "0";
-      setTimeout(() => clearNotification(), 300);
+      setTimeout(() => resetNotification(), 300);
     }
   };
 
   useEffect(() => {
     let timeoutId: number;
 
-    if (message) {
+    if (notification) {
       const container = containerRef.current;
       if (container) {
         container.style.opacity = "1";
 
         timeoutId = window.setTimeout(() => {
           container.style.opacity = "0";
-          setTimeout(() => clearNotification(), 300);
+          setTimeout(() => resetNotification(), 300);
         }, 5000);
       }
     }
@@ -38,12 +38,12 @@ export const Notification: React.FC = () => {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [message, clearNotification]);
+  }, [notification, resetNotification]);
 
   return (
     <Component
       containerRef={containerRef}
-      message={message}
+      notification={notification}
       onClick={onClick}
     />
   );

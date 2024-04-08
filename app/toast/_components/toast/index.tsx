@@ -15,7 +15,7 @@ export const Toast: React.FC = () => {
     setNotification(APP_DESCRIPTION);
   };
 
-  const disabled = notification.message !== "";
+  const disabled = notification !== "";
 
   return <Component showNotification={showNotification} disabled={disabled} />;
 };
