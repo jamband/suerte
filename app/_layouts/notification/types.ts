@@ -1,5 +1,5 @@
 export type _Props = {
+  containerRef: React.RefObject<HTMLDivElement>;
   message: string;
-  notificationRef: React.RefObject<HTMLDivElement>;
-  clear: () => void;
+  onClick: () => void;
 };

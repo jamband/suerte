@@ -1,0 +1,124 @@
+.container {
+  align-items: center;
+  display: flex;
+  height: 48vh;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 55vh;
+  }
+}
+
+.button {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.buttonIcon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.offcanvasContainer {
+  height: 100%;
+  inset: 0 0 auto auto;
+  transition: var(--transition);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .offcanvasContainer {
+    width: 25rem;
+  }
+}
+
+.offcanvasContainer::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.offcanvas {
+  background: rgb(var(--gray-100));
+  color: rgb(var(--gray-600));
+  height: 100%;
+  overflow: scroll;
+}
+
+.transition {
+  translate: 100% 0;
+}
+
+.transition::backdrop {
+  opacity: 0;
+}
+
+.offcanvasHeader {
+  align-items: center;
+  background: rgb(var(--gray-200));
+  box-shadow: 0 0.05rem 0.1rem rgb(var(--gray-300));
+  display: flex;
+}
+
+.offcanvasHeaderTitle {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  padding: 0.675rem 1.5rem;
+}
+
+.close {
+  border-radius: var(--rounded);
+  color: rgb(var(--gray-500));
+  margin: 0 0.75rem 0 auto;
+  padding: 0.25rem;
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .close:hover {
+    background: rgb(var(--gray-300));
+    color: rgb(var(--gray-600));
+  }
+}
+
+.offcanvasMain {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.link {
+  align-items: center;
+  color: rgb(var(--gray-500));
+  display: flex;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  transition: background var(--transition);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    background: rgb(var(--gray-200));
+    color: rgb(var(--gray-600));
+  }
+}
+
+.link:active,
+.link:focus-visible {
+  background: rgb(var(--gray-200));
+  color: rgb(var(--gray-600));
+}
+
+.linkIcon {
+  height: 1rem;
+  margin: 0 0 0 auto;
+  width: 1rem;
+}
+
+.divider {
+  border-bottom: 1px solid rgb(var(--gray-300));
+  margin: 1rem 0;
+}

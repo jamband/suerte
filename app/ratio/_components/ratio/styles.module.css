@@ -1,0 +1,20 @@
+.buttonGroup {
+  margin: 2rem 0 0;
+}
+
+.button {
+  width: 25%;
+}
+
+.textImage {
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  margin: 1rem 0 0;
+  transition: aspect-ratio var(--transition);
+}
+
+@media (min-width: 768px) {
+  .textImage {
+    font-size: calc(var(--text-4xl) * 2);
+  }
+}

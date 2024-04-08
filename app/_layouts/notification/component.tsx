@@ -1,22 +1,17 @@
 import { CloseButton } from "@/_components/close-button";
-import styles from "./styles.module.scss";
+import styles from "./styles.module.css";
 import type { _Props } from "./types";
 
 export const Component: React.FC<_Props> = (props) => (
   <div
-    ref={props.notificationRef}
-    className={`toast align-items-center ${styles.toast}`}
+    ref={props.containerRef}
+    className={styles.container}
     role="alert"
     aria-live="assertive"
     aria-atomic="true"
+    aria-hidden={props.message ? undefined : true}
   >
-    <div className="d-flex">
-      <div className="toast-body">{props.message}</div>
-      <CloseButton
-        className="me-3 m-auto btn-close-white"
-        onClick={props.clear}
-        dismiss="toast"
-      />
-    </div>
+    <div className={styles.message}>{props.message}</div>
+    <CloseButton className={styles.close} onClick={props.onClick} />
   </div>
 );

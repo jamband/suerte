@@ -1,0 +1,11 @@
+.container {
+  color: rgb(var(--gray-400));
+}
+
+.invalid {
+  color: rgb(var(--red));
+}
+
+.valid {
+  color: rgb(var(--green));
+}

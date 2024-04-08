@@ -1,11 +1,9 @@
 export type Props = {
-  className?: string;
-  style?: React.CSSProperties;
+  className: string;
   viewBox: `${number} ${number} ${number} ${number}`;
   children: React.ReactNode;
 };
 
-export type _Props = {
-  className?: string;
-  style?: React.CSSProperties;
+export type _Props = Props & {
+  //
 };

@@ -1,0 +1,16 @@
+.description {
+  margin: 1rem 0 0;
+}
+
+.link {
+  align-items: center;
+  box-shadow: 0 1px 0 0 currentColor;
+  display: inline-flex;
+  gap: 0.25rem;
+  line-height: 1.2;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+}

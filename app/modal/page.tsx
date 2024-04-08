@@ -1,4 +1,5 @@
 import { Breadcrumb } from "@/_components/breadcrumb";
+import { Heading } from "@/_components/heading";
 import type { Metadata } from "next";
 import { Content } from "./_components/content";
 
@@ -10,7 +11,7 @@ export default function Page() {
   return (
     <>
       <Breadcrumb text="Modal" />
-      <h1>Modal</h1>
+      <Heading>Modal</Heading>
       <Content />
     </>
   );

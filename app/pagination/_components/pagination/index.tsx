@@ -1,64 +1,26 @@
 "use client";
 
-import { useHasTouchScreen } from "@/_hooks/screen";
-import { usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Component } from "./component";
-import styles from "./style.module.scss";
-import type { Part, Props } from "./types";
 
-export const Pagination: React.FC<Props> = (props) => {
-  const pathname = usePathname();
-  const { hasTouchScreen } = useHasTouchScreen();
+export const Pagination: React.FC = () => {
+  const searchParams = useSearchParams();
 
-  const disabled = (part: Part) => {
-    return ["first", "previous"].includes(part)
-      ? props.currentPage < 2
-      : props.currentPage >= props.pageCount;
+  const currentPage = Number(searchParams.get("page") || "1");
+  const lastPage = 10;
+
+  const match = (index: number) => {
+    return currentPage === index + 1;
   };
 
-  const itemClass = (part: Part) => {
-    let selector = "page-item w-25";
-    if (disabled(part)) {
-      selector += " disabled";
-    }
-    return selector;
-  };
-
-  const href = (part: Part) => {
-    let page = 1;
-    if (part === "previous") {
-      page = props.currentPage - 1;
-    } else if (part === "next") {
-      page = props.currentPage + 1;
-    } else if (part === "last") {
-      page = props.pageCount;
-    }
-    return {
-      pathname,
-      query: { page },
-    };
-  };
-
-  const linkClass = () => {
-    let selector = "page-link";
-    if (!hasTouchScreen) {
-      selector += ` ${styles.clickable}`;
-    }
-    return selector;
-  };
-
-  const blur = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.currentTarget.blur();
-  };
+  const isValidCurrentPage = currentPage >= 1 && currentPage <= 10;
 
   return (
     <Component
-      {...props}
-      itemClass={itemClass}
-      href={href}
-      linkClass={linkClass}
-      disabled={disabled}
-      blur={blur}
+      isValidCurrentPage={isValidCurrentPage}
+      currentPage={currentPage}
+      lastPage={lastPage}
+      match={match}
     />
   );
 };

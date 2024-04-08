@@ -1,16 +1,11 @@
-import type { Dispatch, RefObject, SetStateAction } from "react";
+export type InputState = undefined | "invalid" | "valid";
 
-export type Props = {
-  //
-};
-
-export type _Props = Props & {
+export type _Props = {
+  action: (formData: FormData) => void;
   code: string;
   input: string;
-  setInput: Dispatch<SetStateAction<string>>;
-  focusRef: RefObject<HTMLInputElement>;
-  error: string;
-  isSubmit: boolean;
-  refreshCode: () => void;
-  submit: () => void;
+  inputState: InputState;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  feedback: string;
+  reset: () => void;
 };

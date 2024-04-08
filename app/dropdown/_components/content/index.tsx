@@ -2,44 +2,32 @@
 
 import { useEffect, useState } from "react";
 import { Component } from "./component";
-import type { Props } from "./types";
 
-export const Content: React.FC<Props> = (props) => {
-  const [characters, setCharacters] = useState([""]);
-  const [isMatched, setIsMatched] = useState(false);
-  const [searchCharacter, setSearchCharacter] = useState("");
+export const Content: React.FC = () => {
+  const [letters, setLetters] = useState(["..."]);
+  const [searchLetter, setSearchLetter] = useState("");
 
-  const generateCharacters = () => {
+  const generateLetters = () => {
     return [...Array(10)].map(() => {
       return ["A", "B", "C"][Math.floor(Math.random() * Math.floor(3))];
     });
   };
 
-  const search = (character: string) => {
-    setIsMatched(true);
-    setSearchCharacter(character);
-  };
-
-  const refresh = () => {
-    setIsMatched(false);
-    setCharacters(generateCharacters());
-  };
-
-  const isMatchedCharacter = (character: string) => {
-    return isMatched && character === searchCharacter;
+  const reset = () => {
+    setSearchLetter("");
+    setLetters(generateLetters());
   };
 
   useEffect(() => {
-    setCharacters(generateCharacters());
+    setLetters(generateLetters());
   }, []);
 
   return (
     <Component
-      {...props}
-      characters={characters}
-      search={search}
-      refresh={refresh}
-      isMatchedCharacter={isMatchedCharacter}
+      reset={reset}
+      setSearchLetter={setSearchLetter}
+      letters={letters}
+      searchLetter={searchLetter}
     />
   );
 };

@@ -1,0 +1,49 @@
+.badges {
+  display: flex;
+  gap: 1rem;
+  margin: 3rem 0 0;
+}
+
+.modal {
+  border-radius: var(--rounded);
+  margin: 0 auto;
+  position: absolute;
+  top: 1rem;
+  transition: var(--transition);
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    top: 2rem;
+    width: 35rem;
+  }
+}
+
+.modal:focus {
+  outline: none;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.transition {
+  translate: 0 -100%;
+}
+
+.transition::backdrop {
+  opacity: 0;
+}
+
+.image {
+  aspect-ratio: 16 / 9;
+  font-size: var(--text-3xl);
+}
+
+@media (min-width: 768px) {
+  .image {
+    font-size: var(--text-4xl);
+  }
+}

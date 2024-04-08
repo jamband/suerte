@@ -1,17 +1,17 @@
-import type { useModal } from "@/modal/_hooks";
+import type { useDialog } from "@/_hooks/dialog";
+
+type Dialog = ReturnType<typeof useDialog>;
 
 export type Image = {
-  color: `#${string}`;
-  text: string;
+  text: "red" | "green" | "blue";
+  background: `#${string}`;
 };
 
-export type Props = {
-  //
-};
-
-export type _Props = Props & {
+export type _Props = {
   images: Array<Image>;
-  showImage: (image: Image) => void;
-  modal: ReturnType<typeof useModal>;
   image: Image;
+  modalRef: Dialog["ref"];
+  showModal: (image: Image) => void;
+  hideModalOnBackgroundClick: Dialog["hideOnBackgroundClick"];
+  hideModalOnEscapeKeyDown: Dialog["hideOnEscapeKeyDown"];
 };

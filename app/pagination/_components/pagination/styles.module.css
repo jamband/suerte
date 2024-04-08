@@ -1,0 +1,51 @@
+.boxContainer {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+  margin: 5rem 0 0;
+}
+
+.box {
+  border-radius: var(--rounded-sm);
+}
+
+.pagination {
+  margin: 3rem 0 0;
+}
+
+.alertContainer {
+  margin: 2rem 0 0;
+}
+
+.alert {
+  background: rgb(var(--red));
+  border-radius: var(--rounded);
+  color: rgb(var(--gray-100));
+  padding: 1rem;
+}
+
+.alertTitle {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+.alertDescription {
+  color: rgb(var(--gray-100));
+}
+
+.alertIcon {
+  height: 1rem;
+  margin: 0 0.5rem 0 0;
+  vertical-align: -0.125rem;
+  width: 1rem;
+}
+
+.alertLinkContainer {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 0;
+}
+
+.alertLink {
+  box-shadow: 0 1px 0 0 currentColor;
+}

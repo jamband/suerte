@@ -1,0 +1,39 @@
+.container {
+  align-items: center;
+  background: rgb(var(--gray-200));
+  border-radius: 50rem;
+  box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-300));
+  color: rgb(var(--gray-600));
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    font-size: var(--text-base);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .container:hover {
+    background: rgb(var(--gray-300));
+    box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-400));
+  }
+}
+
+.container:active,
+.container:focus-visible {
+  background: rgb(var(--gray-300));
+  box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-400));
+}
+
+.main {
+  border-radius: 99rem;
+}
+
+.text {
+  margin: 0 0 0 0.4rem;
+}

@@ -1,14 +1,6 @@
-export type Props = {
+export type _Props = {
+  isValidCurrentPage: boolean;
   currentPage: number;
-  pageCount: number;
+  lastPage: number;
+  match: (index: number) => boolean;
 };
-
-export type _Props = Props & {
-  itemClass: (part: Part) => string;
-  href: (part: Part) => { pathname: string; query: { page: number } };
-  linkClass: () => string;
-  disabled: (part: Part) => boolean;
-  blur: (event: React.MouseEvent<HTMLAnchorElement>) => void;
-};
-
-export type Part = "first" | "previous" | "next" | "last";

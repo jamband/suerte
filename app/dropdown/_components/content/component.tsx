@@ -1,38 +1,35 @@
-import { Dropdown } from "../dropdown";
-import { DropdownButtonLink } from "../dropdown-button-link";
-import { DropdownDivider } from "../dropdown-divider";
+import { Dropdown } from "@/_components/dropdown";
+import { DropdownAction } from "@/_components/dropdown/action";
+import { DropdownDivider } from "@/_components/dropdown/divider";
+import styles from "./styles.module.css";
 import type { _Props } from "./types";
 
 export const Component: React.FC<_Props> = (props) => (
-  <>
-    <Dropdown
-      id="dropdownSearchButton"
-      label="Search"
-      className="btn btn-primary"
-    >
-      <DropdownButtonLink onClick={props.refresh}>Refresh</DropdownButtonLink>
+  <div className={styles.container}>
+    <Dropdown label="Search" className={styles.dropdown}>
+      <DropdownAction onClick={props.reset}>Reset</DropdownAction>
       <DropdownDivider />
-      {["A", "B", "C"].map((character, index) => (
-        <DropdownButtonLink key={index} onClick={() => props.search(character)}>
-          {character}
-        </DropdownButtonLink>
+      {["A", "B", "C"].map((letter) => (
+        <DropdownAction
+          key={letter}
+          onClick={() => props.setSearchLetter(letter)}
+        >
+          {letter}
+        </DropdownAction>
       ))}
     </Dropdown>
-    <div className="mt-3 text-center">
-      {props.characters.map((character, index) =>
-        props.isMatchedCharacter(character) ? (
-          <mark
-            key={index}
-            className="me-2 p-1 fw-bold font-monospace text-primary"
-          >
-            {character}
+    <div className={styles.letters}>
+      {props.letters.map((letter, index) =>
+        props.searchLetter === letter ? (
+          <mark key={index} className={styles.marked}>
+            {letter}
           </mark>
         ) : (
-          <span key={index} className="me-2 p-1 fw-bold font-monospace">
-            {character}
+          <span key={index} className={styles.letter}>
+            {letter}
           </span>
         ),
       )}
     </div>
-  </>
+  </div>
 );

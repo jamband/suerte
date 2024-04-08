@@ -3,7 +3,7 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Component } from "./component";
-import styles from "./style.module.scss";
+import styles from "./style.module.css";
 import type { State } from "./types";
 
 export const Loading: React.FC = () => {

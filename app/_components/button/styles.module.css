@@ -1,0 +1,37 @@
+.container {
+  align-items: center;
+  background: rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  border: none;
+  box-shadow: 0.05rem 0.05rem 0.1rem 0 rgb(var(--gray-400));
+  color: rgb(var(--gray-100));
+  display: flex;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.2;
+  padding: 0.8rem 1.25rem;
+  transition: background var(--transition);
+}
+
+@media (min-width: 768px) {
+  .container {
+    font-size: var(--text-base);
+  }
+}
+
+.container:disabled {
+  background: rgb(var(--gray-500));
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .container:hover {
+    background: rgb(var(--gray-700));
+  }
+}
+
+.container:active,
+.container:focus-visible {
+  background: rgb(var(--gray-700));
+}

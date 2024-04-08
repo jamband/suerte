@@ -1,32 +1,50 @@
 "use client";
 
 import {
-  useNotification,
   useNotificationAction,
   useNotificationState,
 } from "@/_hooks/notification";
+import { useEffect, useRef } from "react";
 import { Component } from "./component";
 
 export const Notification: React.FC = () => {
-  const { notificationRef, showNotification } = useNotification();
   const { message } = useNotificationState();
   const { clearNotification } = useNotificationAction();
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  if (message === "") {
-    return null;
-  }
+  const onClick = () => {
+    const container = containerRef.current;
+    if (container) {
+      container.style.opacity = "0";
+      setTimeout(() => clearNotification(), 300);
+    }
+  };
 
-  showNotification();
+  useEffect(() => {
+    let timeoutId: number;
 
-  notificationRef.current?.addEventListener("hidden.bs.toast", () => {
-    clearNotification();
-  });
+    if (message) {
+      const container = containerRef.current;
+      if (container) {
+        container.style.opacity = "1";
+
+        timeoutId = window.setTimeout(() => {
+          container.style.opacity = "0";
+          setTimeout(() => clearNotification(), 300);
+        }, 5000);
+      }
+    }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [message, clearNotification]);
 
   return (
     <Component
+      containerRef={containerRef}
       message={message}
-      notificationRef={notificationRef}
-      clear={clearNotification}
+      onClick={onClick}
     />
   );
 };

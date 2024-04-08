@@ -1,6 +1,7 @@
 import { Breadcrumb } from "@/_components/breadcrumb";
+import { Heading } from "@/_components/heading";
 import type { Metadata } from "next";
-import { Content } from "./_components/content";
+import { Ratio } from "./_components/ratio";
 
 export const metadata: Metadata = {
   title: "Ratio",
@@ -10,8 +11,8 @@ export default function Page() {
   return (
     <>
       <Breadcrumb text="Ratio" />
-      <h1>Ratio</h1>
-      <Content />
+      <Heading>Ratio</Heading>
+      <Ratio />
     </>
   );
 }

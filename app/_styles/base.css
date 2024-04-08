@@ -1,0 +1,38 @@
+html {
+  line-height: 1.6;
+  scrollbar-gutter: stable;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: rgb(var(--gray-100));
+  color: rgb(var(--gray-600));
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+summary {
+  cursor: pointer;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+dialog {
+  background: none;
+  border: none;
+  max-height: none;
+  max-width: none;
+  overflow: visible;
+  padding: 0;
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}

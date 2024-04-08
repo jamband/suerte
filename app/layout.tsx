@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { APP_NAME } from "./_constants/app";
 import { Layout } from "./_layouts/layout";
-import "./_styles/app.scss";
 
 type Props = {
   children: React.ReactNode;

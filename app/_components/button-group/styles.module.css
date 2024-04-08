@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+}
+
+.container button {
+  border-radius: 0;
+}
+
+.container button:first-child {
+  border-bottom-left-radius: var(--rounded);
+  border-top-left-radius: var(--rounded);
+}
+
+.container button:last-child {
+  border-bottom-right-radius: var(--rounded);
+  border-top-right-radius: var(--rounded);
+}

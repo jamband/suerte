@@ -1,0 +1,3 @@
+.rect {
+  transition: fill var(--transition);
+}

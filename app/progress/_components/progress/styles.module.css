@@ -1,0 +1,37 @@
+.buttonGroup {
+  margin: 2rem 0 0;
+}
+
+.button {
+  width: 35%;
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 25%;
+  }
+}
+
+.progressContainer {
+  background: rgb(var(--gray-300));
+  border-radius: var(--rounded);
+  height: 5px;
+  margin: 1.5rem 0 0;
+  position: relative;
+  width: 100%;
+}
+
+.progress {
+  background: rgb(var(--gray-600));
+  border-radius: var(--rounded);
+  height: 5px;
+  transition: width var(--transition);
+}
+
+.progressText {
+  display: flex;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  justify-content: center;
+  margin: 1rem 0 0;
+}

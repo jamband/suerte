@@ -3,10 +3,9 @@ import type { Props } from "./types";
 export const Icon: React.FC<Props> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    className={props.className}
     viewBox={props.viewBox}
     fill="currentColor"
-    className={`inline-block ${props.className || ""}`}
-    style={props.style}
     role="img"
     aria-hidden={true}
   >

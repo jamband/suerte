@@ -1,17 +1,14 @@
 "use client";
 
-import { useFocus } from "@/_hooks/focus";
 import { useEffect, useState } from "react";
 import { Component } from "./component";
-import type { Props } from "./types";
+import type { InputState } from "./types";
 
-export const Content: React.FC<Props> = (props) => {
-  const { focusRef } = useFocus();
-
-  const [code, setCode] = useState("");
+export const Content: React.FC = () => {
+  const [code, setCode] = useState("...");
+  const [feedback, setFeedback] = useState("");
   const [input, setInput] = useState("");
-  const [error, setError] = useState("");
-  const [isSubmit, setIsSubmit] = useState(false);
+  const [inputState, setInputState] = useState<InputState>(undefined);
 
   const generateCode = () => {
     return [...Array(6)]
@@ -21,38 +18,42 @@ export const Content: React.FC<Props> = (props) => {
       .join("");
   };
 
-  const refreshCode = () => {
-    setCode(generateCode());
-    setInput("");
-    setError("");
-    setIsSubmit(false);
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(event.target.value);
   };
 
-  const submit = () => {
-    if (input === "") {
-      setError("Please enter the code.");
-    } else if (input !== code) {
-      setError("Incorrect code.");
+  const action = (formData: FormData) => {
+    setInput(formData.get("code")?.toString() || "");
+
+    if (input === code) {
+      setFeedback("Looks good!");
+      setInputState("valid");
     } else {
-      setError("");
+      setFeedback("Incorrect code.");
+      setInputState("invalid");
     }
-    setIsSubmit(true);
+  };
+
+  const reset = () => {
+    setCode(generateCode());
+    setInput("");
+    setInputState(undefined);
+    setFeedback("");
   };
 
   useEffect(() => {
     setCode(generateCode());
   }, []);
+
   return (
     <Component
-      {...props}
+      action={action}
       code={code}
       input={input}
-      setInput={setInput}
-      focusRef={focusRef}
-      error={error}
-      isSubmit={isSubmit}
-      refreshCode={refreshCode}
-      submit={submit}
+      inputState={inputState}
+      onChange={onChange}
+      feedback={feedback}
+      reset={reset}
     />
   );
 };

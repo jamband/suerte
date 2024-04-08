@@ -1,7 +1,9 @@
-import type { ComponentProps } from "@/_types/component-props";
-
-export type Props = ComponentProps<"button"> & {
+export type Props = {
   className?: string;
+  type?: "submit";
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
+  children: React.ReactNode;
 };
 
 export type _Props = Props;

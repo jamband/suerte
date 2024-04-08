@@ -1,6 +1,7 @@
 import { Breadcrumb } from "@/_components/breadcrumb";
+import { Heading } from "@/_components/heading";
 import type { Metadata } from "next";
-import { Content } from "./_components/content";
+import { Progress } from "./_components/progress";
 
 export const metadata: Metadata = {
   title: "Progress",
@@ -10,8 +11,8 @@ export default function Page() {
   return (
     <>
       <Breadcrumb text="Progress" />
-      <h1>Progress</h1>
-      <Content />
+      <Heading>Progress</Heading>
+      <Progress />
     </>
   );
 }

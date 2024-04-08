@@ -1,0 +1,51 @@
+.container {
+  margin: 2rem 0 0;
+}
+
+.code {
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  justify-content: center;
+}
+
+.fieldset {
+  margin: 2rem 0 0;
+}
+
+@media (min-width: 768px) {
+  .fieldset {
+    margin: 2rem auto 0;
+    width: 50%;
+  }
+}
+
+.message {
+  color: rgb(var(--gray-400));
+  margin: 0.25rem auto 0;
+}
+
+@media (min-width: 768px) {
+  .message {
+    color: rgb(var(--gray-400));
+    margin: 0.25rem auto 0;
+    width: 50%;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0;
+}
+
+.button {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 25%;
+  }
+}

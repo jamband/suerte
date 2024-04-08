@@ -1,0 +1,19 @@
+.container {
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .container:hover {
+    background: rgb(var(--gray-300));
+  }
+}
+
+.container:active {
+  background: rgb(var(--gray-600));
+  color: rgb(var(--gray-100));
+}
+
+.container:focus-visible {
+  background: rgb(var(--gray-300));
+}

@@ -1,35 +1,38 @@
 "use client";
 
-import { useModal } from "@/modal/_hooks";
+import { useDialog } from "@/_hooks/dialog";
 import { useState } from "react";
 import { Component } from "./component";
-import type { Image, Props } from "./types";
+import styles from "./styles.module.css";
+import type { Image } from "./types";
 
-export const Content: React.FC<Props> = (props) => {
-  const modal = useModal();
-
+export const Content: React.FC = () => {
   const [image, setImage] = useState<Image>({
-    color: "#ed7c7c",
     text: "red",
+    background: "#ed7c7c",
   });
 
+  const dialog = useDialog(styles.transition);
+
   const images: Array<Image> = [
-    { color: "#ed7c7c", text: "red" },
-    { color: "#4b9c69", text: "green" },
-    { color: "#74a7e6", text: "blue" },
+    { text: "red", background: "#ed7c7c" },
+    { text: "green", background: "#4b9c69" },
+    { text: "blue", background: "#74a7e6" },
   ];
 
-  const showImage = (image: Image) => {
+  const showModal = (image: Image) => {
     setImage(image);
+    dialog.show();
   };
 
   return (
     <Component
-      {...props}
       images={images}
-      showImage={showImage}
-      modal={modal}
       image={image}
+      modalRef={dialog.ref}
+      showModal={showModal}
+      hideModalOnBackgroundClick={dialog.hideOnBackgroundClick}
+      hideModalOnEscapeKeyDown={dialog.hideOnEscapeKeyDown}
     />
   );
 };

@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 3rem 0 0;
+}
+
+.button {
+  width: 35%;
+}
+
+@media (min-width: 768px) {
+  .button {
+    width: 25%;
+  }
+}

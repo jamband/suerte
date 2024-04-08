@@ -1,10 +1,6 @@
-export type Props = {
-  //
-};
-
-export type _Props = Props & {
-  characters: Array<string>;
-  search: (character: string) => void;
-  refresh: () => void;
-  isMatchedCharacter: (character: string) => boolean;
+export type _Props = {
+  reset: () => void;
+  setSearchLetter: React.Dispatch<React.SetStateAction<string>>;
+  letters: Array<string>;
+  searchLetter: string;
 };

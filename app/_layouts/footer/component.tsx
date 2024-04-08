@@ -1,31 +1,23 @@
 import Link from "next/link";
-import styles from "./style.module.scss";
+import styles from "./style.module.css";
 
 export const Component: React.FC = () => (
-  <footer className="fixed-bottom py-3 text-center bg-light border-top border-dark">
-    <nav className={styles.contents} aria-label="Footer navigation">
-      <ul className="list-inline m-0">
-        <li className="list-inline-item">
-          <Link href="/about" className="px-3 py-2 text-decoration-none">
-            About
-          </Link>
-        </li>
-        <li className="list-inline-item">
-          <Link href="/contact" className="px-3 py-2 text-decoration-none">
-            Contact
-          </Link>
-        </li>
-        <li className="list-inline-item">
-          <a
-            href="https://github.com/jamband/suerte"
-            className="px-3 py-2 text-decoration-none"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </li>
-      </ul>
+  <footer className={styles.container}>
+    <nav className={styles.navigation} aria-label="footer navigation">
+      <Link href="/about" className={styles.link}>
+        About
+      </Link>
+      <Link href="/contact" className={styles.link}>
+        Contact
+      </Link>
+      <a
+        href="https://github.com/jamband/suerte"
+        className={styles.link}
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub
+      </a>
     </nav>
   </footer>
 );

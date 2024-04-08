@@ -1,6 +1,7 @@
 import { Breadcrumb } from "@/_components/breadcrumb";
+import { Heading } from "@/_components/heading";
 import type { Metadata } from "next";
-import { ActionButton } from "./_components/action-button";
+import { Toast } from "./_components/toast";
 
 export const metadata: Metadata = {
   title: "Toast",
@@ -10,8 +11,8 @@ export default function Page() {
   return (
     <>
       <Breadcrumb text="Toast" />
-      <h1>Toast</h1>
-      <ActionButton />
+      <Heading>Toast</Heading>
+      <Toast />
     </>
   );
 }

@@ -1,22 +1,5 @@
 import { DispatchContext, StateContext } from "@/_contexts/notification";
-import { useCallback, useContext, useRef } from "react";
-
-export const useNotification = () => {
-  const notificationRef = useRef<HTMLDivElement>(null);
-
-  const showNotification = () => {
-    import("bootstrap/js/dist/toast").then((module) => {
-      if (notificationRef.current) {
-        new module.default(notificationRef.current).show();
-      }
-    });
-  };
-
-  return {
-    notificationRef,
-    showNotification,
-  } as const;
-};
+import { useCallback, useContext } from "react";
 
 export const useNotificationState = () => {
   return useContext(StateContext);
