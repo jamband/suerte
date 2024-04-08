@@ -18,6 +18,7 @@ export const Component: React.FC<_Props> = (props) => (
         className={styles.fieldset}
         value={props.input}
         onChange={props.onChange}
+        focus
         required
       />
       <ButtonGroup className={styles.buttons}>

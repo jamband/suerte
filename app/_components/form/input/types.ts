@@ -13,6 +13,7 @@ export type Props = {
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   defaultValue?: string;
+  focus?: boolean;
   required?: boolean;
 };
 

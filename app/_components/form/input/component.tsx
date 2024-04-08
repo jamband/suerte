@@ -9,7 +9,7 @@ export const Component: React.FC<_Props> = (props) => (
       {props.label}
     </FormLabel>
     <input
-      ref={props.focusRef}
+      ref={props.focus ? props.focusRef : undefined}
       type={props.type}
       name={props.name}
       id={props.id}
