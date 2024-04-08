@@ -26,6 +26,7 @@ export const Component: React.FC<_Props> = (props) => (
           ))}
         </div>
         <Pagination
+          pathname="/pagination"
           currentPage={props.currentPage}
           lastPage={props.lastPage}
           className={styles.pagination}

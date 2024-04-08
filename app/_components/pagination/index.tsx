@@ -21,11 +21,10 @@ export const Pagination: React.FC<Props> = (props) => {
   };
 
   const href = (part: Part) => {
-    const pathname = "/pagination";
-    if (part === "First") return pathname;
-    if (part === "Next") return `${pathname}?page=${currentPage + 1}`;
-    if (part === "Previous") return `${pathname}?page=${currentPage - 1}`;
-    return `${pathname}?page=${props.lastPage}`;
+    if (part === "First") return props.pathname;
+    if (part === "Next") return `${props.pathname}?page=${currentPage + 1}`;
+    if (part === "Previous") return `${props.pathname}?page=${currentPage - 1}`;
+    return `${props.pathname}?page=${props.lastPage}`;
   };
 
   return (

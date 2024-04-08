@@ -2,6 +2,7 @@ export type Part = "First" | "Previous" | "Next" | "Last";
 
 export type Props = {
   className?: string;
+  pathname: `/${string}`;
   currentPage: number;
   lastPage: number;
 };
