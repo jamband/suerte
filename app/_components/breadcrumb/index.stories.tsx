@@ -3,35 +3,30 @@ import { Breadcrumb } from ".";
 
 const meta = {
   component: Breadcrumb,
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
+  },
 } satisfies Meta<typeof Breadcrumb>;
 
 export default meta;
 type Story = StoryObj<typeof Breadcrumb>;
 
-export const OnTopPage: Story = {
-  args: {
-    text: "",
-  },
+export const OnTopPage = {
+  render: () => <Breadcrumb text="" />,
   parameters: {
     nextjs: {
-      appDirectory: true,
-      navigation: {
-        pathname: "/",
-      },
+      navigation: { pathname: "/" },
     },
   },
-};
+} satisfies Story;
 
-export const OnFooPage: Story = {
-  args: {
-    text: "Foo",
-  },
+export const OnFooPage = {
+  render: () => <Breadcrumb text="Foo" />,
   parameters: {
     nextjs: {
-      appDirectory: true,
-      navigation: {
-        pathname: "/foo",
-      },
+      navigation: { pathname: "/foo" },
     },
   },
-};
+} satisfies Story;

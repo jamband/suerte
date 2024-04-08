@@ -11,5 +11,5 @@ export default meta;
 type Story = StoryObj<typeof CloseButton>;
 
 export const Default = {
-  render: () => <CloseButton onClick={() => {}} />,
+  render: (args) => <CloseButton {...args} />,
 } satisfies Story;

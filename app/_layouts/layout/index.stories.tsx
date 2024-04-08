@@ -9,15 +9,5 @@ export default meta;
 type Story = StoryObj<typeof Layout>;
 
 export const Default = {
-  args: {
-    children: <h1>Foo</h1>,
-  },
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-      navigation: {
-        pathname: "/foo",
-      },
-    },
-  },
+  render: () => <Layout>foo</Layout>,
 } satisfies Story;

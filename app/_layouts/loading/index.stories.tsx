@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Loading } from ".";
+import { Header } from "../header";
 
 const meta = {
   component: Loading,
@@ -9,23 +10,10 @@ export default meta;
 type Story = StoryObj<typeof Loading>;
 
 export const Default = {
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-      navigation: {
-        pathname: "/",
-      },
-    },
-  },
-} satisfies Story;
-
-export const FooPage = {
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-      navigation: {
-        pathname: "/foo",
-      },
-    },
-  },
+  render: () => (
+    <>
+      <Loading />
+      <Header />
+    </>
+  ),
 } satisfies Story;
