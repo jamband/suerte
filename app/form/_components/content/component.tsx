@@ -16,7 +16,6 @@ export const Component: React.FC<_Props> = (props) => (
         feedback={props.feedback || "Please enter the code above."}
         state={props.inputState}
         className={styles.fieldset}
-        inputClass=""
         value={props.input}
         onChange={props.onChange}
         required

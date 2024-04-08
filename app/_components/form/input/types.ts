@@ -5,7 +5,7 @@ export type Props = {
   label: string;
   type: "email" | "password" | "text";
   name: string;
-  inputClass: string;
+  inputClass?: string;
   feedback?: string;
   state?: "invalid" | "valid";
   placeholder?: string;

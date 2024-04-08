@@ -13,7 +13,7 @@ export const Component: React.FC<_Props> = (props) => (
       type={props.type}
       name={props.name}
       id={props.id}
-      className={`${styles.input} ${props.inputClass}
+      className={`${styles.input} ${props.inputClass || ""}
         ${props.state === "invalid" ? styles.invalidFeedback : ""}
         ${props.state === "valid" ? styles.validFeedback : ""}
       `}
