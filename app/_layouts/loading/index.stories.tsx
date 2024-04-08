@@ -2,14 +2,13 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Loading } from ".";
 
 const meta = {
-  title: "_layouts/Loading",
   component: Loading,
 } satisfies Meta<typeof Loading>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Loading>;
 
-export const Default: Story = {
+export const Default = {
   parameters: {
     nextjs: {
       appDirectory: true,
@@ -18,9 +17,9 @@ export const Default: Story = {
       },
     },
   },
-};
+} satisfies Story;
 
-export const FooPage: Story = {
+export const FooPage = {
   parameters: {
     nextjs: {
       appDirectory: true,
@@ -29,4 +28,4 @@ export const FooPage: Story = {
       },
     },
   },
-};
+} satisfies Story;

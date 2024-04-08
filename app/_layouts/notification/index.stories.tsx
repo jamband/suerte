@@ -3,19 +3,18 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Notification } from ".";
 
 const meta = {
-  title: "_layouts/Notification",
   component: Notification,
 } satisfies Meta<typeof Notification>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Notification>;
 
-export const Default: Story = {
+export const Default = {
   decorators: [
     (Story) => (
-      <NotificationStateContext.Provider value={{ message: Notification.name }}>
+      <NotificationStateContext.Provider value="foo">
         <Story />
       </NotificationStateContext.Provider>
     ),
   ],
-};
+} satisfies Story;

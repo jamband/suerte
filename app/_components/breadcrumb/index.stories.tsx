@@ -2,12 +2,11 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Breadcrumb } from ".";
 
 const meta = {
-  title: "_components/Breadcrumb",
   component: Breadcrumb,
 } satisfies Meta<typeof Breadcrumb>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Breadcrumb>;
 
 export const OnTopPage: Story = {
   args: {

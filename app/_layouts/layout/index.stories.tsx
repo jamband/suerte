@@ -2,14 +2,13 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Layout } from ".";
 
 const meta = {
-  title: "_layouts/Layout",
   component: Layout,
 } satisfies Meta<typeof Layout>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Layout>;
 
-export const Default: Story = {
+export const Default = {
   args: {
     children: <h1>Foo</h1>,
   },
@@ -21,4 +20,4 @@ export const Default: Story = {
       },
     },
   },
-};
+} satisfies Story;
