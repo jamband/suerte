@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Component } from "./component";
 
-export const Progress: React.FC = () => {
+export const Content: React.FC = () => {
   const [bar, setBar] = useState(0);
   const [active, setActive] = useState(false);
 

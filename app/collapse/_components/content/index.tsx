@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Component } from "./component";
 
-export const Collapse: React.FC = () => {
+export const Content: React.FC = () => {
   const [disabled, setDisabled] = useState(false);
   const [show, setShow] = useState(false);
 

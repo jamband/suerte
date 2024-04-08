@@ -7,7 +7,7 @@ import {
 } from "@/_hooks/notification";
 import { Component } from "./component";
 
-export const Toast: React.FC = () => {
+export const Content: React.FC = () => {
   const notification = useNotificationState();
   const { setNotification } = useNotificationAction();
 

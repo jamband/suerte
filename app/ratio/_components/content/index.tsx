@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Component } from "./component";
 
-export const Ratio: React.FC = () => {
+export const Content: React.FC = () => {
   const [text, setText] = useState("21x9");
 
   const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {

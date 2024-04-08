@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { Component } from "./component";
 
-export const Pagination: React.FC = () => {
+export const Content: React.FC = () => {
   const searchParams = useSearchParams();
 
   const currentPage = Number(searchParams.get("page") || "1");
