@@ -1,5 +1,5 @@
 {
-  "[css][javascript][json][jsonc][scss][typescript][typescriptreact]": {
+  "[css][javascript][json][jsonc][typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.codeActionsOnSave": { "source.fixAll": "explicit" },

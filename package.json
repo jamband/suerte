@@ -30,7 +30,6 @@
     "prettier": "3.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "1.71.1",
     "storybook": "8.0.0",
     "the-new-css-reset": "1.11.2",
     "typescript": "5.4.2"
