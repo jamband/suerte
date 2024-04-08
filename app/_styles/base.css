@@ -36,3 +36,7 @@ dialog {
 html:has(dialog[open]) {
   overflow: hidden;
 }
+
+::placeholder {
+  color: rgb(var(--gray-400));
+}
