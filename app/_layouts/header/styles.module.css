@@ -1,6 +1,7 @@
 .container {
   background: rgb(var(--gray-200));
   box-shadow: 0 0.05rem 0.1rem rgb(var(--gray-300));
+  inset: 0 auto auto 0;
   position: fixed;
   width: 100%;
   z-index: 10;
