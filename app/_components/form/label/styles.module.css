@@ -3,7 +3,7 @@
   font-weight: 700;
 }
 
-.container::after {
+.required::after {
   color: rgb(var(--red));
   content: "*";
   margin: 0 0 0 0.25rem;
