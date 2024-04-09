@@ -13,26 +13,22 @@ type Story = StoryObj<typeof Dropdown>;
 
 export const Default = {
   render: () => (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-      <Dropdown label="dropdown">
-        <DropdownAction onClick={fn()}>foo</DropdownAction>
-        <DropdownDivider />
-        <DropdownAction onClick={fn()}>bar</DropdownAction>
-        <DropdownAction onClick={fn()}>baz</DropdownAction>
-      </Dropdown>
-    </div>
+    <Dropdown label="dropdown">
+      <DropdownAction onClick={fn()}>foo</DropdownAction>
+      <DropdownDivider />
+      <DropdownAction onClick={fn()}>bar</DropdownAction>
+      <DropdownAction onClick={fn()}>baz</DropdownAction>
+    </Dropdown>
   ),
 } satisfies Story;
 
 export const WithoutLabel = {
   render: () => (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-      <Dropdown>
-        <DropdownAction onClick={fn()}>foo</DropdownAction>
-        <DropdownDivider />
-        <DropdownAction onClick={fn()}>bar</DropdownAction>
-        <DropdownAction onClick={fn()}>baz</DropdownAction>
-      </Dropdown>
-    </div>
+    <Dropdown>
+      <DropdownAction onClick={fn()}>foo</DropdownAction>
+      <DropdownDivider />
+      <DropdownAction onClick={fn()}>bar</DropdownAction>
+      <DropdownAction onClick={fn()}>baz</DropdownAction>
+    </Dropdown>
   ),
 } satisfies Story;

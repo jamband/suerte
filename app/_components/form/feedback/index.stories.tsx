@@ -17,6 +17,7 @@ export const Invalid = {
     <FormFeedback id="foo-feedback" state="invalid" message="foo" />
   ),
 } satisfies Story;
+
 export const Valid = {
   render: () => <FormFeedback id="foo-feedback" state="valid" message="foo" />,
 } satisfies Story;
