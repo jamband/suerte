@@ -9,9 +9,8 @@ export const Component: React.FC<_Props> = (props) => (
     role="alert"
     aria-live="assertive"
     aria-atomic="true"
-    aria-hidden={props.notification ? undefined : true}
   >
     <div className={styles.notification}>{props.notification}</div>
-    <CloseButton className={styles.close} onClick={props.onClick} />
+    <CloseButton className={styles.close} onClick={props.close} />
   </div>
 );

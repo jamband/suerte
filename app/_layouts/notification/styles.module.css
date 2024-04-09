@@ -2,7 +2,7 @@
   background: rgb(var(--gray-600));
   border-radius: var(--rounded);
   box-shadow: 0.1rem 0.1rem 0.1rem rgb(var(--gray-700));
-  display: flex;
+  display: none;
   inset: 0.5rem 0.5rem auto 0.5rem;
   margin: 0 auto;
   opacity: 0;
