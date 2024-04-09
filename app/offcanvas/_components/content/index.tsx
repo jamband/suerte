@@ -1,12 +1,14 @@
 "use client";
 
 import { useDialog } from "@/_hooks/dialog";
+import { useRouter } from "next/navigation";
 import { Component } from "./component";
 import styles from "./styles.module.css";
 import type { Links } from "./types";
 
 export const Content: React.FC = () => {
   const dialog = useDialog(styles.transition);
+  const router = useRouter();
 
   const links: Links = [
     { href: "/", text: "Home" },
@@ -27,6 +29,19 @@ export const Content: React.FC = () => {
     { href: "/contact", text: "Contact" },
   ];
 
+  const pushAfterHideOffcanvas = (href: string) => {
+    dialog.hide();
+    const offcanvas = dialog.ref.current;
+
+    offcanvas?.addEventListener(
+      "transitionend",
+      () => {
+        router.push(href);
+      },
+      { once: true },
+    );
+  };
+
   return (
     <Component
       offcanvasRef={dialog.ref}
@@ -34,6 +49,7 @@ export const Content: React.FC = () => {
       hideOffcanvas={dialog.hide}
       hideOffcanvasOnBackgroundClick={dialog.hideOnBackgroundClick}
       hideOffcanvasOnEscapeKeyDown={dialog.hideOnEscapeKeyDown}
+      pushAfterHideOffcanvas={pushAfterHideOffcanvas}
       links={links}
       moreLinks={moreLinks}
     />

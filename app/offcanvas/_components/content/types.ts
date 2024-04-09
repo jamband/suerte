@@ -13,6 +13,7 @@ export type _Props = {
   hideOffcanvas: Dialog["hide"];
   hideOffcanvasOnBackgroundClick: Dialog["hideOnBackgroundClick"];
   hideOffcanvasOnEscapeKeyDown: Dialog["hideOnEscapeKeyDown"];
+  pushAfterHideOffcanvas: (href: string) => void;
   links: Links;
   moreLinks: Links;
 };

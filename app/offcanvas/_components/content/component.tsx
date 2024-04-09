@@ -1,7 +1,6 @@
 import { Button } from "@/_components/button";
 import { CloseButton } from "@/_components/close-button";
 import { IconChevronRight } from "@/_icons/chevron-right";
-import Link from "next/link";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
 
@@ -27,17 +26,27 @@ export const Component: React.FC<_Props> = (props) => (
         </div>
         <div className={styles.offcanvasMain}>
           {props.links.map((link) => (
-            <Link key={link.href} href={link.href} className={styles.link}>
+            <button
+              key={link.href}
+              type="button"
+              className={styles.link}
+              onClick={() => props.pushAfterHideOffcanvas(link.href)}
+            >
               {link.text}
               <IconChevronRight className={styles.linkIcon} />
-            </Link>
+            </button>
           ))}
           <hr className={styles.divider} />
           {props.moreLinks.map((link) => (
-            <Link key={link.href} href={link.href} className={styles.link}>
+            <button
+              key={link.href}
+              type="button"
+              className={styles.link}
+              onClick={() => props.pushAfterHideOffcanvas(link.href)}
+            >
               {link.text}
               <IconChevronRight className={styles.linkIcon} />
-            </Link>
+            </button>
           ))}
           <a
             href="https://github.com/jamband/suerte"
