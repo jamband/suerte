@@ -19,8 +19,8 @@ export const Component: React.FC<_Props> = (props) => (
     <dialog
       ref={props.modalRef}
       className={styles.modal}
-      onClick={props.hideModalOnBackgroundClick}
-      onKeyDown={props.hideModalOnEscapeKeyDown}
+      onClick={props.closeModalOnBackgroundClick}
+      onKeyDown={props.closeModalOnEscapeKeyDown}
     >
       <TextImage
         className={styles.image}

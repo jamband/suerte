@@ -16,13 +16,16 @@ export const Component: React.FC<_Props> = (props) => (
     <dialog
       ref={props.offcanvasRef}
       className={styles.offcanvasContainer}
-      onClick={props.hideOffcanvasOnBackgroundClick}
-      onKeyDown={props.hideOffcanvasOnEscapeKeyDown}
+      onClick={props.closeOffcanvasOnBackgroundClick}
+      onKeyDown={props.closeOffcanvasOnEscapeKeyDown}
     >
       <div className={styles.offcanvas}>
         <div className={styles.offcanvasHeader}>
           <div className={styles.offcanvasHeaderTitle}>Pages</div>
-          <CloseButton className={styles.close} onClick={props.hideOffcanvas} />
+          <CloseButton
+            className={styles.close}
+            onClick={props.closeOffcanvas}
+          />
         </div>
         <div className={styles.offcanvasMain}>
           {props.links.map((link) => (
@@ -30,7 +33,7 @@ export const Component: React.FC<_Props> = (props) => (
               key={link.href}
               type="button"
               className={styles.link}
-              onClick={() => props.pushAfterHideOffcanvas(link.href)}
+              onClick={() => props.pushAfterCloseOffcanvas(link.href)}
             >
               {link.text}
               <IconChevronRight className={styles.linkIcon} />
@@ -42,7 +45,7 @@ export const Component: React.FC<_Props> = (props) => (
               key={link.href}
               type="button"
               className={styles.link}
-              onClick={() => props.pushAfterHideOffcanvas(link.href)}
+              onClick={() => props.pushAfterCloseOffcanvas(link.href)}
             >
               {link.text}
               <IconChevronRight className={styles.linkIcon} />

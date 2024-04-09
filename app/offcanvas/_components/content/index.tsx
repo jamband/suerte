@@ -29,8 +29,8 @@ export const Content: React.FC = () => {
     { href: "/contact", text: "Contact" },
   ];
 
-  const pushAfterHideOffcanvas = (href: string) => {
-    dialog.hide();
+  const pushAfterCloseOffcanvas = (href: string) => {
+    dialog.close();
     const offcanvas = dialog.ref.current;
 
     offcanvas?.addEventListener(
@@ -46,10 +46,10 @@ export const Content: React.FC = () => {
     <Component
       offcanvasRef={dialog.ref}
       showOffcanvs={dialog.show}
-      hideOffcanvas={dialog.hide}
-      hideOffcanvasOnBackgroundClick={dialog.hideOnBackgroundClick}
-      hideOffcanvasOnEscapeKeyDown={dialog.hideOnEscapeKeyDown}
-      pushAfterHideOffcanvas={pushAfterHideOffcanvas}
+      closeOffcanvas={dialog.close}
+      closeOffcanvasOnBackgroundClick={dialog.closeOnBackgroundClick}
+      closeOffcanvasOnEscapeKeyDown={dialog.closeOnEscapeKeyDown}
+      pushAfterCloseOffcanvas={pushAfterCloseOffcanvas}
       links={links}
       moreLinks={moreLinks}
     />

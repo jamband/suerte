@@ -12,6 +12,6 @@ export type _Props = {
   image: Image;
   modalRef: Dialog["ref"];
   showModal: (image: Image) => void;
-  hideModalOnBackgroundClick: Dialog["hideOnBackgroundClick"];
-  hideModalOnEscapeKeyDown: Dialog["hideOnEscapeKeyDown"];
+  closeModalOnBackgroundClick: Dialog["closeOnBackgroundClick"];
+  closeModalOnEscapeKeyDown: Dialog["closeOnEscapeKeyDown"];
 };

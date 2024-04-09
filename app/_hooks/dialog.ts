@@ -13,7 +13,7 @@ export const useDialog = (token: string) => {
     });
   };
 
-  const hide = () => {
+  const close = () => {
     const dialog = ref.current;
     dialog?.classList.add(token);
 
@@ -27,20 +27,20 @@ export const useDialog = (token: string) => {
     );
   };
 
-  const hideOnBackgroundClick = (event: React.MouseEvent) => {
-    if (event.target === ref.current) hide();
+  const closeOnBackgroundClick = (event: React.MouseEvent) => {
+    if (event.target === ref.current) close();
   };
 
-  const hideOnEscapeKeyDown = (event: React.KeyboardEvent) => {
+  const closeOnEscapeKeyDown = (event: React.KeyboardEvent) => {
     event.preventDefault();
-    if (event.key === "Escape") hide();
+    if (event.key === "Escape") close();
   };
 
   return {
     ref,
     show,
-    hide,
-    hideOnBackgroundClick,
-    hideOnEscapeKeyDown,
+    close,
+    closeOnBackgroundClick,
+    closeOnEscapeKeyDown,
   } as const;
 };

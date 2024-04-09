@@ -10,10 +10,10 @@ export type Links = Array<{
 export type _Props = {
   offcanvasRef: Dialog["ref"];
   showOffcanvs: Dialog["show"];
-  hideOffcanvas: Dialog["hide"];
-  hideOffcanvasOnBackgroundClick: Dialog["hideOnBackgroundClick"];
-  hideOffcanvasOnEscapeKeyDown: Dialog["hideOnEscapeKeyDown"];
-  pushAfterHideOffcanvas: (href: string) => void;
+  closeOffcanvas: Dialog["close"];
+  closeOffcanvasOnBackgroundClick: Dialog["closeOnBackgroundClick"];
+  closeOffcanvasOnEscapeKeyDown: Dialog["closeOnEscapeKeyDown"];
+  pushAfterCloseOffcanvas: (href: string) => void;
   links: Links;
   moreLinks: Links;
 };

@@ -31,8 +31,8 @@ export const Content: React.FC = () => {
       image={image}
       modalRef={dialog.ref}
       showModal={showModal}
-      hideModalOnBackgroundClick={dialog.hideOnBackgroundClick}
-      hideModalOnEscapeKeyDown={dialog.hideOnEscapeKeyDown}
+      closeModalOnBackgroundClick={dialog.closeOnBackgroundClick}
+      closeModalOnEscapeKeyDown={dialog.closeOnEscapeKeyDown}
     />
   );
 };
