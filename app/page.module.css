@@ -14,17 +14,25 @@
 
 .link {
   align-items: center;
-  border-radius: var(--rounded);
-  display: inline-flex;
+  display: flex;
   gap: 0.5rem;
-  margin: 0 0 0 -1rem;
+  margin: 0 -1rem;
   padding: 0.25rem 1rem;
   transition:
     background var(--transition),
     color var(--transition);
 }
 
+@media (min-width: 768px) {
+  .link {
+    border-radius: var(--rounded);
+    display: inline-flex;
+    margin: 0 0 0 -1rem;
+  }
+}
+
 .link::after {
+  color: rgb(var(--gray-500));
   content: "→";
   font-size: 1rem;
   font-weight: 400;
@@ -32,13 +40,13 @@
 
 @media (hover: hover) and (pointer: fine) {
   .link:hover {
-    background: rgb(var(--gray-300));
+    background: rgb(var(--gray-200));
     color: rgb(var(--gray-800));
   }
 }
 
 .link:active,
 .link:focus-visible {
-  background: rgb(var(--gray-300));
+  background: rgb(var(--gray-200));
   color: rgb(var(--gray-800));
 }
