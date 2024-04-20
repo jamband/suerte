@@ -7,6 +7,8 @@
   border-radius: var(--rounded);
   font-size: var(--text-sm);
   font-weight: 700;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 @media (min-width: 768px) {
