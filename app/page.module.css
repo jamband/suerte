@@ -1,6 +1,6 @@
 .list {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 0.25rem;
   list-style: none;
   margin: 2rem 0 0;

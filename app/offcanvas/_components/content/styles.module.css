@@ -86,7 +86,7 @@
 
 .offcanvasMain {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   margin: 1rem 0;
 }
 

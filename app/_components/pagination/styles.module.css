@@ -19,7 +19,7 @@
   border-radius: var(--rounded);
   color: rgb(var(--gray-600));
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   font-size: var(--text-sm);
   font-weight: 600;
   gap: 0.25rem;

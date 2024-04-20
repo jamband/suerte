@@ -45,7 +45,7 @@
   border-radius: var(--rounded);
   border: 1px solid rgb(var(--gray-300));
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   height: auto;
   margin: 0.25rem 0 0;
   max-height: 352px;

@@ -1,7 +1,7 @@
 .container {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   margin: 3rem 0 0;
 }
