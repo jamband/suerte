@@ -20,7 +20,7 @@ type Story = StoryObj<typeof Icon>;
 
 export const Icons = {
   render: () => (
-    <Gap direction="column" gap="1rem">
+    <Gap flow="column wrap" gap="1rem">
       <div className={styles.group}>
         <IconBoxArrowUpRight className={styles.icon} />
         {IconBoxArrowUpRight.name}

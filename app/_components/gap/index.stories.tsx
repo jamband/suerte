@@ -20,7 +20,7 @@ export const Row = {
 
 export const Column = {
   render: () => (
-    <Gap direction="column" gap="1rem">
+    <Gap flow="column" gap="1rem">
       <div>foo</div>
       <div>bar</div>
       <div>baz</div>

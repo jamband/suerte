@@ -1,6 +1,8 @@
+import type { CSSProperties } from "react";
+
 export type Props = {
-  direction?: "column";
-  gap: `${number}rem` | `${number}rem ${number}rem`;
+  flow?: CSSProperties["flexFlow"];
+  gap: CSSProperties["gap"];
   children: React.ReactNode;
 };
 

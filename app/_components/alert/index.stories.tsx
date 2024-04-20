@@ -11,7 +11,7 @@ type Story = StoryObj<typeof Alert>;
 
 export const Default = {
   render: () => (
-    <Gap direction="column" gap="1rem">
+    <Gap flow="column" gap="1rem">
       <Alert>this is a test.</Alert>
       <Alert type="info">this is a test.</Alert>
       <Alert dismissible>this is a test.</Alert>

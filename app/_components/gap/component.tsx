@@ -4,9 +4,8 @@ export const Component: React.FC<_Props> = (props) => (
   <div
     style={{
       display: "flex",
-      flexWrap: "wrap",
+      flexFlow: props.flow,
       alignContent: "flex-start",
-      flexDirection: props.direction ? "column" : "row",
       gap: props.gap,
     }}
   >
