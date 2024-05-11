@@ -32,8 +32,10 @@ export const useDialog = (token: string) => {
   };
 
   const closeOnEscapeKeyDown = (event: React.KeyboardEvent) => {
-    event.preventDefault();
-    if (event.key === "Escape") close();
+    if (event.key === "Escape") {
+      event.preventDefault();
+      close();
+    }
   };
 
   return {
