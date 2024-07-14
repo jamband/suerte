@@ -47,6 +47,7 @@
 }
 
 .transition {
+  opacity: 0;
   translate: 100% 0;
 }
 
