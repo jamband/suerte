@@ -51,7 +51,7 @@
   max-height: 352px;
   min-width: 10rem;
   overflow-x: hidden;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   position: absolute;
   z-index: 20;
 }
