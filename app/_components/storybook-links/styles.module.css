@@ -42,6 +42,12 @@
   }
 }
 
+.link:active,
+.link:focus-visible {
+  background: rgb(var(--gray-600));
+  color: rgb(var(--gray-100));
+}
+
 .linkIcon {
   height: 1rem;
   margin: 0 0 0.125rem;
