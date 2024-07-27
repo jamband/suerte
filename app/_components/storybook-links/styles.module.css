@@ -64,6 +64,7 @@
 }
 
 .footerLinkIcon {
-  height: 0.925rem;
-  width: 0.925rem;
+  height: 1rem;
+  margin: 0 0 0.125rem;
+  width: 1rem;
 }
