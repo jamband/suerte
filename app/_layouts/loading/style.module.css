@@ -1,6 +1,6 @@
 .initial {
   background: rgb(var(--green));
-  height: 3px;
+  height: 0.3rem;
   inset: 0 auto 0 auto;
   opacity: 0;
   position: fixed;

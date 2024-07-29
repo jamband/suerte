@@ -40,3 +40,9 @@
     color: rgb(var(--gray-600));
   }
 }
+
+.close:active,
+.close:focus-visible {
+  background: rgb(var(--gray-300));
+  color: rgb(var(--gray-600));
+}
