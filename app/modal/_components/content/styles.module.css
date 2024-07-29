@@ -6,9 +6,9 @@
 
 .modal {
   border-radius: var(--rounded);
+  inset: 1rem 0 0 0;
   margin: 0 auto;
-  position: absolute;
-  top: 1rem;
+  position: fixed;
   transition: var(--transition);
   width: 90%;
 }
