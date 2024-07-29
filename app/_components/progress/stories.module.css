@@ -1,0 +1,5 @@
+.container {
+  background: rgb(var(--blue));
+  border-radius: var(--rounded);
+  height: 0.25rem;
+}
