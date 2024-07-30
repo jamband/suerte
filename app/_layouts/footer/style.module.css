@@ -1,14 +1,33 @@
 .container {
-  align-items: center;
   background: rgb(var(--gray-200));
   box-shadow: 0 0 0.1rem 0.05rem rgb(var(--gray-300));
-  display: flex;
   inset: auto auto 0 0;
-  justify-content: center;
   padding: 0.5rem 0;
   position: fixed;
   width: 100%;
   z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0.75rem 0;
+  }
+}
+
+.containerInner {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  gap: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .containerInner {
+    flex-flow: row;
+    gap: 0;
+    margin: 0 auto;
+    max-width: 768px;
+  }
 }
 
 .navigation {
@@ -18,16 +37,26 @@
 
 @media (min-width: 768px) {
   .navigation {
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
 .link {
+  align-items: center;
   border-radius: var(--rounded);
-  padding: 0.5rem 1.5rem;
+  display: inline-flex;
+  font-size: var(--text-sm);
+  gap: 0.25rem;
+  padding: 0.25rem 1.25rem;
   transition:
     background var(--transition),
     color var(--transition);
+}
+
+@media (min-width: 768px) {
+  .link {
+    font-size: var(--text-base);
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -41,4 +70,24 @@
 .link:focus-visible {
   background: rgb(var(--gray-300));
   color: rgb(var(--gray-800));
+}
+
+.linkIcon {
+  height: 1rem;
+  margin: 0 0 0.125rem 0;
+  width: 1rem;
+}
+
+.copyright {
+  color: rgb(var(--gray-500));
+  font-size: 0.75rem;
+  padding: 0 0 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .copyright {
+    font-size: var(--text-sm);
+    margin: 0 0 0 auto;
+    padding: 0 1.5rem;
+  }
 }
