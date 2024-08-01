@@ -23,6 +23,10 @@ export const Icons = {
   render: () => (
     <Gap flow="column wrap" gap="1rem">
       <div className={styles.group}>
+        <IconArrows className={styles.icon} />
+        {IconArrows.name}
+      </div>
+      <div className={styles.group}>
         <IconBoxArrowUpRight className={styles.icon} />
         {IconBoxArrowUpRight.name}
       </div>
@@ -53,10 +57,6 @@ export const Icons = {
       <div className={styles.group}>
         <IconX className={styles.icon} />
         {IconX.name}
-      </div>
-      <div className={styles.group}>
-        <IconArrows className={styles.icon} />
-        {IconArrows.name}
       </div>
     </Gap>
   ),
