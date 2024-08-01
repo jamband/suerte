@@ -10,29 +10,68 @@
 .navigation {
   align-items: center;
   display: flex;
-  justify-content: center;
-  padding: 0.75rem 1rem;
+  padding: 1rem;
 }
 
-.link {
-  border-radius: var(--rounded);
-  font-size: 1.125rem;
+@media (min-width: 768px) {
+  .navigation {
+    margin: 0 auto;
+    max-width: 768px;
+  }
+}
+
+.brandLink {
+  font-size: 1.3rem;
   font-weight: 900;
-  padding: 0.25rem 1.25rem;
+}
+
+.storybookLink {
+  align-items: center;
+  border-radius: var(--rounded);
+  color: rgb(var(--gray-500));
+  display: inline-flex;
+  font-size: var(--text-sm);
+  gap: 0.25rem;
+  margin: 0 0 0 auto;
   transition:
     background var(--transition),
     color var(--transition);
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .link:hover {
-    background: rgb(var(--gray-300));
-    color: rgb(var(--gray-800));
+@media (min-width: 768px) {
+  .storybookLink {
+    font-size: var(--text-base);
+    padding: 0.25rem 1rem;
   }
 }
 
-.link:active,
-.link:focus-visible {
-  background: rgb(var(--gray-300));
-  color: rgb(var(--gray-800));
+@media (hover: hover) and (pointer: fine) {
+  .storybookLink:hover {
+    background: rgb(var(--gray-300));
+    color: rgb(var(--gray-600));
+  }
+}
+
+.storybookLink:active,
+.storybookLink:focus-visible {
+  color: rgb(var(--gray-600));
+}
+
+@media (min-width: 768px) {
+  .storybookLink:active,
+  .storybookLink:focus-visible {
+    background: rgb(var(--gray-300));
+  }
+}
+
+.storybookLinkIcon {
+  height: 1.125rem;
+  width: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .storybookLinkIcon {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
 }
