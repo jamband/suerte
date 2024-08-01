@@ -21,7 +21,7 @@
   background: rgb(var(--red));
   border-radius: var(--rounded);
   color: rgb(var(--gray-100));
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 .alertTitle {
