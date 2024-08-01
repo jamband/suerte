@@ -13,6 +13,7 @@ export default function Page() {
     { slug: "components-dropdown--default", text: "Dropdown" },
     { slug: "components-dropdown-action--default", text: "Dropdown Action" },
     { slug: "components-dropdown-divider--default", text: "Dropdown Divider" },
+    { slug: "icons-base--icons", text: "Icons" },
   ];
 
   return (

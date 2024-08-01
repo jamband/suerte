@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function Page() {
   const storybookLinks = [
     { slug: "components-button--default", text: "Button" },
+    { slug: "icons-base--icons", text: "Icons" },
     { slug: "components-close-button--default", text: "Close Button" },
     { slug: "components-alert--default", text: "Alert" },
   ];

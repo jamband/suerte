@@ -12,6 +12,7 @@ export default function Page() {
   const storybookLinks = [
     { slug: "components-button--default", text: "Button" },
     { slug: "components-close-button--default", text: "Close Button" },
+    { slug: "icons-base--icons", text: "Icons" },
   ];
 
   return (

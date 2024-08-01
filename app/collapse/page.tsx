@@ -13,6 +13,7 @@ export default function Page() {
     { slug: "components-button--default", text: "Button" },
     { slug: "components-collapse--default", text: "Collapse" },
     { slug: "components-alert--default", text: "Alert" },
+    { slug: "icons-base--icons", text: "Icons" },
   ];
 
   return (
