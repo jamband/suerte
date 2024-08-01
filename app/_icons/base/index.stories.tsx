@@ -1,6 +1,7 @@
 import { Gap } from "@/_components/gap";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Icon } from ".";
+import { IconArrows } from "../arrows";
 import { IconBoxArrowUpRight } from "../box-arrow-up-right";
 import { IconChevronDown } from "../chevron-down";
 import { IconChevronLeft } from "../chevron-left";
@@ -52,6 +53,10 @@ export const Icons = {
       <div className={styles.group}>
         <IconX className={styles.icon} />
         {IconX.name}
+      </div>
+      <div className={styles.group}>
+        <IconArrows className={styles.icon} />
+        {IconArrows.name}
       </div>
     </Gap>
   ),
