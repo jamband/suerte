@@ -11,6 +11,7 @@ import { IconInfoCircleFill } from "../info-circle-fill";
 import { IconThreeDots } from "../three-dots";
 import { IconX } from "../x";
 import styles from "./stories.module.css";
+import { IconStorybook } from "../storybook";
 
 const meta = {
   component: Icon,
@@ -49,6 +50,10 @@ export const Icons = {
       <div className={styles.group}>
         <IconInfoCircleFill className={styles.icon} />
         {IconInfoCircleFill.name}
+      </div>
+      <div className={styles.group}>
+        <IconStorybook className={styles.icon} />
+        {IconStorybook.name}
       </div>
       <div className={styles.group}>
         <IconThreeDots className={styles.icon} />
