@@ -21,6 +21,7 @@ export const Content: React.FC = () => {
     { href: "/pagination", text: "Pagination" },
     { href: "/progress", text: "Progress" },
     { href: "/ratio", text: "Ratio" },
+    { href: "/tabs", text: "Tabs" },
     { href: "/toast", text: "Toast" },
   ];
 
