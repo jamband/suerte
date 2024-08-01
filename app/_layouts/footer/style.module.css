@@ -1,6 +1,7 @@
 .container {
   background: rgb(var(--gray-200));
   box-shadow: 0 0 0.1rem 0.05rem rgb(var(--gray-300));
+  color: rgb(var(--gray-500));
   inset: auto auto 0 0;
   padding: 0.5rem 0;
   position: fixed;
@@ -62,14 +63,14 @@
 @media (hover: hover) and (pointer: fine) {
   .link:hover {
     background: rgb(var(--gray-300));
-    color: rgb(var(--gray-800));
+    color: rgb(var(--gray-600));
   }
 }
 
 .link:active,
 .link:focus-visible {
   background: rgb(var(--gray-300));
-  color: rgb(var(--gray-800));
+  color: rgb(var(--gray-600));
 }
 
 .linkIcon {
@@ -79,14 +80,13 @@
 }
 
 .copyright {
-  color: rgb(var(--gray-500));
   font-size: 0.75rem;
   padding: 0 0 0.25rem;
 }
 
 @media (min-width: 768px) {
   .copyright {
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     margin: 0 0 0 auto;
     padding: 0 1.5rem;
   }
