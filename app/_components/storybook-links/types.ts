@@ -6,5 +6,5 @@ export type Props = {
 };
 
 export type _Props = Props & {
-  storybookLink: string;
+  //
 };

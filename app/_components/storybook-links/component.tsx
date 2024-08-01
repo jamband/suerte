@@ -1,3 +1,4 @@
+import { APP_STORYBOOK_URL } from "@/_constants/app";
 import { IconBoxArrowUpRight } from "@/_icons/box-arrow-up-right";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
@@ -9,7 +10,7 @@ export const Component: React.FC<_Props> = (props) => (
       {props.links.map((link) => (
         <li key={link.slug}>
           <a
-            href={`${props.storybookLink}/?path=/story/${link.slug}`}
+            href={`${APP_STORYBOOK_URL}/?path=/story/${link.slug}`}
             className={styles.link}
             rel="noreferrer"
             target="_blank"
@@ -22,7 +23,7 @@ export const Component: React.FC<_Props> = (props) => (
     </ul>
     <div className={styles.footer}>
       <a
-        href={props.storybookLink}
+        href={APP_STORYBOOK_URL}
         className={styles.footerLink}
         rel="noreferrer"
         target="_blank"
