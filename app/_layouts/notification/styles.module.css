@@ -3,7 +3,7 @@
   border-radius: var(--rounded);
   box-shadow: 0.1rem 0.1rem 0.1rem rgb(var(--gray-700));
   display: none;
-  inset: 0.5rem 0.5rem auto 0.5rem;
+  inset: 0.5rem 0.5rem auto;
   margin: 0 auto;
   opacity: 0;
   position: fixed;

@@ -1,6 +1,8 @@
 :root {
   /* font family */
+  /* stylelint-disable-next-line value-keyword-case */
   --font-sans: system-ui, Arial, sans-serif;
+  /* stylelint-disable-next-line value-keyword-case */
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* font size */

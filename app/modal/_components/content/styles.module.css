@@ -6,7 +6,7 @@
 
 .modal {
   border-radius: var(--rounded);
-  inset: 1rem 0 0 0;
+  inset: 1rem 0 0;
   margin: 0 auto;
   position: fixed;
   transition: var(--transition);
@@ -25,13 +25,13 @@
 }
 
 .modal::backdrop {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 30%);
   transition: var(--transition);
 }
 
 .transition {
-  translate: 0 -100%;
   opacity: 0;
+  translate: 0 -100%;
 }
 
 .transition::backdrop {

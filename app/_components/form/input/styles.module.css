@@ -6,16 +6,16 @@
 
 .input {
   background: rgb(var(--gray-100));
-  border-radius: var(--rounded);
   border: 1px solid rgb(var(--gray-300));
+  border-radius: var(--rounded);
   padding: 0.5rem 1rem;
   width: 100%;
 }
 
 .invalidFeedback {
   border: 1px solid rgb(var(--red));
-  outline-offset: 0.1em;
   outline: 2px solid transparent;
+  outline-offset: 0.1em;
 }
 
 .invalidFeedback:focus {
@@ -24,8 +24,8 @@
 
 .validFeedback {
   border: 1px solid rgb(var(--green));
-  outline-offset: 0.1em;
   outline: 2px solid transparent;
+  outline-offset: 0.1em;
 }
 
 .validFeedback:focus {

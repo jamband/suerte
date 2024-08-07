@@ -6,6 +6,7 @@
     "start": "next start",
     "typecheck": "tsc",
     "lint": "next lint",
+    "stylelint": "stylelint \"app/**/*.css\"",
     "format": "prettier --check .",
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",
@@ -32,6 +33,9 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "storybook": "8.2.7",
+    "stylelint": "16.8.1",
+    "stylelint-config-standard": "36.0.1",
+    "stylelint-order": "6.0.4",
     "the-new-css-reset": "1.11.2",
     "typescript": "5.4.5"
   }

@@ -1,6 +1,6 @@
 .container {
-  border-radius: var(--rounded);
   border: 3px solid rgb(var(--gray-500));
+  border-radius: var(--rounded);
   margin: 3rem 0 0;
   padding: 1rem;
 }

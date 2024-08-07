@@ -4,7 +4,7 @@
 
 .link {
   align-items: center;
-  box-shadow: 0 1px 0 0 currentColor;
+  box-shadow: 0 1px 0 0 currentcolor;
   display: inline-flex;
   gap: 0.25rem;
   line-height: 1.2;
