@@ -6,7 +6,6 @@ import type { _Props } from "./types";
 export const Component: React.FC<_Props> = (props) => (
   // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
   <details
-    id={props.id}
     className={styles.container}
     onClick={props.onClick}
     onBlur={props.onBlur}

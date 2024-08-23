@@ -46,11 +46,10 @@
   border-radius: var(--rounded);
   display: flex;
   flex-flow: column;
-  height: auto;
   margin: 0.25rem 0 0;
-  max-height: 352px;
+  max-height: 20rem;
   min-width: 10rem;
-  overflow-x: hidden;
+  overflow: scroll;
   padding: 0.5rem;
   position: absolute;
   z-index: 20;
