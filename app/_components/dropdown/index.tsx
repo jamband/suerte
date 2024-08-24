@@ -14,8 +14,12 @@ export const Dropdown: React.FC<Props> = (props) => {
   };
 
   const onBlur = (event: React.FocusEvent) => {
-    if (!event.currentTarget.contains(event.relatedTarget)) {
-      event.currentTarget.removeAttribute("open");
+    const current = event.currentTarget;
+
+    if (!current.contains(event.relatedTarget)) {
+      setTimeout(() => {
+        current.removeAttribute("open");
+      }, 100);
     }
   };
 
