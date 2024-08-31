@@ -1,7 +1,7 @@
 "use client";
 
 import { useNow } from "@/_hooks/now";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Component } from "./component";
 import type { City } from "./types";
 
@@ -12,6 +12,27 @@ export const Content: React.FC = (props) => {
   });
 
   const [now, setNow] = useNow();
+
+  const tabsRef = useRef<HTMLUListElement>(null);
+  const [tabsPosition, setTabsPosition] = useState("right");
+
+  const tabsOnScroll = () => {
+    const tabs = tabsRef.current;
+
+    if (tabs) {
+      const scrollLeft = tabs.scrollLeft;
+      const scrollWidth = tabs.scrollWidth;
+      const clientWidth = tabs.clientWidth;
+
+      if (scrollLeft <= 10) {
+        setTabsPosition("right");
+      } else if (scrollLeft + clientWidth + 10 >= scrollWidth) {
+        setTabsPosition("left");
+      } else {
+        setTabsPosition("center");
+      }
+    }
+  };
 
   const cities: Array<City> = [
     { name: "Tokyo", timezone: "Asia/Tokyo" },
@@ -45,6 +66,9 @@ export const Content: React.FC = (props) => {
   return (
     <Component
       {...props}
+      tabsRef={tabsRef}
+      tabsPosition={tabsPosition}
+      tabsOnScroll={tabsOnScroll}
       cities={cities}
       onClick={onClick}
       activeCity={activeCity}

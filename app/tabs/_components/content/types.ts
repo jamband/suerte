@@ -4,6 +4,9 @@ export type City = {
 };
 
 export type _Props = {
+  tabsRef: React.RefObject<HTMLUListElement>;
+  tabsPosition: string;
+  tabsOnScroll: () => void;
   cities: Array<City>;
   onClick: (event: React.MouseEvent) => void;
   activeCity: City;

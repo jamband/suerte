@@ -5,12 +5,20 @@ import type { _Props } from "./types";
 export const Component: React.FC<_Props> = (props) => (
   <div className={styles.container}>
     <div className={styles.tabsContainer}>
-      <ul className={styles.tabs}>
+      <ul
+        ref={props.tabsRef}
+        className={`${styles.tabs}
+          ${props.tabsPosition === "right" ? styles.tabsMaskRight : ""}
+          ${props.tabsPosition === "center" ? styles.tabsMask : ""}
+          ${props.tabsPosition === "left" ? styles.tabsMaskLeft : ""}`}
+        onScroll={props.tabsOnScroll}
+      >
         {props.cities.map((city) => (
           <li key={city.name} className={styles.tab}>
             <button
               type="button"
-              className={`${styles.button} ${city.name === props.activeCity.name ? styles.active : ""}`}
+              className={`${styles.button}
+                ${city.name === props.activeCity.name ? styles.active : ""}`}
               onClick={props.onClick}
               disabled={city.name === props.activeCity.name}
             >
