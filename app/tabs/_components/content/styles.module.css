@@ -16,6 +16,7 @@
   display: flex;
   gap: 0.5rem;
   overflow: scroll;
+  overscroll-behavior: contain;
   padding: 0.5rem 1rem 0;
   white-space: nowrap;
 }
