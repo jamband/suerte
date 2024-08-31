@@ -7,7 +7,7 @@ export const Component: React.FC<_Props> = (props) => (
     <div className={styles.tabsContainer}>
       <ul className={styles.tabs}>
         {props.cities.map((city) => (
-          <li key={city.name}>
+          <li key={city.name} className={styles.tab}>
             <button
               type="button"
               className={`${styles.button} ${city.name === props.activeCity.name ? styles.active : ""}`}

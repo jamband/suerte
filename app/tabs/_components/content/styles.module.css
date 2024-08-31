@@ -13,12 +13,20 @@
 
 .tabs {
   border-bottom: 0.25rem solid rgb(var(--gray-600));
-  display: flex;
-  gap: 0.5rem;
   overflow: scroll;
   overscroll-behavior: contain;
-  padding: 0.5rem 1rem 0;
+  padding: 0.5rem 0 0 0.5rem;
   white-space: nowrap;
+}
+
+.tabs::after {
+  content: "";
+  margin: 0 1rem 0 0;
+}
+
+.tab {
+  display: inline-block;
+  margin: 0 0 0 0.5rem;
 }
 
 .tabsHint {
