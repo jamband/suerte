@@ -16,7 +16,6 @@ export const Notification: React.FC = () => {
     const container = containerRef.current;
     if (container) {
       container.style.display = "flex";
-      container.offsetHeight;
       container.style.opacity = "1";
     }
   };
