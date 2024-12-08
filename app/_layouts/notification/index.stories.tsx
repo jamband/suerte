@@ -14,11 +14,11 @@ export const Default = {
   decorators: [
     (Story) => (
       <>
-        <StateContext.Provider value="foo">
-          <DispatchContext.Provider value={fn()}>
+        <StateContext value="foo">
+          <DispatchContext value={fn()}>
             <Story />
-          </DispatchContext.Provider>
-        </StateContext.Provider>
+          </DispatchContext>
+        </StateContext>
       </>
     ),
   ],
@@ -28,11 +28,11 @@ export const LongSentence = {
   decorators: [
     (Story) => (
       <>
-        <StateContext.Provider value={`foo `.repeat(30).trim()}>
-          <DispatchContext.Provider value={fn()}>
+        <StateContext value={`foo `.repeat(30).trim()}>
+          <DispatchContext value={fn()}>
             <Story />
-          </DispatchContext.Provider>
-        </StateContext.Provider>
+          </DispatchContext>
+        </StateContext>
       </>
     ),
   ],
