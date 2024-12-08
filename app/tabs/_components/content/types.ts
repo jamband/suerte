@@ -4,7 +4,7 @@ export type City = {
 };
 
 export type _Props = {
-  tabsRef: React.RefObject<HTMLUListElement>;
+  tabsRef: React.RefObject<HTMLUListElement | null>;
   tabsPosition: string;
   tabsOnScroll: () => void;
   cities: Array<City>;

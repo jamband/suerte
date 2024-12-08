@@ -5,6 +5,6 @@ export type Props = {
 };
 
 export type _Props = Props & {
-  containerRef: React.RefObject<HTMLDivElement>;
-  mainRef: React.RefObject<HTMLDivElement>;
+  containerRef: React.RefObject<HTMLDivElement | null>;
+  mainRef: React.RefObject<HTMLDivElement | null>;
 };

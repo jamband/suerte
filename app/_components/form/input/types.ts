@@ -19,6 +19,6 @@ export type Props = {
 
 export type _Props = Props & {
   id: string;
-  focusRef: React.RefObject<HTMLInputElement>;
+  focusRef: React.RefObject<HTMLInputElement | null>;
   feedbackId: FeedbackProps["id"];
 };
