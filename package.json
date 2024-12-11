@@ -22,11 +22,11 @@
     "@storybook/theming": "8.4.7",
     "@types/node": "20.17.9",
     "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.1",
-    "chromatic": "11.20.0",
+    "@types/react-dom": "19.0.2",
+    "chromatic": "11.20.1",
     "eslint": "9.16.0",
-    "eslint-config-next": "15.0.4",
-    "next": "15.0.4",
+    "eslint-config-next": "15.1.0",
+    "next": "15.1.0",
     "prettier": "3.4.2",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -36,6 +36,6 @@
     "stylelint-order": "6.0.4",
     "the-new-css-reset": "1.11.3",
     "typescript": "5.7.2",
-    "typescript-eslint": "8.17.0"
+    "typescript-eslint": "8.18.0"
   }
 }
