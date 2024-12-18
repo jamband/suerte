@@ -37,17 +37,10 @@ export const Notification: React.FC = () => {
   }, [resetNotification]);
 
   useEffect(() => {
-    let timeoutId: number;
-
     if (notification) {
       show();
-      timeoutId = window.setTimeout(close, 5000);
     }
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [notification, close]);
+  }, [notification]);
 
   return (
     <Component
