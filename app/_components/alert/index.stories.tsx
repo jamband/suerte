@@ -20,6 +20,10 @@ export const Default = {
       <Alert type="info" dismissible>
         {"this is a test. ".repeat(10).trim()}
       </Alert>
+      <Alert type="info" dismissible>
+        <p>{"this is a test. ".repeat(5).trim()}</p>
+        <p>{"this is a test. ".repeat(5).trim()}</p>
+      </Alert>
     </Gap>
   ),
 } satisfies Story;

@@ -17,10 +17,11 @@
 }
 
 .main {
-  align-items: center;
   color: rgb(var(--gray-600));
   display: flex;
   flex: 9;
+  flex-flow: column;
+  gap: 0.5rem;
   line-height: 1.6;
   padding: 1rem 1.25rem;
 }
