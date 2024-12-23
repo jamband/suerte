@@ -13,7 +13,7 @@
 
 .tabs {
   overflow: scroll;
-  overscroll-behavior: contain;
+  overscroll-behavior: contain auto;
   padding: 0.5rem 0 0.5rem 0.5rem;
   white-space: nowrap;
 }
