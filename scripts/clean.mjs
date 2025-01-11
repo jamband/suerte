@@ -4,4 +4,5 @@ await rm(".next", { recursive: true, force: true });
 await rm("node_modules", { recursive: true, force: true });
 await rm("out", { recursive: true, force: true });
 await rm("storybook-static", { recursive: true, force: true });
+await rm("next-env.d.ts", { recursive: true, force: true });
 await rm("tsconfig.tsbuildinfo", { recursive: true, force: true });
