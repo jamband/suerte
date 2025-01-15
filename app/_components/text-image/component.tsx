@@ -3,10 +3,8 @@ import type { _Props } from "./types";
 
 export const Component: React.FC<_Props> = (props) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     role="img"
     preserveAspectRatio="xMidYMid slice"
-    focusable="false"
     className={`${styles.container} ${props.className || ""}`}
     style={props.style}
   >

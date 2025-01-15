@@ -11,11 +11,9 @@ export const Component: React.FC<_Props> = (props) => (
       className={styles.main}
       width="30"
       height="30"
-      xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label={props.text}
       preserveAspectRatio="xMidYMid slice"
-      focusable="false"
     >
       <title>{props.text}</title>
       <rect width="100%" height="100%" fill={props.color}></rect>
