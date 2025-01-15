@@ -1,3 +1,4 @@
+import { CloseButton } from "@/_components/close-button";
 import { ColorBadge } from "@/_components/color-badge";
 import { TextImage } from "@/_components/text-image";
 import styles from "./styles.module.css";
@@ -22,6 +23,9 @@ export const Component: React.FC<_Props> = (props) => (
       onClick={props.modal.closeOnBackgroundClick}
       onKeyDown={props.modal.closeOnEscapeKeyDown}
     >
+      <div className={styles.closeContainer}>
+        <CloseButton onClick={props.modal.close} className={styles.close} />
+      </div>
       <TextImage
         className={styles.image}
         text={props.image.text}
