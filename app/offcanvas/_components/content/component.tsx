@@ -7,24 +7,24 @@ import type { _Props } from "./types";
 export const Component: React.FC<_Props> = (props) => (
   <>
     <div className={styles.container}>
-      <Button className={styles.button} onClick={props.showOffcanvs}>
+      <Button className={styles.button} onClick={props.offcanvas.show}>
         Go to Pages
         <IconChevronRight className={styles.buttonIcon} />
       </Button>
     </div>
     {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
     <dialog
-      ref={props.offcanvasRef}
+      ref={props.offcanvas.ref}
       className={styles.offcanvasContainer}
-      onClick={props.closeOffcanvasOnBackgroundClick}
-      onKeyDown={props.closeOffcanvasOnEscapeKeyDown}
+      onClick={props.offcanvas.closeOnBackgroundClick}
+      onKeyDown={props.offcanvas.closeOnEscapeKeyDown}
     >
       <div className={styles.offcanvas}>
         <div className={styles.offcanvasHeader}>
           <div className={styles.offcanvasHeaderTitle}>Pages</div>
           <CloseButton
             className={styles.close}
-            onClick={props.closeOffcanvas}
+            onClick={props.offcanvas.close}
           />
         </div>
         <div className={styles.offcanvasMain}>

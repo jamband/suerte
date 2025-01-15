@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 import type { Links } from "./types";
 
 export const Content: React.FC = () => {
-  const dialog = useDialog(styles.transition);
+  const offcanvas = useDialog(styles.transition);
   const router = useRouter();
 
   const links: Links = [
@@ -31,10 +31,10 @@ export const Content: React.FC = () => {
   ];
 
   const pushAfterCloseOffcanvas = (href: string) => {
-    dialog.close();
-    const offcanvas = dialog.ref.current;
+    offcanvas.close();
+    const _offcanvas = offcanvas.ref.current;
 
-    offcanvas?.addEventListener(
+    _offcanvas?.addEventListener(
       "transitionend",
       () => {
         router.push(href);
@@ -45,11 +45,7 @@ export const Content: React.FC = () => {
 
   return (
     <Component
-      offcanvasRef={dialog.ref}
-      showOffcanvs={dialog.show}
-      closeOffcanvas={dialog.close}
-      closeOffcanvasOnBackgroundClick={dialog.closeOnBackgroundClick}
-      closeOffcanvasOnEscapeKeyDown={dialog.closeOnEscapeKeyDown}
+      offcanvas={offcanvas}
       pushAfterCloseOffcanvas={pushAfterCloseOffcanvas}
       links={links}
       moreLinks={moreLinks}

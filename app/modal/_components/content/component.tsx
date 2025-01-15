@@ -17,10 +17,10 @@ export const Component: React.FC<_Props> = (props) => (
     </div>
     {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
     <dialog
-      ref={props.modalRef}
+      ref={props.modal.ref}
       className={styles.modal}
-      onClick={props.closeModalOnBackgroundClick}
-      onKeyDown={props.closeModalOnEscapeKeyDown}
+      onClick={props.modal.closeOnBackgroundClick}
+      onKeyDown={props.modal.closeOnEscapeKeyDown}
     >
       <TextImage
         className={styles.image}
