@@ -13,7 +13,7 @@
   transition: background var(--transition);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .dropdown:hover {
     background: rgb(var(--gray-700));
   }

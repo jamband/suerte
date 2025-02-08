@@ -17,7 +17,7 @@
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .container:hover {
     background: rgb(var(--gray-300));
     box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-400));

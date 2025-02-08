@@ -45,7 +45,7 @@
     color var(--transition);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .close:hover {
     background: rgb(var(--gray-500));
     color: rgb(var(--gray-200));

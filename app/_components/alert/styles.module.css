@@ -35,7 +35,7 @@
   transition: background var(--transition);
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .close:hover {
     background: rgb(var(--gray-300));
     color: rgb(var(--gray-600));

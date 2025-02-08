@@ -36,7 +36,7 @@
   padding: 0.5rem 1.25rem;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .link:hover {
     background: rgb(var(--gray-600));
     color: rgb(var(--gray-100));

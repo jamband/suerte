@@ -90,7 +90,7 @@
   pointer-events: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (any-hover: hover) {
   .button:hover {
     background: rgb(var(--gray-300));
     color: rgb(var(--gray-800));
