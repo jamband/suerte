@@ -27,8 +27,8 @@
     "@types/react-dom": "19.0.4",
     "chromatic": "11.27.0",
     "eslint": "9.22.0",
-    "eslint-config-next": "15.2.1",
-    "next": "15.2.1",
+    "eslint-config-next": "15.2.2",
+    "next": "15.2.2",
     "prettier": "3.5.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -38,7 +38,7 @@
     "stylelint-order": "6.0.4",
     "the-new-css-reset": "1.11.3",
     "typescript": "5.8.2",
-    "typescript-eslint": "8.26.0"
+    "typescript-eslint": "8.26.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
