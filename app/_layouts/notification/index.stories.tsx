@@ -1,6 +1,6 @@
 import { DispatchContext, StateContext } from "@/_contexts/notification";
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import { fn } from "storybook/test";
 import { Notification } from ".";
 
 const meta = {
