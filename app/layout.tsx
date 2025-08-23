@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import { APP_NAME } from "./_constants/app";
 import { Layout } from "./_layouts/layout";
 
-type Props = {
-  children: React.ReactNode;
-};
-
 export const metadata: Metadata = {
   title: {
     template: `%s ･ ${APP_NAME}`,
@@ -13,6 +9,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout(props: Props) {
+export default function RootLayout(props: LayoutProps<"/">) {
   return <Layout>{props.children}</Layout>;
 }
