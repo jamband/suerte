@@ -4,13 +4,13 @@ import { useDialog } from "@/_hooks/dialog";
 import { useRouter } from "next/navigation";
 import { Component } from "./component";
 import styles from "./styles.module.css";
-import type { Links } from "./types";
+import type { Link } from "./types";
 
 export const Content: React.FC = () => {
   const offcanvas = useDialog(styles.transition);
   const router = useRouter();
 
-  const links: Links = [
+  const links: Array<Link> = [
     { href: "/", text: "Home" },
     { href: "/alert", text: "Alert" },
     { href: "/collapse", text: "Collapse" },
@@ -25,12 +25,12 @@ export const Content: React.FC = () => {
     { href: "/toast", text: "Toast" },
   ];
 
-  const moreLinks: Links = [
+  const moreLinks: Array<Link> = [
     { href: "/about", text: "About" },
     { href: "/contact", text: "Contact" },
   ];
 
-  const pushAfterCloseOffcanvas = (href: string) => {
+  const pushAfterCloseOffcanvas = (href: Link["href"]) => {
     offcanvas.close();
     const _offcanvas = offcanvas.ref.current;
 

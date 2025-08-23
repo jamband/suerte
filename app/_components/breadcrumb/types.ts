@@ -1,8 +1,15 @@
-export type Props = {
+import type { Route } from "next";
+
+export type Link = {
+  href: Route;
   text: string;
 };
 
+export type Props = {
+  text: Link["text"];
+};
+
 export type _Props = {
-  items: { pathname: string; text: string }[];
-  isCurrent: (pathname: string) => boolean;
+  links: Array<Link>;
+  isCurrent: (href: Link["href"]) => boolean;
 };

@@ -5,24 +5,24 @@ import type { _Props } from "./types";
 export const Component: React.FC<_Props> = (props) => (
   <nav aria-label="breadcrumb">
     <ol className={styles.container}>
-      {props.items.map((item) => (
+      {props.links.map((link) => (
         <li
-          key={item.pathname}
+          key={link.href}
           className={styles.list}
-          aria-current={props.isCurrent(item.pathname) ? "page" : undefined}
+          aria-current={props.isCurrent(link.href) ? "page" : undefined}
         >
-          {props.isCurrent(item.pathname) ? (
+          {props.isCurrent(link.href) ? (
             <>
-              {props.items.length > 1 && (
+              {props.links.length > 1 && (
                 <div className={styles.divider} role="separator">
                   /
                 </div>
               )}
-              {item.text}
+              {link.text}
             </>
           ) : (
-            <Link href={item.pathname} className={styles.link}>
-              {item.text}
+            <Link href={link.href} className={styles.link}>
+              {link.text}
             </Link>
           )}
         </li>

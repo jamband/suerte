@@ -2,25 +2,22 @@
 
 import { usePathname } from "next/navigation";
 import { Component } from "./component";
-import type { Props } from "./types";
+import type { Link, Props } from "./types";
 
 export const Breadcrumb: React.FC<Props> = (props) => {
   const pathname = usePathname();
 
-  const items = () => {
-    const links = [{ pathname: "/", text: "Home" }];
+  const links = () => {
+    const items: Array<Link> = [{ href: "/", text: "Home" }];
+    if (props.text === "") return items;
 
-    if (props.text === "") {
-      return links;
-    }
-
-    links.push({ pathname, text: props.text });
-    return links;
+    items.push({ href: pathname as Link["href"], text: props.text });
+    return items;
   };
 
-  const isCurrent = (current: string) => {
+  const isCurrent = (current: Link["href"]) => {
     return pathname === current;
   };
 
-  return <Component items={items()} isCurrent={isCurrent} />;
+  return <Component links={links()} isCurrent={isCurrent} />;
 };

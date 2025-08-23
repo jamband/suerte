@@ -1,9 +1,10 @@
+import type { Route } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "./_components/breadcrumb";
 import styles from "./page.module.css";
 
 export default function Page() {
-  const links = [
+  const links: Array<{ href: Route; text: string }> = [
     { href: "/alert", text: "Alert" },
     { href: "/collapse", text: "Collapse" },
     { href: "/dropdown", text: "Dropdown" },
