@@ -36,13 +36,5 @@
     "the-new-css-reset": "1.11.3",
     "typescript": "5.9.2",
     "typescript-eslint": "8.42.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "core-js-pure",
-      "esbuild",
-      "sharp",
-      "unrs-resolver"
-    ]
   }
 }
