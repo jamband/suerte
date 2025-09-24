@@ -1,9 +1,9 @@
 {
   "private": true,
   "engines": {
-    "node": "22.x",
-    "pnpm": "10.17.x"
+    "node": "22.x"
   },
+  "packageManager": "pnpm@10.17.1",
   "scripts": {
     "postinstall": "next typegen",
     "dev": "next dev --turbopack",
