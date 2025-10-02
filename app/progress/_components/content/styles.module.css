@@ -3,6 +3,7 @@
 }
 
 .button {
+  user-select: none;
   width: 35%;
 }
 

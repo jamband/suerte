@@ -41,6 +41,7 @@
 }
 
 .button {
+  user-select: none;
   width: 100%;
 }
 

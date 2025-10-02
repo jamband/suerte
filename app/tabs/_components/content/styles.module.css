@@ -84,6 +84,7 @@
   transition:
     background var(--transition),
     color var(--transition);
+  user-select: none;
 }
 
 .button:disabled {

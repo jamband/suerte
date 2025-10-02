@@ -10,6 +10,7 @@
 }
 
 .reload {
+  user-select: none;
   width: 28%;
 }
 
