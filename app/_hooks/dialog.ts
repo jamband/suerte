@@ -26,7 +26,9 @@ export const useDialog = (token: string) => {
   };
 
   const closeOnBackgroundClick = (event: React.MouseEvent) => {
-    if (event.target === ref.current) close();
+    if (event.target === ref.current) {
+      close();
+    }
   };
 
   const closeOnEscapeKeyDown = (event: React.KeyboardEvent) => {
