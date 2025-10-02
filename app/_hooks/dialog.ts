@@ -4,24 +4,22 @@ export const useDialog = (token: string) => {
   const ref = useRef<HTMLDialogElement>(null);
 
   const show = () => {
-    const dialog = ref.current;
-    dialog?.classList.add(token);
-    dialog?.showModal();
+    ref.current?.classList.add(token);
+    ref.current?.showModal();
 
     requestAnimationFrame(() => {
-      dialog?.classList.remove(token);
+      ref.current?.classList.remove(token);
     });
   };
 
   const close = () => {
-    const dialog = ref.current;
-    dialog?.classList.add(token);
+    ref.current?.classList.add(token);
 
-    dialog?.addEventListener(
+    ref.current?.addEventListener(
       "transitionend",
       () => {
-        dialog.classList.remove(token);
-        dialog.close();
+        ref.current?.classList.remove(token);
+        ref.current?.close();
       },
       { once: true },
     );
