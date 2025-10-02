@@ -7,8 +7,20 @@
   margin: 0 auto;
   opacity: 0;
   position: fixed;
-  transition: opacity var(--transition);
+  transform: scale(0.95);
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
   z-index: 40;
+}
+
+.show {
+  display: flex;
+}
+
+.transition {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media (min-width: 768px) {

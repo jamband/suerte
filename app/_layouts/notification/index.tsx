@@ -4,8 +4,9 @@ import {
   useNotificationAction,
   useNotificationState,
 } from "@/_hooks/notification";
-import { useCallback, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Component } from "./component";
+import styles from "./styles.module.css";
 
 export const Notification: React.FC = () => {
   const notification = useNotificationState();
@@ -13,28 +14,24 @@ export const Notification: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const show = () => {
-    const container = containerRef.current;
-    if (container) {
-      container.style.display = "flex";
-      container.style.opacity = "1";
-    }
+    containerRef.current?.classList.add(styles.show);
+    setTimeout(() => {
+      containerRef.current?.classList.add(styles.transition);
+    }, 100);
   };
 
-  const close = useCallback(() => {
-    const container = containerRef.current;
-    if (container) {
-      container.style.opacity = "0";
+  const close = () => {
+    containerRef.current?.classList.remove(styles.transition);
 
-      container.addEventListener(
-        "transitionend",
-        () => {
-          resetNotification();
-          container.style.display = "none";
-        },
-        { once: true },
-      );
-    }
-  }, [resetNotification]);
+    containerRef.current?.addEventListener(
+      "transitionend",
+      () => {
+        resetNotification();
+        containerRef.current?.classList.remove(styles.show);
+      },
+      { once: true },
+    );
+  };
 
   useEffect(() => {
     if (notification) {
