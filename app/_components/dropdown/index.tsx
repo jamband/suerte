@@ -1,40 +1,78 @@
 "use client";
 
+import { useRef } from "react";
 import { Component } from "./component";
+import styles from "./styles.module.css";
 import type { Props } from "./types";
 
 export const Dropdown: React.FC<Props> = (props) => {
-  const onClick = (event: React.MouseEvent) => {
-    if (
-      event.target instanceof HTMLAnchorElement ||
-      event.target instanceof HTMLButtonElement
-    ) {
-      event.currentTarget.removeAttribute("open");
-    }
+  const containerRef = useRef<HTMLDetailsElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const open = () => {
+    contentRef.current?.classList.add(styles.transition);
+    requestAnimationFrame(() => {
+      containerRef.current?.setAttribute("open", "true");
+    });
   };
 
-  const onBlur = (event: React.FocusEvent) => {
-    const current = event.currentTarget;
+  const close = () => {
+    contentRef.current?.classList.remove(styles.transition);
+    contentRef.current?.addEventListener(
+      "transitionend",
+      () => {
+        containerRef.current?.removeAttribute("open");
+      },
+      { once: true },
+    );
+  };
 
-    if (!current.contains(event.relatedTarget)) {
-      setTimeout(() => {
-        current.removeAttribute("open");
-      }, 100);
+  const onClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+    if (containerRef.current?.open) {
+      close();
+    } else {
+      open();
     }
   };
 
   const onKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === "Escape") {
-      event.currentTarget.removeAttribute("open");
+    if (containerRef.current?.open) {
+      if (event.key === "Escape") {
+        close();
+      }
+    }
+  };
+
+  const onBlur = (event: React.FocusEvent) => {
+    if (containerRef.current?.open) {
+      if (!event.currentTarget.contains(event.relatedTarget)) {
+        close();
+      }
+    }
+  };
+
+  const onClickCapture = (event: React.MouseEvent) => {
+    event.preventDefault();
+    if (
+      event.target instanceof HTMLAnchorElement ||
+      event.target instanceof HTMLButtonElement
+    ) {
+      if (containerRef.current?.open) {
+        close();
+      }
     }
   };
 
   return (
     <Component
       {...props}
-      onClick={onClick}
+      containerRef={containerRef}
       onBlur={onBlur}
+      onClick={onClick}
       onKeyDown={onKeyDown}
+      contentRef={contentRef}
+      onClickCapture={onClickCapture}
     />
   );
 };

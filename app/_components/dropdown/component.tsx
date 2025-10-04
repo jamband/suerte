@@ -4,16 +4,16 @@ import styles from "./styles.module.css";
 import type { _Props } from "./types";
 
 export const Component: React.FC<_Props> = (props) => (
-  // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
   <details
+    ref={props.containerRef}
     className={styles.container}
-    onClick={props.onClick}
     onBlur={props.onBlur}
-    onKeyDown={props.onKeyDown}
   >
     <summary
       className={`${styles.button} ${props.className || ""}`}
       aria-label={props.label ? undefined : "more"}
+      onClick={props.onClick}
+      onKeyDown={props.onKeyDown}
     >
       {props.label ? (
         <div className={styles.labelContainer}>
@@ -24,6 +24,12 @@ export const Component: React.FC<_Props> = (props) => (
         <IconThreeDots className={styles.dots} />
       )}
     </summary>
-    <div className={styles.content}>{props.children}</div>
+    <div
+      ref={props.contentRef}
+      className={styles.content}
+      onClickCapture={props.onClickCapture}
+    >
+      {props.children}
+    </div>
   </details>
 );
