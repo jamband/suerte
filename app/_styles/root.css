@@ -15,6 +15,7 @@
   /* border radius */
   --rounded-sm: 0.25rem;
   --rounded: 0.5rem;
+  --rounded-full: calc(infinity * 1px);
 
   /* transition */
   --transition: 0.3s;
