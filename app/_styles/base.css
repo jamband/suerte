@@ -1,3 +1,5 @@
+@import url("the-new-css-reset");
+
 html {
   line-height: 1.6;
   scrollbar-gutter: stable;
@@ -35,6 +37,10 @@ dialog {
 
 html:has(dialog[open]) {
   overflow: hidden;
+}
+
+:focus {
+  outline: revert;
 }
 
 ::placeholder {
