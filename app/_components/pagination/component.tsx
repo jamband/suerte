@@ -1,3 +1,5 @@
+import { IconArrowLeft } from "@/_icons/arrow-left";
+import { IconArrowRight } from "@/_icons/arrow-right";
 import Link from "next/link";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
@@ -9,12 +11,20 @@ export const Component: React.FC<_Props> = (props) => (
         <li key={part} className={styles.item}>
           {props.disabled(part) ? (
             <div className={styles.link} aria-disabled="true">
-              <div aria-hidden={true}>{props.symbol(part)}</div>
+              {["First", "Previous"].includes(part) ? (
+                <IconArrowLeft className={styles.icon} />
+              ) : (
+                <IconArrowRight className={styles.icon} />
+              )}
               {part}
             </div>
           ) : (
             <Link className={styles.link} href={props.href(part)}>
-              <div aria-hidden={true}>{props.symbol(part)}</div>
+              {["First", "Previous"].includes(part) ? (
+                <IconArrowLeft className={styles.icon} />
+              ) : (
+                <IconArrowRight className={styles.icon} />
+              )}
               {part}
             </Link>
           )}

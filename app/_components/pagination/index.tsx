@@ -17,10 +17,6 @@ export const Pagination: React.FC<Props> = (props) => {
       : props.currentPage >= props.lastPage;
   };
 
-  const symbol = (part: Part) => {
-    return ["First", "Previous"].includes(part) ? "←" : "→";
-  };
-
   const href = (part: Part) => {
     if (part === "First") {
       return props.pathname;
@@ -34,13 +30,5 @@ export const Pagination: React.FC<Props> = (props) => {
     return `${props.pathname}?page=${props.lastPage}` as Route;
   };
 
-  return (
-    <Component
-      {...props}
-      parts={parts}
-      disabled={disabled}
-      symbol={symbol}
-      href={href}
-    />
-  );
+  return <Component {...props} parts={parts} disabled={disabled} href={href} />;
 };

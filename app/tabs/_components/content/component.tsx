@@ -1,4 +1,4 @@
-import { IconArrows } from "@/_icons/arrows";
+import { IconArrowsLeftRight } from "@/_icons/arrows-left-right";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
 
@@ -31,7 +31,7 @@ export const Component: React.FC<_Props> = (props) => (
         className={styles.tabsHint}
         aria-label="tabs can be scrolled horizontally"
       >
-        <IconArrows className={styles.tabsHintIcon} />
+        <IconArrowsLeftRight className={styles.tabsHintIcon} />
       </div>
     </div>
     <div className={styles.content}>

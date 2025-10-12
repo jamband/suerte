@@ -65,7 +65,7 @@
 .close {
   border-radius: var(--rounded);
   color: rgb(var(--gray-500));
-  margin: 0 0.75rem 0 auto;
+  margin: 0 1rem 0 auto;
   padding: 0.25rem;
   transition:
     background var(--transition),
@@ -96,7 +96,7 @@
   color: rgb(var(--gray-500));
   display: flex;
   font-weight: 600;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 1.5rem;
   transition: background var(--transition);
 }
 

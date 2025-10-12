@@ -1,5 +1,5 @@
-import { IconChevronDown } from "@/_icons/chevron-down";
-import { IconThreeDots } from "@/_icons/three-dots";
+import { IconAngleDown } from "@/_icons/angle-down";
+import { IconEllipsis } from "@/_icons/ellipsis";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
 
@@ -18,10 +18,10 @@ export const Component: React.FC<_Props> = (props) => (
       {props.label ? (
         <div className={styles.labelContainer}>
           {props.label}
-          <IconChevronDown className={styles.caret} />
+          <IconAngleDown className={styles.caret} />
         </div>
       ) : (
-        <IconThreeDots className={styles.dots} />
+        <IconEllipsis className={styles.dots} />
       )}
     </summary>
     <div

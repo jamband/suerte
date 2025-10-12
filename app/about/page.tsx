@@ -1,7 +1,7 @@
 import { Breadcrumb } from "@/_components/breadcrumb";
 import { Heading } from "@/_components/heading";
 import { APP_NAME } from "@/_constants/app";
-import { IconBoxArrowUpRight } from "@/_icons/box-arrow-up-right";
+import { IconArrowUpRightFromSquare } from "@/_icons/arrow-up-right-from-square";
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 
@@ -23,7 +23,7 @@ export default function Page() {
           rel="noreferrer"
         >
           Next.js
-          <IconBoxArrowUpRight className={styles.icon} />
+          <IconArrowUpRightFromSquare className={styles.icon} />
         </a>{" "}
         and{" "}
         <a
@@ -33,7 +33,7 @@ export default function Page() {
           rel="noreferrer"
         >
           Storybook
-          <IconBoxArrowUpRight className={styles.icon} />
+          <IconArrowUpRightFromSquare className={styles.icon} />
         </a>
         .
       </p>
@@ -46,7 +46,7 @@ export default function Page() {
           rel="noreferrer"
         >
           GitHub
-          <IconBoxArrowUpRight className={styles.icon} />
+          <IconArrowUpRightFromSquare className={styles.icon} />
         </a>{" "}
         for details.
       </p>

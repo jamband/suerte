@@ -1,5 +1,5 @@
 import { APP_STORYBOOK_URL } from "@/_constants/app";
-import { IconBoxArrowUpRight } from "@/_icons/box-arrow-up-right";
+import { IconArrowUpRightFromSquare } from "@/_icons/arrow-up-right-from-square";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
 
@@ -16,7 +16,7 @@ export const Component: React.FC<_Props> = (props) => (
             target="_blank"
           >
             {link.text}
-            <IconBoxArrowUpRight className={styles.linkIcon} />
+            <IconArrowUpRightFromSquare className={styles.linkIcon} />
           </a>
         </li>
       ))}
@@ -29,7 +29,7 @@ export const Component: React.FC<_Props> = (props) => (
         target="_blank"
       >
         You can see the all stories here
-        <IconBoxArrowUpRight className={styles.footerLinkIcon} />
+        <IconArrowUpRightFromSquare className={styles.footerLinkIcon} />
       </a>
     </div>
   </div>

@@ -1,6 +1,7 @@
 import type { Route } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "./_components/breadcrumb";
+import { IconArrowRight } from "./_icons/arrow-right";
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -26,6 +27,7 @@ export default function Page() {
           <li key={index} className={styles.item}>
             <Link href={link.href} className={styles.link}>
               {link.text}
+              <IconArrowRight className={styles.linkIcon} />
             </Link>
           </li>
         ))}

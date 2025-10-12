@@ -1,6 +1,7 @@
 import { Button } from "@/_components/button";
 import { CloseButton } from "@/_components/close-button";
-import { IconChevronRight } from "@/_icons/chevron-right";
+import { IconArrowRight } from "@/_icons/arrow-right";
+import { IconArrowUpRightFromSquare } from "@/_icons/arrow-up-right-from-square";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
 
@@ -9,7 +10,7 @@ export const Component: React.FC<_Props> = (props) => (
     <div className={styles.container}>
       <Button className={styles.button} onClick={props.offcanvas.show}>
         Go to Pages
-        <IconChevronRight className={styles.buttonIcon} />
+        <IconArrowRight className={styles.buttonIcon} />
       </Button>
     </div>
     {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
@@ -36,7 +37,7 @@ export const Component: React.FC<_Props> = (props) => (
               onClick={() => props.pushAfterCloseOffcanvas(link.href)}
             >
               {link.text}
-              <IconChevronRight className={styles.linkIcon} />
+              <IconArrowRight className={styles.linkIcon} />
             </button>
           ))}
           <hr className={styles.divider} />
@@ -48,7 +49,7 @@ export const Component: React.FC<_Props> = (props) => (
               onClick={() => props.pushAfterCloseOffcanvas(link.href)}
             >
               {link.text}
-              <IconChevronRight className={styles.linkIcon} />
+              <IconArrowRight className={styles.linkIcon} />
             </button>
           ))}
           <a
@@ -58,7 +59,7 @@ export const Component: React.FC<_Props> = (props) => (
             target="_blank"
           >
             GitHub
-            <IconChevronRight className={styles.linkIcon} />
+            <IconArrowUpRightFromSquare className={styles.linkIcon} />
           </a>
         </div>
       </div>

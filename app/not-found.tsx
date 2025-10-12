@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "./_components/breadcrumb";
 import { Heading } from "./_components/heading";
-import { IconInfoCircleFill } from "./_icons/info-circle-fill";
+import { IconArrowLeft } from "./_icons/arrow-left";
+import { IconInfoCircle } from "./_icons/info-circle";
 import styles from "./not-found.module.css";
 
 export const metadata: Metadata = {
@@ -16,11 +17,12 @@ export default function NotFound() {
       <div className={styles.container}>
         <Heading>Not Found</Heading>
         <p className={styles.description}>
-          <IconInfoCircleFill className={styles.icon} />
+          <IconInfoCircle className={styles.descriptionIcon} />
           Page not fonud.
         </p>
         <Link href="/" className={styles.link}>
-          ← Back to Home
+          <IconArrowLeft className={styles.linkIcon} />
+          Back to Home
         </Link>
       </div>
     </>

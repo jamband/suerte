@@ -1,6 +1,7 @@
 import { BoxImage } from "@/_components/box-image";
 import { Pagination } from "@/_components/pagination";
-import { IconExclamationTriangleFill } from "@/_icons/exclamation-triangle-fill";
+import { IconArrowLeft } from "@/_icons/arrow-left";
+import { IconCircleExclamation } from "@/_icons/circle-exclamation";
 import Link from "next/link";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
@@ -37,13 +38,14 @@ export const Component: React.FC<_Props> = (props) => (
         <div className={styles.alert}>
           <h2 className={styles.alertTitle}>Invalid page parameter:</h2>
           <p className={styles.alertDescription}>
-            <IconExclamationTriangleFill className={styles.alertIcon} />
+            <IconCircleExclamation className={styles.alertIcon} />
             Page parameters must be between 1 and 10.
           </p>
         </div>
         <div className={styles.alertLinkContainer}>
           <Link href="/pagination" className={styles.alertLink}>
-            ← Back to Pagination
+            <IconArrowLeft className={styles.alertLinkIcon} />
+            Back to Pagination
           </Link>
         </div>
       </div>

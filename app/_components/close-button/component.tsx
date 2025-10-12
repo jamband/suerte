@@ -1,4 +1,4 @@
-import { IconX } from "@/_icons/x";
+import { IconXMark } from "@/_icons/x-mark";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
 
@@ -9,6 +9,6 @@ export const Component: React.FC<_Props> = (props) => (
     aria-label="close"
     onClick={props.onClick}
   >
-    <IconX className={styles.icon} />
+    <IconXMark className={styles.icon} />
   </button>
 );

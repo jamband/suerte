@@ -1,6 +1,6 @@
 import { Breadcrumb } from "@/_components/breadcrumb";
 import { Heading } from "@/_components/heading";
-import { IconBoxArrowUpRight } from "@/_icons/box-arrow-up-right";
+import { IconArrowUpRightFromSquare } from "@/_icons/arrow-up-right-from-square";
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 
@@ -22,7 +22,7 @@ export default function Page() {
           rel="noreferrer"
         >
           X
-          <IconBoxArrowUpRight className={styles.icon} />
+          <IconArrowUpRightFromSquare className={styles.icon} />
         </a>{" "}
         or{" "}
         <a
@@ -32,7 +32,7 @@ export default function Page() {
           rel="noreferrer"
         >
           GitHub Issues
-          <IconBoxArrowUpRight className={styles.icon} />
+          <IconArrowUpRightFromSquare className={styles.icon} />
         </a>
         .
       </p>

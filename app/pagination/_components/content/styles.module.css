@@ -10,7 +10,7 @@
 }
 
 .pagination {
-  margin: 3rem 0 0;
+  margin: 3.5rem 0 0;
 }
 
 .alertContainer {
@@ -21,7 +21,7 @@
   background: rgb(var(--red));
   border-radius: var(--rounded);
   color: rgb(var(--gray-100));
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem 1.25rem;
 }
 
 .alertTitle {
@@ -34,10 +34,10 @@
 }
 
 .alertIcon {
-  height: 1rem;
+  height: 1.5rem;
   margin: 0 0.5rem 0 0;
-  vertical-align: -0.125rem;
-  width: 1rem;
+  vertical-align: -0.35rem;
+  width: 1.5rem;
 }
 
 .alertLinkContainer {
@@ -47,5 +47,14 @@
 }
 
 .alertLink {
+  align-items: center;
   box-shadow: 0 1px 0 0 currentcolor;
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.alertLinkIcon {
+  height: 1rem;
+  margin: 0 0 -0.1rem;
+  width: 1rem;
 }

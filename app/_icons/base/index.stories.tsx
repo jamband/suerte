@@ -1,17 +1,16 @@
 import { Gap } from "@/_components/gap";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Icon } from ".";
-import { IconArrows } from "../arrows";
-import { IconBoxArrowUpRight } from "../box-arrow-up-right";
-import { IconChevronDown } from "../chevron-down";
-import { IconChevronLeft } from "../chevron-left";
-import { IconChevronRight } from "../chevron-right";
-import { IconExclamationTriangleFill } from "../exclamation-triangle-fill";
-import { IconInfoCircleFill } from "../info-circle-fill";
-import { IconThreeDots } from "../three-dots";
-import { IconX } from "../x";
-import styles from "./stories.module.css";
+import { IconAngleDown } from "../angle-down";
+import { IconArrowRight } from "../arrow-right";
+import { IconArrowUpRightFromSquare } from "../arrow-up-right-from-square";
+import { IconArrowsLeftRight } from "../arrows-left-right";
+import { IconCircleExclamation } from "../circle-exclamation";
+import { IconEllipsis } from "../ellipsis";
+import { IconInfoCircle } from "../info-circle";
 import { IconStorybook } from "../storybook";
+import { IconXMark } from "../x-mark";
+import styles from "./stories.module.css";
 
 const meta = {
   component: Icon,
@@ -24,44 +23,40 @@ export const Icons = {
   render: () => (
     <Gap flow="column wrap" gap="1rem">
       <div className={styles.group}>
-        <IconArrows className={styles.icon} />
-        {IconArrows.name}
+        <IconAngleDown className={styles.icon} />
+        {IconAngleDown.name}
       </div>
       <div className={styles.group}>
-        <IconBoxArrowUpRight className={styles.icon} />
-        {IconBoxArrowUpRight.name}
+        <IconArrowRight className={styles.icon} />
+        {IconArrowRight.name}
       </div>
       <div className={styles.group}>
-        <IconChevronDown className={styles.icon} />
-        {IconChevronDown.name}
+        <IconArrowUpRightFromSquare className={styles.icon} />
+        {IconArrowUpRightFromSquare.name}
       </div>
       <div className={styles.group}>
-        <IconChevronLeft className={styles.icon} />
-        {IconChevronLeft.name}
+        <IconArrowsLeftRight className={styles.icon} />
+        {IconArrowsLeftRight.name}
       </div>
       <div className={styles.group}>
-        <IconChevronRight className={styles.icon} />
-        {IconChevronRight.name}
+        <IconCircleExclamation className={styles.icon} />
+        {IconCircleExclamation.name}
       </div>
       <div className={styles.group}>
-        <IconExclamationTriangleFill className={styles.icon} />
-        {IconExclamationTriangleFill.name}
+        <IconEllipsis className={styles.icon} />
+        {IconEllipsis.name}
       </div>
       <div className={styles.group}>
-        <IconInfoCircleFill className={styles.icon} />
-        {IconInfoCircleFill.name}
+        <IconInfoCircle className={styles.icon} />
+        {IconInfoCircle.name}
       </div>
       <div className={styles.group}>
         <IconStorybook className={styles.icon} />
         {IconStorybook.name}
       </div>
       <div className={styles.group}>
-        <IconThreeDots className={styles.icon} />
-        {IconThreeDots.name}
-      </div>
-      <div className={styles.group}>
-        <IconX className={styles.icon} />
-        {IconX.name}
+        <IconXMark className={styles.icon} />
+        {IconXMark.name}
       </div>
     </Gap>
   ),

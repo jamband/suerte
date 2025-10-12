@@ -1,4 +1,4 @@
-import { IconBoxArrowUpRight } from "@/_icons/box-arrow-up-right";
+import { IconArrowUpRightFromSquare } from "@/_icons/arrow-up-right-from-square";
 import Link from "next/link";
 import styles from "./style.module.css";
 
@@ -19,11 +19,11 @@ export const Component: React.FC = () => (
           target="_blank"
         >
           GitHub
-          <IconBoxArrowUpRight className={styles.linkIcon} />
+          <IconArrowUpRightFromSquare className={styles.linkIcon} />
         </a>
       </nav>
       <div className={styles.copyright}>
-        ©️ {new Date().getFullYear()} Tomoki Morita
+        © {new Date().getFullYear()} Tomoki Morita
       </div>
     </div>
   </footer>

@@ -12,6 +12,5 @@ export type Props = {
 export type _Props = Props & {
   parts: Array<Part>;
   disabled: (part: Part) => boolean;
-  symbol: (part: Part) => "←" | "→";
   href: (part: Part) => Route;
 };
