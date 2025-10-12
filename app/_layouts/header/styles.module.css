@@ -10,13 +10,14 @@
 .navigation {
   align-items: center;
   display: flex;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 @media (min-width: 768px) {
   .navigation {
     margin: 0 auto;
     max-width: 768px;
+    padding: 1rem;
   }
 }
 
