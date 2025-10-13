@@ -5,7 +5,7 @@ import { Component } from "./component";
 import type { InputState } from "./types";
 
 export const Content: React.FC = () => {
-  const [code, setCode] = useState("...");
+  const [code, setCode] = useState("000000");
   const [feedback, setFeedback] = useState("");
   const [input, setInput] = useState("");
   const [inputState, setInputState] = useState<InputState>(undefined);

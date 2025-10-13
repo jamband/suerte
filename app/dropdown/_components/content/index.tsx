@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Component } from "./component";
 
 export const Content: React.FC = () => {
-  const [letters, setLetters] = useState(["..."]);
+  const [letters, setLetters] = useState("GENERATING".split(""));
   const [searchLetter, setSearchLetter] = useState("");
 
   const generateLetters = () => {
