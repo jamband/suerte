@@ -8,7 +8,7 @@
 }
 
 .type {
-  margin: 1.15rem -0.5rem 0 1rem;
+  margin: 1.125rem -0.5rem 0 1rem;
 }
 
 .typeIcon {
@@ -30,7 +30,7 @@
   align-self: flex-start;
   border-radius: var(--rounded);
   color: rgb(var(--gray-500));
-  margin: 0.8rem 0.75rem 0 0;
+  margin: 0.8rem 0.8rem 0 0;
   padding: 0.25rem;
   transition: background var(--transition);
 }
