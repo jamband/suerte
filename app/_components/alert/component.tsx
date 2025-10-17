@@ -1,4 +1,4 @@
-import { IconInfoCircle } from "@/_icons/info-circle";
+import { IconCircleInfo } from "@/_icons/circle-info";
 import { CloseButton } from "../close-button";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
@@ -7,7 +7,7 @@ export const Component: React.FC<_Props> = (props) => (
   <div className={`${styles.container} ${props.className || ""}`} role="alert">
     {props.type === "info" && (
       <div className={styles.type}>
-        <IconInfoCircle className={styles.typeIcon} />
+        <IconCircleInfo className={styles.typeIcon} />
       </div>
     )}
     <div className={styles.main}>{props.children}</div>

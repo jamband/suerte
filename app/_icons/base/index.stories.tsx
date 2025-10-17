@@ -6,8 +6,8 @@ import { IconArrowRight } from "../arrow-right";
 import { IconArrowUpRightFromSquare } from "../arrow-up-right-from-square";
 import { IconArrowsLeftRight } from "../arrows-left-right";
 import { IconCircleExclamation } from "../circle-exclamation";
+import { IconCircleInfo } from "../circle-info";
 import { IconEllipsis } from "../ellipsis";
-import { IconInfoCircle } from "../info-circle";
 import { IconStorybook } from "../storybook";
 import { IconXMark } from "../x-mark";
 import styles from "./stories.module.css";
@@ -47,8 +47,8 @@ export const Icons = {
         {IconEllipsis.name}
       </div>
       <div className={styles.group}>
-        <IconInfoCircle className={styles.icon} />
-        {IconInfoCircle.name}
+        <IconCircleInfo className={styles.icon} />
+        {IconCircleInfo.name}
       </div>
       <div className={styles.group}>
         <IconStorybook className={styles.icon} />
