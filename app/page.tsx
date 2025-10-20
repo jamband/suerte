@@ -17,6 +17,7 @@ export default function Page() {
     { href: "/ratio", text: "Ratio" },
     { href: "/tabs", text: "Tabs" },
     { href: "/toast", text: "Toast" },
+    { href: "/tooltip", text: "Tooltip" },
   ];
 
   return (
