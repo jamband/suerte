@@ -10,6 +10,9 @@ const meta = {
       options: ["top", "right", "bottom", "left"],
     },
   },
+  args: {
+    placement: "top",
+  },
 } satisfies Meta<typeof Tooltip>;
 
 export default meta;
