@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.button {
+  background: rgb(var(--gray-600));
+  border-radius: 0.5rem;
+  box-shadow: 0.05rem 0.05rem 0.1rem 0 rgb(var(--gray-400));
+  color: rgb(var(--gray-100));
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.8rem 1.25rem;
+  user-select: none;
+}
+
+.tooltip {
+  background: rgb(var(--blue));
+  color: rgb(var(--gray-100));
+}

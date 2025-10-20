@@ -1,0 +1,85 @@
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  user-select: none;
+}
+
+.tooltip {
+  border-radius: var(--rounded);
+  font-weight: 600;
+  opacity: 0;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  text-wrap: nowrap;
+  transition:
+    opacity var(--transition),
+    visibility var(--transition);
+  visibility: hidden;
+  z-index: 10;
+}
+
+@media (any-hover: hover) {
+  .button:not(:disabled):hover + .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.button:not(:disabled):focus-visible + .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip::before {
+  background: inherit;
+  border-radius: 0.125rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
+  rotate: 45deg;
+  width: 1rem;
+  z-index: -1;
+}
+
+.top {
+  inset: auto auto 100% 50%;
+  translate: -50% -0.75rem;
+}
+
+.top::before {
+  inset: 100% auto auto 50%;
+  translate: -50% -0.75rem;
+}
+
+.right {
+  inset: 50% auto auto 100%;
+  translate: 0.625rem -50%;
+}
+
+.right::before {
+  inset: 50% 100% auto auto;
+  translate: 0.75rem -50%;
+}
+
+.bottom {
+  inset: 100% auto auto 50%;
+  translate: -50% 0.625rem;
+}
+
+.bottom::before {
+  inset: auto auto 100% 50%;
+  translate: -50% 0.75rem;
+}
+
+.left {
+  inset: 50% 100% auto auto;
+  translate: -0.625rem -50%;
+}
+
+.left::before {
+  inset: 50% auto auto 100%;
+  translate: -0.75rem -50%;
+}
