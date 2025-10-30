@@ -6,7 +6,7 @@
   "packageManager": "pnpm@10.20.0",
   "scripts": {
     "postinstall": "next typegen",
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",
@@ -19,7 +19,6 @@
     "clean": "node scripts/clean.mjs"
   },
   "dependencies": {
-    "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.38.0",
     "@storybook/nextjs": "9.1.13",
     "@storybook/react": "9.1.13",
@@ -28,8 +27,9 @@
     "@types/react-dom": "19.2.2",
     "chromatic": "13.3.2",
     "eslint": "9.38.0",
-    "eslint-config-next": "15.5.6",
-    "next": "15.5.6",
+    "eslint-config-next": "16.0.1",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "next": "16.0.1",
     "prettier": "3.6.2",
     "react": "19.2.0",
     "react-dom": "19.2.0",

@@ -1,26 +1,32 @@
-import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
+import next from "eslint-config-next/core-web-vitals";
+import ts from "eslint-config-next/typescript";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import { defineConfig, globalIgnores } from "eslint/config";
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
-});
-
-const eslintConfig = [
+const eslintConfig = defineConfig([
+  globalIgnores([".next/", "out/", "storybook-static/", "next-env.d.ts"]),
   {
-    ignores: [".next/**", "out/**", "storybook-static", "next-env.d.ts"],
+    files: ["**/*.{js,mjs}"],
+    extends: [js.configs.recommended],
   },
-  ...compat.config({
-    extends: [
-      "eslint:recommended",
-      "plugin:jsx-a11y/recommended",
-      "next/core-web-vitals",
-      "next/typescript",
-    ],
+  {
+    files: ["**/*.{ts,tsx}"],
+    extends: [ts],
     rules: {
       "@typescript-eslint/consistent-type-imports": "error",
     },
-  }),
-];
+  },
+  {
+    files: ["app/**/*.tsx"],
+    rules: {
+      ...jsxA11y.flatConfigs.recommended.rules,
+    },
+  },
+  {
+    files: ["app/**/*.{ts,tsx}"],
+    extends: [next],
+  },
+]);
 
 export default eslintConfig;
