@@ -19,7 +19,9 @@ export const Content: React.FC = () => {
   };
 
   useEffect(() => {
-    setLetters(generateLetters());
+    setTimeout(() => {
+      setLetters(generateLetters());
+    }, 1000);
   }, []);
 
   return (

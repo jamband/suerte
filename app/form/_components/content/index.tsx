@@ -42,7 +42,9 @@ export const Content: React.FC = () => {
   };
 
   useEffect(() => {
-    setCode(generateCode());
+    setTimeout(() => {
+      setCode(generateCode());
+    }, 1000);
   }, []);
 
   return (

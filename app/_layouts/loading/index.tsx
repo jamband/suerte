@@ -22,7 +22,9 @@ export const Loading: React.FC = () => {
   }
 
   useEffect(() => {
-    setState("start");
+    setTimeout(() => {
+      setState("start");
+    }, 100);
 
     setTimeout(() => {
       setState("complete");
