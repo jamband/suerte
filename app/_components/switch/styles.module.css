@@ -1,6 +1,6 @@
 .container {
   background: rgb(var(--gray-200));
-  border-radius: 0.5rem;
+  border-radius: var(--rounded);
   box-shadow: 0.05rem 0.05rem 0.1rem 0 rgb(var(--gray-300));
   display: flex;
   gap: 0.125rem;

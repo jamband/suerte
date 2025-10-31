@@ -1,7 +1,7 @@
 .container {
   align-items: center;
   background: rgb(var(--gray-200));
-  border-radius: 50rem;
+  border-radius: var(--rounded-full);
   box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-300));
   color: rgb(var(--gray-600));
   display: flex;
@@ -31,7 +31,7 @@
 }
 
 .main {
-  border-radius: 99rem;
+  border-radius: var(--rounded-full);
 }
 
 .text {

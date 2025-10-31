@@ -6,7 +6,7 @@
 
 .button {
   background: rgb(var(--gray-600));
-  border-radius: 0.5rem;
+  border-radius: var(--rounded);
   box-shadow: 0.05rem 0.05rem 0.1rem 0 rgb(var(--gray-400));
   color: rgb(var(--gray-100));
   font-weight: 600;
