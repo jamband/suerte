@@ -69,10 +69,3 @@
   height: 1.125rem;
   width: 1.125rem;
 }
-
-@media (min-width: 768px) {
-  .storybookLinkIcon {
-    height: 1.3rem;
-    width: 1.3rem;
-  }
-}

@@ -1,6 +1,7 @@
 .container {
   background: rgb(var(--gray-200));
   border-radius: var(--rounded);
+  box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-300));
   display: flex;
   flex-flow: column;
   gap: 1rem;
