@@ -3,12 +3,12 @@
   border-radius: var(--rounded);
   box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-300));
   display: flex;
-  line-height: 0;
+  line-height: 1.4;
   transition: opacity var(--transition);
 }
 
 .type {
-  margin: 1.125rem -0.5rem 0 1rem;
+  margin: 1rem -0.5rem 0 1rem;
 }
 
 .typeIcon {
