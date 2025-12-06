@@ -25,20 +25,20 @@
     "@types/node": "22.19.1",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
-    "chromatic": "13.3.3",
+    "chromatic": "13.3.4",
     "eslint": "9.39.1",
     "eslint-config-next": "16.0.7",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "next": "16.0.7",
-    "prettier": "3.6.2",
+    "prettier": "3.7.4",
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "storybook": "10.0.7",
-    "stylelint": "16.25.0",
+    "stylelint": "16.26.1",
     "stylelint-config-standard": "39.0.1",
     "stylelint-order": "7.0.0",
     "the-new-css-reset": "1.11.3",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.4"
+    "typescript-eslint": "8.48.1"
   }
 }
