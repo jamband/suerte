@@ -33,7 +33,7 @@
     "prettier": "3.7.4",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-    "storybook": "10.0.7",
+    "storybook": "10.1.10",
     "stylelint": "16.26.1",
     "stylelint-config-standard": "39.0.1",
     "stylelint-order": "7.0.0",
