@@ -14,7 +14,7 @@
   width: 28%;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .reload {
     width: 15%;
   }

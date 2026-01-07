@@ -23,7 +23,7 @@
   transform: scale(1);
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .container {
     left: auto;
     margin: 0;
@@ -31,7 +31,7 @@
   }
 }
 
-@media (width >= 1024px) {
+@media (width >= 64rem) {
   .container {
     width: 20%;
   }

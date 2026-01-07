@@ -4,9 +4,9 @@
   width: 100%;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .main {
-    max-width: 768px;
+    max-width: 48rem;
     padding: 7.25rem 1rem;
   }
 }

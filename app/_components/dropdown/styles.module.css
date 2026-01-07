@@ -11,7 +11,7 @@
   user-select: none;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .button {
     font-size: var(--text-base);
   }

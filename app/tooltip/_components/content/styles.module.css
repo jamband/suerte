@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .buttonGroup {
     width: 50%;
   }

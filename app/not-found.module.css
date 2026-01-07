@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .container {
     height: 65vh;
   }

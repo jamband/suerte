@@ -23,7 +23,7 @@
     color var(--transition);
 }
 
-@media (width >= 768px) {
+@media (width >= 48rem) {
   .link {
     border-radius: var(--rounded);
     display: inline-flex;
