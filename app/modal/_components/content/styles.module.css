@@ -13,7 +13,7 @@
   width: 85%;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .modal {
     inset: 3rem 0 0;
     width: 35rem;
@@ -63,7 +63,7 @@
   margin: 0.25rem 0 0;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .image {
     font-size: var(--text-4xl);
   }

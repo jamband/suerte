@@ -10,7 +10,7 @@
   width: 35%;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .button {
     width: 25%;
   }

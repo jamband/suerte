@@ -6,7 +6,7 @@
   margin: 2rem 0 0;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .container {
     font-size: var(--text-4xl);
   }

@@ -13,7 +13,7 @@
   padding: 1rem 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .navigation {
     margin: 0 auto;
     max-width: 768px;
@@ -39,7 +39,7 @@
     color var(--transition);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .storybookLink {
     font-size: var(--text-base);
     padding: 0.25rem 1rem;
@@ -58,7 +58,7 @@
   color: rgb(var(--gray-600));
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .storybookLink:active,
   .storybookLink:focus-visible {
     background: rgb(var(--gray-300));
