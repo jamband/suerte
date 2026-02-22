@@ -3,7 +3,7 @@
   "engines": {
     "node": "22.x"
   },
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.30.1",
   "scripts": {
     "postinstall": "next typegen",
     "dev": "next dev",
