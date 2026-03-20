@@ -19,26 +19,26 @@
     "clean": "node scripts/clean.mjs"
   },
   "dependencies": {
-    "@eslint/js": "9.39.3",
-    "@storybook/nextjs": "10.2.15",
-    "@storybook/react": "10.2.15",
-    "@types/node": "22.19.13",
+    "@eslint/js": "9.39.4",
+    "@storybook/nextjs": "10.3.0",
+    "@storybook/react": "10.3.0",
+    "@types/node": "22.19.15",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "chromatic": "15.2.0",
-    "eslint": "9.39.3",
-    "eslint-config-next": "16.1.6",
+    "chromatic": "15.3.0",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "next": "16.1.6",
+    "next": "16.2.0",
     "prettier": "3.8.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "storybook": "10.2.15",
+    "storybook": "10.3.0",
     "stylelint": "17.4.0",
     "stylelint-config-standard": "40.0.0",
-    "stylelint-order": "7.0.1",
+    "stylelint-order": "8.1.1",
     "the-new-css-reset": "1.11.3",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.56.1"
+    "typescript-eslint": "8.57.1"
   }
 }
