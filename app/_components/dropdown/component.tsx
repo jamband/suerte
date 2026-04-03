@@ -12,7 +12,6 @@ export const Component: React.FC<_Props> = (props) => (
     <summary
       className={`${styles.button} ${props.className || ""}`}
       aria-label={props.label ? undefined : "more"}
-      onClick={props.onClick}
       onKeyDown={props.onKeyDown}
     >
       {props.label ? (

@@ -1,6 +1,21 @@
 .container {
   display: inline-block;
   line-height: 1.8;
+
+  &::details-content {
+    content-visibility: initial;
+    opacity: 0;
+    transition:
+      opacity var(--transition),
+      translate var(--transition),
+      content-visibility var(--transition) allow-discrete;
+    translate: 0;
+  }
+
+  &[open]::details-content {
+    opacity: 1;
+    translate: 0 0.25rem;
+  }
 }
 
 .button {
@@ -41,17 +56,8 @@
   flex-flow: column;
   max-height: 20rem;
   min-width: 10rem;
-  opacity: 0;
   overflow: scroll;
   padding: 0.5rem;
   position: absolute;
-  transition:
-    opacity var(--transition),
-    translate var(--transition);
   z-index: 20;
-}
-
-.transition {
-  opacity: 1;
-  translate: 0 0.25rem;
 }
