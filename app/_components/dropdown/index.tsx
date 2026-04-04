@@ -19,13 +19,13 @@ export const Dropdown: React.FC<Props> = (props) => {
   const onBlur = (event: React.FocusEvent) => {
     if (containerRef.current?.open) {
       if (!event.currentTarget.contains(event.relatedTarget)) {
+        if (event.relatedTarget === null) return;
         containerRef.current.removeAttribute("open");
       }
     }
   };
 
   const onClickCapture = (event: React.MouseEvent) => {
-    event.preventDefault();
     if (
       event.target instanceof HTMLAnchorElement ||
       event.target instanceof HTMLButtonElement
