@@ -3,11 +3,10 @@
 import { useDialog } from "@/_hooks/dialog";
 import { useRouter } from "next/navigation";
 import { Component } from "./component";
-import styles from "./styles.module.css";
 import type { Link } from "./types";
 
 export const Content: React.FC = () => {
-  const offcanvas = useDialog(styles.transition);
+  const offcanvas = useDialog();
   const router = useRouter();
 
   const links: Array<Link> = [
@@ -16,6 +15,7 @@ export const Content: React.FC = () => {
     { href: "/collapse", text: "Collapse" },
     { href: "/dropdown", text: "Dropdown" },
     { href: "/form", text: "Form" },
+    { href: "/footer-menu", text: "Footer Menu" },
     { href: "/modal", text: "Modal" },
     { href: "/offcanvas", text: "Offcanvas" },
     { href: "/pagination", text: "Pagination" },
@@ -33,15 +33,10 @@ export const Content: React.FC = () => {
 
   const pushAfterCloseOffcanvas = (href: Link["href"]) => {
     offcanvas.close();
-    const _offcanvas = offcanvas.ref.current;
 
-    _offcanvas?.addEventListener(
-      "transitionend",
-      () => {
-        router.push(href);
-      },
-      { once: true },
-    );
+    setTimeout(() => {
+      router.push(href);
+    }, 100);
   };
 
   return (

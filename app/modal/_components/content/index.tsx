@@ -3,7 +3,6 @@
 import { useDialog } from "@/_hooks/dialog";
 import { useState } from "react";
 import { Component } from "./component";
-import styles from "./styles.module.css";
 import type { Image } from "./types";
 
 export const Content: React.FC = () => {
@@ -12,7 +11,7 @@ export const Content: React.FC = () => {
     background: "#ed7c7c",
   });
 
-  const modal = useDialog(styles.transition);
+  const modal = useDialog();
 
   const images: Array<Image> = [
     { text: "red", background: "#ed7c7c" },
