@@ -15,7 +15,7 @@ export const Content: React.FC = () => {
     { href: "/collapse", text: "Collapse" },
     { href: "/dropdown", text: "Dropdown" },
     { href: "/form", text: "Form" },
-    { href: "/footer-menu", text: "Footer Menu" },
+    // { href: "/footer-menu", text: "Footer Menu" },
     { href: "/modal", text: "Modal" },
     { href: "/offcanvas", text: "Offcanvas" },
     { href: "/pagination", text: "Pagination" },
