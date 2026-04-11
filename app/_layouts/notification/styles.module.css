@@ -12,6 +12,16 @@
     opacity var(--transition),
     transform var(--transition);
   z-index: 40;
+
+  @media (width >= 48rem) {
+    left: auto;
+    margin: 0;
+    width: 40%;
+
+    @media (width >= 64rem) {
+      width: 20%;
+    }
+  }
 }
 
 .show {
@@ -21,20 +31,6 @@
 .transition {
   opacity: 1;
   transform: scale(1);
-}
-
-@media (width >= 48rem) {
-  .container {
-    left: auto;
-    margin: 0;
-    width: 40%;
-  }
-}
-
-@media (width >= 64rem) {
-  .container {
-    width: 20%;
-  }
 }
 
 .notification {
@@ -55,17 +51,17 @@
   transition:
     background var(--transition),
     color var(--transition);
-}
 
-@media (any-hover: hover) {
-  .close:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-500));
+      color: rgb(var(--gray-200));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-500));
     color: rgb(var(--gray-200));
   }
-}
-
-.close:active,
-.close:focus-visible {
-  background: rgb(var(--gray-500));
-  color: rgb(var(--gray-200));
 }

@@ -12,26 +12,24 @@
   line-height: 1.2;
   padding: 0.8rem 1.25rem;
   transition: background var(--transition);
-}
 
-@media (width >= 48rem) {
-  .container {
+  @media (width >= 48rem) {
     font-size: var(--text-base);
   }
-}
 
-.container:disabled {
-  background: rgb(var(--gray-500));
-  pointer-events: none;
-}
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-700));
+    }
+  }
 
-@media (any-hover: hover) {
-  .container:hover {
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-700));
   }
-}
 
-.container:active,
-.container:focus-visible {
-  background: rgb(var(--gray-700));
+  &:disabled {
+    background: rgb(var(--gray-500));
+    pointer-events: none;
+  }
 }

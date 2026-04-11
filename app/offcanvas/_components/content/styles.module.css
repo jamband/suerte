@@ -29,6 +29,10 @@
   translate: 100% 0;
   width: 100%;
 
+  @media (width >= 48rem) {
+    width: 20rem;
+  }
+
   &[open] {
     opacity: 1;
     translate: 0;
@@ -51,12 +55,6 @@
     @starting-style {
       opacity: 0;
     }
-  }
-}
-
-@media (width >= 48rem) {
-  .offcanvasContainer {
-    width: 20rem;
   }
 }
 
@@ -88,19 +86,19 @@
   transition:
     background var(--transition),
     color var(--transition);
-}
 
-@media (any-hover: hover) {
-  .close:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-300));
+      color: rgb(var(--gray-600));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-300));
     color: rgb(var(--gray-600));
   }
-}
-
-.close:active,
-.close:focus-visible {
-  background: rgb(var(--gray-300));
-  color: rgb(var(--gray-600));
 }
 
 .offcanvasMain {
@@ -116,19 +114,19 @@
   font-weight: 600;
   padding: 0.5rem 1.5rem;
   transition: background var(--transition);
-}
 
-@media (any-hover: hover) {
-  .link:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-200));
+      color: rgb(var(--gray-600));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-200));
     color: rgb(var(--gray-600));
   }
-}
-
-.link:active,
-.link:focus-visible {
-  background: rgb(var(--gray-200));
-  color: rgb(var(--gray-600));
 }
 
 .linkIcon {

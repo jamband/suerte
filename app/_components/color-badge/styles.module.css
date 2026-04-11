@@ -9,25 +9,23 @@
   font-size: var(--text-sm);
   font-weight: 700;
   padding: 0.5rem 1rem 0.5rem 0.5rem;
-}
 
-@media (width >= 48rem) {
-  .container {
+  @media (width >= 48rem) {
     font-size: var(--text-base);
   }
-}
 
-@media (any-hover: hover) {
-  .container:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-300));
+      box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-400));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-300));
     box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-400));
   }
-}
-
-.container:active,
-.container:focus-visible {
-  background: rgb(var(--gray-300));
-  box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-400));
 }
 
 .main {

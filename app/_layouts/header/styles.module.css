@@ -11,10 +11,8 @@
   align-items: center;
   display: flex;
   padding: 1rem 1.5rem;
-}
 
-@media (width >= 48rem) {
-  .navigation {
+  @media (width >= 48rem) {
     margin: 0 auto;
     max-width: 48rem;
     padding: 1rem;
@@ -37,31 +35,23 @@
   transition:
     background var(--transition),
     color var(--transition);
-}
 
-@media (width >= 48rem) {
-  .storybookLink {
+  @media (width >= 48rem) {
     font-size: var(--text-base);
     padding: 0.25rem 1rem;
   }
-}
 
-@media (any-hover: hover) {
-  .storybookLink:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-300));
+      color: rgb(var(--gray-600));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-300));
     color: rgb(var(--gray-600));
-  }
-}
-
-.storybookLink:active,
-.storybookLink:focus-visible {
-  color: rgb(var(--gray-600));
-}
-
-@media (width >= 48rem) {
-  .storybookLink:active,
-  .storybookLink:focus-visible {
-    background: rgb(var(--gray-300));
   }
 }
 

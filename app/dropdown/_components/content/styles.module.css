@@ -11,17 +11,17 @@
   color: rgb(var(--gray-100));
   padding: 0.5rem 1rem;
   transition: background var(--transition);
-}
 
-@media (any-hover: hover) {
-  .dropdown:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-700));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-700));
   }
-}
-
-.dropdown:active,
-.dropdown:focus-visible {
-  background: rgb(var(--gray-700));
 }
 
 .letters {

@@ -12,10 +12,8 @@
 
 .fieldset {
   margin: 2rem 0 0;
-}
 
-@media (width >= 48rem) {
-  .fieldset {
+  @media (width >= 48rem) {
     margin: 2rem auto 0;
     width: 50%;
   }
@@ -24,10 +22,8 @@
 .message {
   color: rgb(var(--gray-400));
   margin: 0.25rem auto 0;
-}
 
-@media (width >= 48rem) {
-  .message {
+  @media (width >= 48rem) {
     color: rgb(var(--gray-400));
     margin: 0.25rem auto 0;
     width: 50%;
@@ -43,10 +39,8 @@
 .button {
   user-select: none;
   width: 100%;
-}
 
-@media (width >= 48rem) {
-  .button {
+  @media (width >= 48rem) {
     width: 25%;
   }
 }

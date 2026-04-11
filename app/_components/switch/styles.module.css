@@ -23,21 +23,29 @@
 }
 
 .off {
-  border-radius: var(--rounded) 0 0 var(--rounded);
+  border-radius: 0.375rem 0 0 0.375rem;
+
+  .container[aria-checked="false"] & {
+    background: rgb(var(--gray-600));
+    color: rgb(var(--gray-100));
+  }
+
+  .container[aria-checked="true"] & {
+    background: rgb(var(--gray-300));
+    color: rgb(var(--gray-400) / 75%);
+  }
 }
 
 .on {
-  border-radius: 0 var(--rounded) var(--rounded) 0;
-}
+  border-radius: 0 0.375rem 0.375rem 0;
 
-.container[aria-checked="false"] .off,
-.container[aria-checked="true"] .on {
-  background: rgb(var(--gray-600));
-  color: rgb(var(--gray-100));
-}
+  .container[aria-checked="false"] & {
+    background: rgb(var(--gray-300));
+    color: rgb(var(--gray-400) / 75%);
+  }
 
-.container[aria-checked="true"] .off,
-.container[aria-checked="false"] .on {
-  background: rgb(var(--gray-300));
-  color: rgb(var(--gray-400) / 75%);
+  .container[aria-checked="true"] & {
+    background: rgb(var(--gray-600));
+    color: rgb(var(--gray-100));
+  }
 }

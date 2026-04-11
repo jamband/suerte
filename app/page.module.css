@@ -21,27 +21,25 @@
   transition:
     background var(--transition),
     color var(--transition);
-}
 
-@media (width >= 48rem) {
-  .link {
+  @media (width >= 48rem) {
     border-radius: var(--rounded);
     display: inline-flex;
     margin: 0 0 0 -1.5rem;
   }
-}
 
-@media (any-hover: hover) {
-  .link:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-200));
+      color: rgb(var(--gray-800));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-200));
     color: rgb(var(--gray-800));
   }
-}
-
-.link:active,
-.link:focus-visible {
-  background: rgb(var(--gray-200));
-  color: rgb(var(--gray-800));
 }
 
 .linkIcon {

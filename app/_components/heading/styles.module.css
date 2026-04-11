@@ -4,10 +4,8 @@
   font-weight: 800;
   line-height: 1.2;
   margin: 2rem 0 0;
-}
 
-@media (width >= 48rem) {
-  .container {
+  @media (width >= 48rem) {
     font-size: var(--text-4xl);
   }
 }

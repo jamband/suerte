@@ -5,10 +5,8 @@
 .button {
   user-select: none;
   width: 35%;
-}
 
-@media (width >= 48rem) {
-  .button {
+  @media (width >= 48rem) {
     width: 25%;
   }
 }

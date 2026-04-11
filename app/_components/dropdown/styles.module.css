@@ -23,10 +23,8 @@
   font-weight: 700;
   -webkit-user-select: none;
   user-select: none;
-}
 
-@media (width >= 48rem) {
-  .button {
+  @media (width >= 48rem) {
     font-size: var(--text-base);
   }
 }

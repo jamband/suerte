@@ -1,10 +1,8 @@
 .list {
   display: flex;
   gap: 0.25rem;
-}
 
-@media (width >= 48rem) {
-  .list {
+  @media (width >= 48rem) {
     gap: 1rem;
   }
 }
@@ -27,31 +25,29 @@
   transition:
     background var(--transition),
     color var(--transition);
-}
 
-@media (width >= 48rem) {
-  .link {
+  @media (width >= 48rem) {
     font-size: var(--text-base);
     padding: 1rem 1.25rem;
   }
-}
 
-@media (any-hover: hover) {
-  .link:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-200));
+      color: rgb(var(--gray-800));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-200));
     color: rgb(var(--gray-800));
   }
-}
 
-.link:active,
-.link:focus-visible {
-  background: rgb(var(--gray-200));
-  color: rgb(var(--gray-800));
-}
-
-.link[aria-disabled="true"] {
-  color: rgb(var(--gray-400));
-  pointer-events: none;
+  &[aria-disabled="true"] {
+    color: rgb(var(--gray-400));
+    pointer-events: none;
+  }
 }
 
 .icon {

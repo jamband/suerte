@@ -9,10 +9,10 @@
 .list {
   align-items: center;
   display: flex;
-}
 
-.list[aria-current="page"] {
-  color: rgb(var(--gray-400));
+  &[aria-current="page"] {
+    color: rgb(var(--gray-400));
+  }
 }
 
 .divider {

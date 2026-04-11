@@ -6,10 +6,8 @@
 .buttonGroup {
   margin: 0.75rem 0 0;
   width: 100%;
-}
 
-@media (width >= 48rem) {
-  .buttonGroup {
+  @media (width >= 48rem) {
     width: 50%;
   }
 }
@@ -38,17 +36,17 @@
   line-height: 1.2;
   padding: 0.8rem 1.25rem;
   transition: background var(--transition);
-}
 
-@media (any-hover: hover) {
-  .tooltipButton:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-700));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-700));
   }
-}
-
-.tooltipButton:active,
-.tooltipButton:focus-visible {
-  background: rgb(var(--gray-700));
 }
 
 .tooltip {

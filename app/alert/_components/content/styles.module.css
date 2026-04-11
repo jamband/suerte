@@ -12,10 +12,8 @@
 .reload {
   user-select: none;
   width: 28%;
-}
 
-@media (width >= 48rem) {
-  .reload {
+  @media (width >= 48rem) {
     width: 15%;
   }
 }

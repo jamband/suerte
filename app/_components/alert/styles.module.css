@@ -33,17 +33,17 @@
   margin: 0.8rem 0.8rem 0 0;
   padding: 0.25rem;
   transition: background var(--transition);
-}
 
-@media (any-hover: hover) {
-  .close:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-300));
+      color: rgb(var(--gray-600));
+    }
+  }
+
+  &:active,
+  &:focus-visible {
     background: rgb(var(--gray-300));
     color: rgb(var(--gray-600));
   }
-}
-
-.close:active,
-.close:focus-visible {
-  background: rgb(var(--gray-300));
-  color: rgb(var(--gray-600));
 }

@@ -4,10 +4,8 @@
   flex-flow: column;
   height: 55vh;
   justify-content: center;
-}
 
-@media (width >= 48rem) {
-  .container {
+  @media (width >= 48rem) {
     height: 65vh;
   }
 }

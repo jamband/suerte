@@ -1,7 +1,4 @@
-@import url("the-new-css-reset");
-
 html {
-  line-height: 1.6;
   scrollbar-gutter: stable;
   -webkit-text-size-adjust: 100%;
 }
@@ -11,7 +8,7 @@ body {
   color: rgb(var(--gray-600));
   font-family: var(--font-sans);
   font-size: var(--text-base);
-  line-height: inherit;
+  line-height: 1.6;
 }
 
 button {
@@ -35,7 +32,7 @@ dialog {
   padding: 0;
 }
 
-html:has(dialog[open]) {
+:root:has(:modal) {
   overflow: hidden;
 }
 

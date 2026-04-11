@@ -2,19 +2,19 @@
   border-radius: var(--rounded);
   font-size: 1rem;
   padding: 0.25rem 1rem;
-}
 
-@media (any-hover: hover) {
-  .container:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      background: rgb(var(--gray-300));
+    }
+  }
+
+  &:active {
+    background: rgb(var(--gray-600));
+    color: rgb(var(--gray-100));
+  }
+
+  &:focus-visible {
     background: rgb(var(--gray-300));
   }
-}
-
-.container:active {
-  background: rgb(var(--gray-600));
-  color: rgb(var(--gray-100));
-}
-
-.container:focus-visible {
-  background: rgb(var(--gray-300));
 }

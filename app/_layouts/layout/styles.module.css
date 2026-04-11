@@ -2,10 +2,8 @@
   margin: 0 auto;
   padding: 7.25rem 1.5rem 9rem;
   width: 100%;
-}
 
-@media (width >= 48rem) {
-  .main {
+  @media (width >= 48rem) {
     max-width: 48rem;
     padding: 7.25rem 1rem;
   }

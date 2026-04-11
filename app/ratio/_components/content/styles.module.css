@@ -12,10 +12,8 @@
   font-weight: 700;
   margin: 1rem 0 0;
   transition: aspect-ratio var(--transition);
-}
 
-@media (width >= 48rem) {
-  .textImage {
+  @media (width >= 48rem) {
     font-size: calc(var(--text-4xl) * 2);
   }
 }

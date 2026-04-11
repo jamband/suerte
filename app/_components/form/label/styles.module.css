@@ -3,8 +3,10 @@
   font-weight: 700;
 }
 
-.required::after {
-  color: rgb(var(--red));
-  content: "*";
-  margin: 0 0 0 0.25rem;
+.required {
+  &::after {
+    color: rgb(var(--red));
+    content: "*";
+    margin: 0 0 0 0.25rem;
+  }
 }

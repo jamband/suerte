@@ -16,18 +16,18 @@
   border: 1px solid rgb(var(--red));
   outline: 2px solid transparent;
   outline-offset: 0.1em;
-}
 
-.invalidFeedback:focus {
-  box-shadow: 0 0 0 0.2rem rgb(var(--red) / 75%);
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgb(var(--red) / 75%);
+  }
 }
 
 .validFeedback {
   border: 1px solid rgb(var(--green));
   outline: 2px solid transparent;
   outline-offset: 0.1em;
-}
 
-.validFeedback:focus {
-  box-shadow: 0 0 0 0.2rem rgb(var(--green) / 75%);
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgb(var(--green) / 75%);
+  }
 }
