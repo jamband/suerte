@@ -1,9 +1,9 @@
 .container {
+  display: flex;
+  line-height: 1.4;
   background: rgb(var(--gray-200));
   border-radius: var(--rounded);
   box-shadow: 0.05rem 0.05rem 0.05rem rgb(var(--gray-300));
-  display: flex;
-  line-height: 1.4;
   transition: opacity var(--transition);
 }
 
@@ -12,37 +12,37 @@
 }
 
 .typeIcon {
-  height: 1.5rem;
   width: 1.5rem;
+  height: 1.5rem;
 }
 
 .main {
-  color: rgb(var(--gray-600));
   display: flex;
   flex: 9;
   flex-flow: column;
   gap: 0.5rem;
-  line-height: 1.6;
   padding: 1rem 1.25rem;
+  line-height: 1.6;
+  color: rgb(var(--gray-600));
 }
 
 .close {
   align-self: flex-start;
-  border-radius: var(--rounded);
-  color: rgb(var(--gray-500));
-  margin: 0.8rem 0.8rem 0 0;
   padding: 0.25rem;
+  margin: 0.8rem 0.8rem 0 0;
+  color: rgb(var(--gray-500));
+  border-radius: var(--rounded);
   transition: background var(--transition);
 
   @media (any-hover: hover) {
     &:hover {
-      background: rgb(var(--gray-300));
       color: rgb(var(--gray-600));
+      background: rgb(var(--gray-300));
     }
   }
 
   &:is(:active, :focus-visible) {
-    background: rgb(var(--gray-300));
     color: rgb(var(--gray-600));
+    background: rgb(var(--gray-300));
   }
 }

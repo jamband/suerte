@@ -1,7 +1,7 @@
 "use client";
 
-import { useFocus } from "@/_hooks/focus";
 import { useId } from "react";
+import { useFocus } from "@/_hooks/focus";
 import { Component } from "./component";
 import type { Props } from "./types";
 

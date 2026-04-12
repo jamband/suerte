@@ -1,5 +1,5 @@
-import { IconArrowUpRightFromSquare } from "@/_icons/arrow-up-right-from-square";
 import Link from "next/link";
+import { IconArrowUpRightFromSquare } from "@/_icons/arrow-up-right-from-square";
 import styles from "./style.module.css";
 
 export const Component: React.FC = () => (

@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { IconArrowLeft } from "@/_icons/arrow-left";
 import { IconArrowRight } from "@/_icons/arrow-right";
-import Link from "next/link";
 import styles from "./styles.module.css";
 import type { _Props } from "./types";
 

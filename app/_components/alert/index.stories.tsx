@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Alert } from ".";
 import { Gap } from "../gap";
+import { Alert } from ".";
 
 const meta = {
   component: Alert,

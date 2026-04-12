@@ -3,14 +3,14 @@
 }
 
 .button {
-  user-select: none;
   width: 25%;
+  user-select: none;
 }
 
 .textImage {
+  margin: 1rem 0 0;
   font-size: var(--text-4xl);
   font-weight: 700;
-  margin: 1rem 0 0;
   transition: aspect-ratio var(--transition);
 
   @media (width >= 48rem) {

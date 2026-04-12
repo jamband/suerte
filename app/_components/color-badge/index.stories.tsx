@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
-import { ColorBadge } from ".";
 import { Gap } from "../gap";
+import { ColorBadge } from ".";
 
 const meta = {
   component: ColorBadge,

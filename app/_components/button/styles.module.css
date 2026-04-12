@@ -1,16 +1,16 @@
 .container {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.25rem;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgb(var(--gray-100));
   background: rgb(var(--gray-600));
   border: none;
   border-radius: var(--rounded);
   box-shadow: 0.05rem 0.05rem 0.1rem 0 rgb(var(--gray-400));
-  color: rgb(var(--gray-100));
-  display: flex;
-  font-size: var(--text-sm);
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1.2;
-  padding: 0.8rem 1.25rem;
   transition: background var(--transition);
 
   @media (width >= 48rem) {
@@ -28,7 +28,7 @@
   }
 
   &:disabled {
-    background: rgb(var(--gray-500));
     pointer-events: none;
+    background: rgb(var(--gray-500));
   }
 }

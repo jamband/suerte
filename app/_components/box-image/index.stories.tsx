@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { BoxImage } from ".";
 import { Gap } from "../gap";
+import { BoxImage } from ".";
 
 const meta = {
   component: BoxImage,

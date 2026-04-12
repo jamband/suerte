@@ -9,6 +9,7 @@ export const Component: React.FC<_Props> = (props) => (
     className={styles.container}
     onBlur={props.onBlur}
   >
+    {/* biome-ignore lint/a11y/noStaticElementInteractions: summary is inherently interactive as details toggle */}
     <summary
       className={`${styles.button} ${props.className || ""}`}
       aria-label={props.label ? undefined : "more"}

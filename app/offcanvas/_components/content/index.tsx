@@ -1,7 +1,7 @@
 "use client";
 
-import { useDialog } from "@/_hooks/dialog";
 import { useRouter } from "next/navigation";
+import { useDialog } from "@/_hooks/dialog";
 import { Component } from "./component";
 import type { Link } from "./types";
 

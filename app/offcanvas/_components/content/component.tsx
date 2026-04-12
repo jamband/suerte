@@ -13,7 +13,6 @@ export const Component: React.FC<_Props> = (props) => (
         <IconArrowRight className={styles.buttonIcon} />
       </Button>
     </div>
-    {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
     <dialog
       ref={props.offcanvas.ref}
       className={styles.offcanvasContainer}

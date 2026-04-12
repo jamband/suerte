@@ -5,17 +5,17 @@
 }
 
 .input {
+  width: 100%;
+  padding: 0.5rem 1rem;
   background: rgb(var(--gray-100));
   border: 1px solid rgb(var(--gray-300));
   border-radius: var(--rounded);
-  padding: 0.5rem 1rem;
-  width: 100%;
 }
 
 .invalidFeedback {
-  border: 1px solid rgb(var(--red));
   outline: 2px solid transparent;
   outline-offset: 0.1em;
+  border: 1px solid rgb(var(--red));
 
   &:focus {
     box-shadow: 0 0 0 0.2rem rgb(var(--red) / 75%);
@@ -23,9 +23,9 @@
 }
 
 .validFeedback {
-  border: 1px solid rgb(var(--green));
   outline: 2px solid transparent;
   outline-offset: 0.1em;
+  border: 1px solid rgb(var(--green));
 
   &:focus {
     box-shadow: 0 0 0 0.2rem rgb(var(--green) / 75%);

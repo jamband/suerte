@@ -1,7 +1,7 @@
+import type { Metadata } from "next";
 import { Breadcrumb } from "@/_components/breadcrumb";
 import { Heading } from "@/_components/heading";
 import { IconArrowUpRightFromSquare } from "@/_icons/arrow-up-right-from-square";
-import type { Metadata } from "next";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {

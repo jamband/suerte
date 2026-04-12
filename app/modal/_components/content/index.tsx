@@ -1,7 +1,7 @@
 "use client";
 
-import { useDialog } from "@/_hooks/dialog";
 import { useState } from "react";
+import { useDialog } from "@/_hooks/dialog";
 import { Component } from "./component";
 import type { Image } from "./types";
 

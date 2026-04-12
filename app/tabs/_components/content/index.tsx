@@ -1,7 +1,7 @@
 "use client";
 
-import { useNow } from "@/_hooks/now";
 import { useRef, useState } from "react";
+import { useNow } from "@/_hooks/now";
 import { Component } from "./component";
 import type { City } from "./types";
 

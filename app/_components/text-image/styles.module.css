@@ -1,7 +1,7 @@
 .container {
-  border-radius: var(--rounded);
   font-family: var(--font-mono);
   font-weight: 700;
-  text-anchor: middle;
   user-select: none;
+  border-radius: var(--rounded);
+  text-anchor: middle;
 }

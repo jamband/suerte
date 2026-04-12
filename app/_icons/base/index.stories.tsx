@@ -1,6 +1,5 @@
-import { Gap } from "@/_components/gap";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Icon } from ".";
+import { Gap } from "@/_components/gap";
 import { IconAngleDown } from "../angle-down";
 import { IconArrowRight } from "../arrow-right";
 import { IconArrowUpRightFromSquare } from "../arrow-up-right-from-square";
@@ -10,6 +9,7 @@ import { IconCircleInfo } from "../circle-info";
 import { IconEllipsis } from "../ellipsis";
 import { IconStorybook } from "../storybook";
 import { IconXMark } from "../x-mark";
+import { Icon } from ".";
 import styles from "./stories.module.css";
 
 const meta = {

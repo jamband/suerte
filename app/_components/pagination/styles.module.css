@@ -12,35 +12,35 @@
 }
 
 .link {
-  align-items: center;
-  background: transparent;
-  border-radius: var(--rounded);
-  color: rgb(var(--gray-600));
   display: flex;
   flex-flow: column;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
   font-size: var(--text-sm);
   font-weight: 600;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
+  color: rgb(var(--gray-600));
+  background: transparent;
+  border-radius: var(--rounded);
   transition:
     background var(--transition),
     color var(--transition);
 
   @media (width >= 48rem) {
-    font-size: var(--text-base);
     padding: 1rem 1.25rem;
+    font-size: var(--text-base);
   }
 
   @media (any-hover: hover) {
     &:hover {
-      background: rgb(var(--gray-200));
       color: rgb(var(--gray-800));
+      background: rgb(var(--gray-200));
     }
   }
 
   &:is(:active, :focus-visible) {
-    background: rgb(var(--gray-200));
     color: rgb(var(--gray-800));
+    background: rgb(var(--gray-200));
   }
 
   &[aria-disabled="true"] {
@@ -50,6 +50,6 @@
 }
 
 .icon {
-  height: 1rem;
   width: 1rem;
+  height: 1rem;
 }

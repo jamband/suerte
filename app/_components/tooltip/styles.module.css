@@ -1,6 +1,6 @@
 .container {
-  display: inline-block;
   position: relative;
+  display: inline-block;
 }
 
 .button {
@@ -8,39 +8,39 @@
 }
 
 .tooltip {
-  border-radius: var(--rounded);
-  font-weight: 600;
-  opacity: 0;
-  padding: 0.5rem 1rem;
   position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
   text-wrap: nowrap;
+  border-radius: var(--rounded);
+  opacity: 0;
   transition:
     opacity var(--transition),
     visibility var(--transition);
-  visibility: hidden;
-  z-index: 10;
 
   @media (any-hover: hover) {
     .button:not(:disabled):hover + & {
-      opacity: 1;
       visibility: visible;
+      opacity: 1;
     }
   }
 
   .button:not(:disabled):focus-visible + & {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
   }
 
   &::before {
+    position: absolute;
+    z-index: -1;
+    width: 1rem;
+    height: 1rem;
+    content: "";
     background: inherit;
     border-radius: 0.125rem;
-    content: "";
-    height: 1rem;
-    position: absolute;
     rotate: 45deg;
-    width: 1rem;
-    z-index: -1;
   }
 }
 

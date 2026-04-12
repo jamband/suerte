@@ -1,5 +1,5 @@
-import type { useDialog } from "@/_hooks/dialog";
 import type { Route } from "next";
+import type { useDialog } from "@/_hooks/dialog";
 
 export type Link = {
   href: Route;

@@ -11,7 +11,7 @@ export const Content: React.FC = () => {
   };
 
   const disabled = (ratio: `${number}x${number}`) => {
-    return ratio === text ? true : false;
+    return ratio === text;
   };
 
   const aspectRatio = text.replace("x", " / ");

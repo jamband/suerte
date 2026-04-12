@@ -1,6 +1,6 @@
+import { use, useCallback } from "react";
 import { DispatchContext, StateContext } from "@/_contexts/notification";
 import type { State } from "@/_reducers/notification";
-import { use, useCallback } from "react";
 
 export const useNotificationState = () => {
   return use(StateContext);

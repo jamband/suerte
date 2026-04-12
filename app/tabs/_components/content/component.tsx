@@ -27,10 +27,7 @@ export const Component: React.FC<_Props> = (props) => (
           </li>
         ))}
       </ul>
-      <div
-        className={styles.tabsHint}
-        aria-label="tabs can be scrolled horizontally"
-      >
+      <div className={styles.tabsHint} aria-hidden="true">
         <IconArrowsLeftRight className={styles.tabsHintIcon} />
       </div>
     </div>

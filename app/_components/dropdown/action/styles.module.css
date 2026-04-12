@@ -1,7 +1,7 @@
 .container {
-  border-radius: var(--rounded);
-  font-size: 1rem;
   padding: 0.25rem 1rem;
+  font-size: 1rem;
+  border-radius: var(--rounded);
 
   @media (any-hover: hover) {
     &:hover {
@@ -10,8 +10,8 @@
   }
 
   &:active {
-    background: rgb(var(--gray-600));
     color: rgb(var(--gray-100));
+    background: rgb(var(--gray-600));
   }
 
   &:focus-visible {

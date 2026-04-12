@@ -1,13 +1,13 @@
 .group {
-  align-items: center;
-  background: rgb(var(--gray-200));
-  border-radius: var(--rounded);
   display: inline-flex;
   gap: 0.75rem;
+  align-items: center;
   padding: 0.75rem 1.25rem;
+  background: rgb(var(--gray-200));
+  border-radius: var(--rounded);
 }
 
 .icon {
-  height: 1.25rem;
   width: 1.25rem;
+  height: 1.25rem;
 }

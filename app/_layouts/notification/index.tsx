@@ -1,10 +1,10 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import {
   useNotificationAction,
   useNotificationState,
 } from "@/_hooks/notification";
-import { useEffect, useRef } from "react";
 import { Component } from "./component";
 import styles from "./styles.module.css";
 
@@ -12,13 +12,6 @@ export const Notification: React.FC = () => {
   const notification = useNotificationState();
   const { resetNotification } = useNotificationAction();
   const containerRef = useRef<HTMLDivElement>(null);
-
-  const show = () => {
-    containerRef.current?.classList.add(styles.show);
-    setTimeout(() => {
-      containerRef.current?.classList.add(styles.transition);
-    }, 100);
-  };
 
   const close = () => {
     containerRef.current?.classList.remove(styles.transition);
@@ -35,7 +28,10 @@ export const Notification: React.FC = () => {
 
   useEffect(() => {
     if (notification) {
-      show();
+      containerRef.current?.classList.add(styles.show);
+      setTimeout(() => {
+        containerRef.current?.classList.add(styles.transition);
+      }, 100);
     }
   }, [notification]);
 

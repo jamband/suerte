@@ -4,11 +4,11 @@ html {
 }
 
 body {
-  background: rgb(var(--gray-100));
-  color: rgb(var(--gray-600));
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: 1.6;
+  color: rgb(var(--gray-600));
+  background: rgb(var(--gray-100));
 }
 
 button {
@@ -24,12 +24,12 @@ svg {
 }
 
 dialog {
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  overflow: visible;
   background: none;
   border: none;
-  max-height: none;
-  max-width: none;
-  overflow: visible;
-  padding: 0;
 }
 
 :root:has(:modal) {

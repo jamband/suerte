@@ -4,29 +4,29 @@
 
 .code {
   display: flex;
+  justify-content: center;
   font-family: var(--font-mono);
   font-size: var(--text-4xl);
   font-weight: 700;
-  justify-content: center;
 }
 
 .fieldset {
   margin: 2rem 0 0;
 
   @media (width >= 48rem) {
-    margin: 2rem auto 0;
     width: 50%;
+    margin: 2rem auto 0;
   }
 }
 
 .message {
-  color: rgb(var(--gray-400));
   margin: 0.25rem auto 0;
+  color: rgb(var(--gray-400));
 
   @media (width >= 48rem) {
-    color: rgb(var(--gray-400));
-    margin: 0.25rem auto 0;
     width: 50%;
+    margin: 0.25rem auto 0;
+    color: rgb(var(--gray-400));
   }
 }
 
@@ -37,8 +37,8 @@
 }
 
 .button {
-  user-select: none;
   width: 100%;
+  user-select: none;
 
   @media (width >= 48rem) {
     width: 25%;

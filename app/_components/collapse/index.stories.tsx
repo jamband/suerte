@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Collapse } from ".";
 import { Alert } from "../alert";
+import { Collapse } from ".";
 import styles from "./stories.module.css";
 
 const meta = {

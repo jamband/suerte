@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { APP_NAME, APP_STORYBOOK_URL } from "@/_constants/app";
 import { IconStorybook } from "@/_icons/storybook";
-import Link from "next/link";
 import styles from "./styles.module.css";
 
 export const Component: React.FC = () => (

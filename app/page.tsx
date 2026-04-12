@@ -10,6 +10,7 @@ export default function Page() {
     { href: "/collapse", text: "Collapse" },
     { href: "/dropdown", text: "Dropdown" },
     { href: "/form", text: "Form" },
+    // { href: "/footer-menu", text: "Footer Menu" },
     { href: "/modal", text: "Modal" },
     { href: "/offcanvas", text: "Offcanvas" },
     { href: "/pagination", text: "Pagination" },
@@ -24,8 +25,8 @@ export default function Page() {
     <>
       <Breadcrumb text="" />
       <ul className={styles.list}>
-        {links.map((link, index) => (
-          <li key={index} className={styles.item}>
+        {links.map((link) => (
+          <li key={link.href} className={styles.item}>
             <Link href={link.href} className={styles.link}>
               {link.text}
               <IconArrowRight className={styles.linkIcon} />

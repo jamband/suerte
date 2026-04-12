@@ -14,7 +14,7 @@ export const Component: React.FC<_Props> = (props) => (
           {props.isCurrent(link.href) ? (
             <>
               {props.links.length > 1 && (
-                <div className={styles.divider} role="separator">
+                <div className={styles.divider} aria-hidden="true">
                   /
                 </div>
               )}

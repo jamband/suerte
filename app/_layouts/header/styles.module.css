@@ -1,21 +1,21 @@
 .container {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 10;
+  width: 100%;
   background: rgb(var(--gray-200));
   box-shadow: 0 0.05rem 0.1rem rgb(var(--gray-300));
-  inset: 0 auto auto 0;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
 }
 
 .navigation {
-  align-items: center;
   display: flex;
+  align-items: center;
   padding: 1rem 1.5rem;
 
   @media (width >= 48rem) {
-    margin: 0 auto;
     max-width: 48rem;
     padding: 1rem;
+    margin: 0 auto;
   }
 }
 
@@ -25,36 +25,36 @@
 }
 
 .storybookLink {
-  align-items: center;
-  border-radius: var(--rounded);
-  color: rgb(var(--gray-500));
   display: inline-flex;
-  font-size: var(--text-sm);
   gap: 0.25rem;
+  align-items: center;
   margin: 0 0 0 auto;
+  font-size: var(--text-sm);
+  color: rgb(var(--gray-500));
+  border-radius: var(--rounded);
   transition:
     background var(--transition),
     color var(--transition);
 
   @media (width >= 48rem) {
-    font-size: var(--text-base);
     padding: 0.25rem 1rem;
+    font-size: var(--text-base);
   }
 
   @media (any-hover: hover) {
     &:hover {
-      background: rgb(var(--gray-300));
       color: rgb(var(--gray-600));
+      background: rgb(var(--gray-300));
     }
   }
 
   &:is(:active, :focus-visible) {
-    background: rgb(var(--gray-300));
     color: rgb(var(--gray-600));
+    background: rgb(var(--gray-300));
   }
 }
 
 .storybookLinkIcon {
-  height: 1.125rem;
   width: 1.125rem;
+  height: 1.125rem;
 }

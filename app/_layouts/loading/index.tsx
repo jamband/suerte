@@ -21,6 +21,7 @@ export const Loading: React.FC = () => {
     className += ` ${styles.complete}`;
   }
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: intentionally triggers on route change
   useEffect(() => {
     setTimeout(() => {
       setState("start");

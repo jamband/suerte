@@ -1,9 +1,9 @@
 .container {
-  color: rgb(var(--gray-700));
+  margin: 2rem 0 0;
   font-size: var(--text-3xl);
   font-weight: 800;
   line-height: 1.2;
-  margin: 2rem 0 0;
+  color: rgb(var(--gray-700));
 
   @media (width >= 48rem) {
     font-size: var(--text-4xl);

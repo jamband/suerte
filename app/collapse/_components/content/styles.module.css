@@ -1,13 +1,13 @@
 .container {
+  padding: 1rem;
+  margin: 3rem 0 0;
   border: 3px solid rgb(var(--gray-500));
   border-radius: var(--rounded);
-  margin: 3rem 0 0;
-  padding: 1rem;
 }
 
 .button {
-  user-select: none;
   width: 35%;
+  user-select: none;
 
   @media (width >= 48rem) {
     width: 25%;

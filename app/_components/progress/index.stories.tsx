@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Progress } from ".";
 import { Gap } from "../gap";
+import { Progress } from ".";
 import styles from "./stories.module.css";
 
 const meta = {

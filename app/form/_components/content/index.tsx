@@ -4,19 +4,19 @@ import { useEffect, useState } from "react";
 import { Component } from "./component";
 import type { InputState } from "./types";
 
+const generateCode = () => {
+  return [...Array(6)]
+    .map(() => {
+      return Math.floor(Math.random() * Math.floor(10)).toString();
+    })
+    .join("");
+};
+
 export const Content: React.FC = () => {
   const [code, setCode] = useState("000000");
   const [feedback, setFeedback] = useState("");
   const [input, setInput] = useState("");
   const [inputState, setInputState] = useState<InputState>(undefined);
-
-  const generateCode = () => {
-    return [...Array(6)]
-      .map(() => {
-        return Math.floor(Math.random() * Math.floor(10)).toString();
-      })
-      .join("");
-  };
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInput(event.target.value);

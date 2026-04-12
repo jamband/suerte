@@ -1,11 +1,11 @@
 .description {
-  color: rgb(var(--gray-400));
   margin: 3rem 0 0;
+  color: rgb(var(--gray-400));
 }
 
 .buttonGroup {
-  margin: 0.75rem 0 0;
   width: 100%;
+  margin: 0.75rem 0 0;
 
   @media (width >= 48rem) {
     width: 50%;
@@ -13,8 +13,8 @@
 }
 
 .button {
-  user-select: none;
   width: 100%;
+  user-select: none;
 }
 
 .switch {
@@ -28,13 +28,13 @@
 }
 
 .tooltipButton {
+  padding: 0.8rem 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgb(var(--gray-100));
   background: rgb(var(--gray-600));
   border-radius: var(--rounded);
   box-shadow: 0.05rem 0.05rem 0.1rem 0 rgb(var(--gray-400));
-  color: rgb(var(--gray-100));
-  font-weight: 700;
-  line-height: 1.2;
-  padding: 0.8rem 1.25rem;
   transition: background var(--transition);
 
   @media (any-hover: hover) {
@@ -49,11 +49,11 @@
 }
 
 .tooltip {
-  background: rgb(var(--green));
   color: rgb(var(--gray-100));
+  background: rgb(var(--green));
 }
 
 .tooltipPermanent {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
