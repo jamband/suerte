@@ -1,32 +1,33 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { Breadcrumb } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: Breadcrumb,
   parameters: {
     nextjs: {
       appDirectory: true,
     },
   },
-} satisfies Meta<typeof Breadcrumb>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Breadcrumb>;
-
-export const OnTopPage = {
-  render: () => <Breadcrumb text="" />,
+export const OnTopPage = meta.story({
+  args: {
+    text: "",
+  },
   parameters: {
     nextjs: {
       navigation: { pathname: "/" },
     },
   },
-} satisfies Story;
+});
 
-export const OnFooPage = {
-  render: () => <Breadcrumb text="Foo" />,
+export const OnFooPage = meta.story({
+  args: {
+    text: "Foo",
+  },
   parameters: {
     nextjs: {
       navigation: { pathname: "/foo" },
     },
   },
-} satisfies Story;
+});

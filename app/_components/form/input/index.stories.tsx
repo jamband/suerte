@@ -1,81 +1,95 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../../.storybook/preview";
 import { FormInput } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: FormInput,
-} satisfies Meta<typeof FormInput>;
+});
 
-export default meta;
-type Story = StoryObj<typeof FormInput>;
+export const Text = meta.story({
+  args: {
+    label: "foo",
+    type: "text",
+    name: "foo",
+  },
+});
 
-export const Text = {
-  render: () => <FormInput label="foo" type="text" name="foo" />,
-} satisfies Story;
+export const Email = meta.story({
+  args: {
+    label: "email",
+    type: "email",
+    name: "email",
+  },
+});
 
-export const Email = {
-  render: () => <FormInput label="email" type="email" name="email" />,
-} satisfies Story;
+export const Password = meta.story({
+  args: {
+    label: "password",
+    type: "password",
+    name: "password",
+  },
+});
 
-export const Password = {
-  render: () => <FormInput label="password" type="password" name="password" />,
-} satisfies Story;
+export const Required = meta.story({
+  args: {
+    label: "foo",
+    type: "text",
+    name: "foo",
+    required: true,
+  },
+});
 
-export const Required = {
-  render: () => <FormInput label="foo" type="text" name="foo" required />,
-} satisfies Story;
+export const Focus = meta.story({
+  args: {
+    label: "foo",
+    type: "text",
+    name: "foo",
+    focus: true,
+  },
+});
 
-export const Focus = {
-  render: () => <FormInput label="foo" type="text" name="foo" focus />,
-} satisfies Story;
+export const Placeholder = meta.story({
+  args: {
+    label: "foo",
+    type: "email",
+    name: "email",
+    placeholder: "foo@example.com",
+  },
+});
 
-export const Placeholder = {
-  render: () => (
-    <FormInput
-      label="foo"
-      type="email"
-      name="email"
-      placeholder="foo@example.com"
-    />
-  ),
-} satisfies Story;
+export const DefaultValue = meta.story({
+  args: {
+    label: "foo",
+    type: "email",
+    name: "email",
+    defaultValue: "foo@example.com",
+  },
+});
 
-export const DefaultValue = {
-  render: () => (
-    <FormInput
-      label="foo"
-      type="email"
-      name="email"
-      defaultValue="foo@example.com"
-    />
-  ),
-} satisfies Story;
+export const Feedback = meta.story({
+  args: {
+    label: "foo",
+    type: "text",
+    name: "foo",
+    feedback: "feedback...",
+  },
+});
 
-export const Feedback = {
-  render: () => (
-    <FormInput label="foo" type="text" name="foo" feedback="feedback..." />
-  ),
-} satisfies Story;
+export const InvalidFeedback = meta.story({
+  args: {
+    label: "foo",
+    type: "text",
+    name: "foo",
+    feedback: "invalid feedback...",
+    state: "invalid",
+  },
+});
 
-export const InvalidFeedback = {
-  render: () => (
-    <FormInput
-      label="foo"
-      type="text"
-      name="foo"
-      feedback="invalid feedback..."
-      state="invalid"
-    />
-  ),
-} satisfies Story;
-
-export const ValidFeedback = {
-  render: () => (
-    <FormInput
-      label="foo"
-      type="text"
-      name="foo"
-      feedback="valid feedback..."
-      state="valid"
-    />
-  ),
-} satisfies Story;
+export const ValidFeedback = meta.story({
+  args: {
+    label: "foo",
+    type: "text",
+    name: "foo",
+    feedback: "valid feedback...",
+    state: "valid",
+  },
+});

@@ -1,13 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../../.storybook/preview";
 import { DropdownDivider } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: DropdownDivider,
-} satisfies Meta<typeof DropdownDivider>;
+});
 
-export default meta;
-type Story = StoryObj<typeof DropdownDivider>;
-
-export const Default = {
-  render: () => <DropdownDivider />,
-} satisfies Story;
+export const Default = meta.story();

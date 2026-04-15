@@ -1,29 +1,17 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { Tooltip } from ".";
 import styles from "./stories.module.css";
 
-const meta = {
+const meta = preview.meta({
   component: Tooltip,
-  argTypes: {
-    placement: {
-      control: { type: "radio" },
-      options: ["top", "right", "bottom", "left"],
-    },
-  },
-  args: {
-    placement: "top",
-  },
-} satisfies Meta<typeof Tooltip>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Tooltip>;
-
-export const Default = {
-  render: (args) => (
+export const Top = meta.story({
+  render: () => (
     <div className={styles.container}>
       <Tooltip
-        {...args}
-        title={args.placement}
+        placement="top"
+        title="top"
         buttonStyle={styles.button}
         tooltipStyle={styles.tooltip}
       >
@@ -31,4 +19,49 @@ export const Default = {
       </Tooltip>
     </div>
   ),
-} satisfies Story;
+});
+
+export const Right = meta.story({
+  render: () => (
+    <div className={styles.container}>
+      <Tooltip
+        placement="right"
+        title="right"
+        buttonStyle={styles.button}
+        tooltipStyle={styles.tooltip}
+      >
+        placement on
+      </Tooltip>
+    </div>
+  ),
+});
+
+export const Bottom = meta.story({
+  render: () => (
+    <div className={styles.container}>
+      <Tooltip
+        placement="bottom"
+        title="bottom"
+        buttonStyle={styles.button}
+        tooltipStyle={styles.tooltip}
+      >
+        placement on
+      </Tooltip>
+    </div>
+  ),
+});
+
+export const Left = meta.story({
+  render: () => (
+    <div className={styles.container}>
+      <Tooltip
+        placement="left"
+        title="left"
+        buttonStyle={styles.button}
+        tooltipStyle={styles.tooltip}
+      >
+        placement on
+      </Tooltip>
+    </div>
+  ),
+});

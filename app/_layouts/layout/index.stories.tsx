@@ -1,13 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { Layout } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: Layout,
-} satisfies Meta<typeof Layout>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Layout>;
-
-export const Default = {
-  render: () => <Layout>foo</Layout>,
-} satisfies Story;
+export const Default = meta.story({
+  args: {
+    children: "foo",
+  },
+});

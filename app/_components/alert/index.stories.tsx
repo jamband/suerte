@@ -1,15 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { Gap } from "../gap";
 import { Alert } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: Alert,
-} satisfies Meta<typeof Alert>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Alert>;
-
-export const Default = {
+export const Default = meta.story({
   render: () => (
     <Gap flow="column" gap="1rem">
       <Alert>this is a test.</Alert>
@@ -26,4 +23,4 @@ export const Default = {
       </Alert>
     </Gap>
   ),
-} satisfies Story;
+});

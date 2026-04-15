@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { Pagination } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: Pagination,
   parameters: {
     nextjs: {
@@ -11,40 +11,49 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Pagination>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Pagination>;
-
-export const OneTenth = {
+export const OneTenth = meta.story({
   parameters: {
     nextjs: {
       navigation: {
-        query: { page: 1 },
+        query: { page: "1" },
       },
     },
   },
-  render: () => <Pagination pathname="/" currentPage={1} lastPage={10} />,
-} satisfies Story;
+  args: {
+    pathname: "/",
+    currentPage: 1,
+    lastPage: 10,
+  },
+});
 
-export const TwoTenths = {
+export const TwoTenths = meta.story({
   parameters: {
     nextjs: {
       navigation: {
-        query: { page: 2 },
+        query: { page: "2" },
       },
     },
   },
-  render: () => <Pagination pathname="/" currentPage={2} lastPage={10} />,
-} satisfies Story;
+  args: {
+    pathname: "/",
+    currentPage: 2,
+    lastPage: 10,
+  },
+});
 
-export const TenTenths = {
+export const TenTenths = meta.story({
   parameters: {
     nextjs: {
       navigation: {
-        query: { page: 10 },
+        query: { page: "10" },
       },
     },
   },
-  render: () => <Pagination pathname="/" currentPage={10} lastPage={10} />,
-} satisfies Story;
+  args: {
+    pathname: "/",
+    currentPage: 10,
+    lastPage: 10,
+  },
+});

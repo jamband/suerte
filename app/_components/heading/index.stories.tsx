@@ -1,13 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { Heading } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: Heading,
-} satisfies Meta<typeof Heading>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Heading>;
-
-export const Default = {
-  render: () => <Heading>foo</Heading>,
-} satisfies Story;
+export const Default = meta.story({
+  args: {
+    children: "foo",
+  },
+});

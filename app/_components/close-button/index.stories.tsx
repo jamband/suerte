@@ -1,15 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
+import preview from "../../../.storybook/preview";
 import { CloseButton } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: CloseButton,
-  args: { onClick: fn() },
-} satisfies Meta<typeof CloseButton>;
+});
 
-export default meta;
-type Story = StoryObj<typeof CloseButton>;
-
-export const Default = {
-  render: (args) => <CloseButton {...args} />,
-} satisfies Story;
+export const Default = meta.story({
+  args: {
+    onClick: fn(),
+  },
+});

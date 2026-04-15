@@ -1,39 +1,31 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Gap } from "../gap";
+import preview from "../../../.storybook/preview";
 import { Progress } from ".";
 import styles from "./stories.module.css";
 
-const meta = {
+const meta = preview.meta({
   component: Progress,
-} satisfies Meta<typeof Progress>;
+  args: {
+    min: 0,
+    max: 100,
+    text: "in progress",
+    className: styles.container,
+  },
+});
 
-export default meta;
-type Story = StoryObj<typeof Progress>;
+export const Ten = meta.story({
+  args: {
+    now: 10,
+  },
+});
 
-export const Default = {
-  render: () => (
-    <Gap flow="column" gap="1rem">
-      <Progress
-        className={styles.container}
-        min={0}
-        max={100}
-        now={10}
-        text="in progress"
-      />
-      <Progress
-        className={styles.container}
-        min={0}
-        max={100}
-        now={50}
-        text="in progress"
-      />
-      <Progress
-        className={styles.container}
-        min={0}
-        max={100}
-        now={100}
-        text="completed"
-      />
-    </Gap>
-  ),
-} satisfies Story;
+export const Fifty = meta.story({
+  args: {
+    now: 50,
+  },
+});
+
+export const OneHundred = meta.story({
+  args: {
+    now: 100,
+  },
+});

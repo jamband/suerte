@@ -1,16 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { Alert } from "../alert";
 import { Collapse } from ".";
 import styles from "./stories.module.css";
 
-const meta = {
+const meta = preview.meta({
   component: Collapse,
-} satisfies Meta<typeof Collapse>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Collapse>;
-
-export const Default = {
+export const Default = meta.story({
   decorators: [
     (Story) => (
       <>
@@ -24,4 +21,4 @@ export const Default = {
     show: true,
     children: <Alert className={styles.alert}>bar</Alert>,
   },
-} satisfies Story;
+});

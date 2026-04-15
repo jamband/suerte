@@ -1,21 +1,16 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { StorybookLinks } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: StorybookLinks,
-} satisfies Meta<typeof StorybookLinks>;
+});
 
-export default meta;
-type Story = StoryObj<typeof StorybookLinks>;
-
-export const Default = {
-  render: () => (
-    <StorybookLinks
-      links={[
-        { slug: "components-foo--default", text: "Foo" },
-        { slug: "components-bar--default", text: "Bar" },
-        { slug: "components-baz--default", text: "Baz" },
-      ]}
-    />
-  ),
-} satisfies Story;
+export const Default = meta.story({
+  args: {
+    links: [
+      { slug: "components-foo--default", text: "Foo" },
+      { slug: "components-bar--default", text: "Bar" },
+      { slug: "components-baz--default", text: "Baz" },
+    ],
+  },
+});

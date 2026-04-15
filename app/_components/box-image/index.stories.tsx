@@ -1,15 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { Gap } from "../gap";
 import { BoxImage } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: BoxImage,
-} satisfies Meta<typeof BoxImage>;
+});
 
-export default meta;
-type Story = StoryObj<typeof BoxImage>;
-
-export const Default = {
+export const Default = meta.story({
   render: () => (
     <Gap gap="1rem">
       <BoxImage size={30} color="#ed7c7c" title="red" />
@@ -17,4 +14,4 @@ export const Default = {
       <BoxImage size={90} color="#74a7e6" title="blue" />
     </Gap>
   ),
-} satisfies Story;
+});

@@ -1,23 +1,29 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../../.storybook/preview";
 import { FormFeedback } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: FormFeedback,
-} satisfies Meta<typeof FormFeedback>;
+});
 
-export default meta;
-type Story = StoryObj<typeof FormFeedback>;
+export const Default = meta.story({
+  args: {
+    id: "foo-feedback",
+    message: "foo",
+  },
+});
 
-export const Default = {
-  render: () => <FormFeedback id="foo-feedback" message="foo" />,
-} satisfies Story;
+export const Invalid = meta.story({
+  args: {
+    id: "foo-feedback",
+    state: "invalid",
+    message: "foo",
+  },
+});
 
-export const Invalid = {
-  render: () => (
-    <FormFeedback id="foo-feedback" state="invalid" message="foo" />
-  ),
-} satisfies Story;
-
-export const Valid = {
-  render: () => <FormFeedback id="foo-feedback" state="valid" message="foo" />,
-} satisfies Story;
+export const Valid = meta.story({
+  args: {
+    id: "foo-feedback",
+    state: "valid",
+    message: "foo",
+  },
+});

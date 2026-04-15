@@ -1,15 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
+import preview from "../../../../.storybook/preview";
 import { DropdownAction } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: DropdownAction,
-  args: { onClick: fn() },
-} satisfies Meta<typeof DropdownAction>;
+});
 
-export default meta;
-type Story = StoryObj<typeof DropdownAction>;
-
-export const Default = {
-  render: (args) => <DropdownAction {...args}>foo</DropdownAction>,
-} satisfies Story;
+export const Default = meta.story({
+  args: {
+    onClick: fn(),
+    children: "foo",
+  },
+});

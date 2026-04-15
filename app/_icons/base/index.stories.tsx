@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { Gap } from "@/_components/gap";
+import preview from "../../../.storybook/preview";
 import { IconAngleDown } from "../angle-down";
 import { IconArrowRight } from "../arrow-right";
 import { IconArrowUpRightFromSquare } from "../arrow-up-right-from-square";
@@ -12,14 +12,11 @@ import { IconXMark } from "../x-mark";
 import { Icon } from ".";
 import styles from "./stories.module.css";
 
-const meta = {
+const meta = preview.meta({
   component: Icon,
-} satisfies Meta<typeof Icon>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Icon>;
-
-export const Icons = {
+export const Icons = meta.story({
   render: () => (
     <Gap flow="column wrap" gap="1rem">
       <div className={styles.group}>
@@ -60,4 +57,4 @@ export const Icons = {
       </div>
     </Gap>
   ),
-} satisfies Story;
+});

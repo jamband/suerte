@@ -1,7 +1,7 @@
-import type { StorybookConfig } from "@storybook/nextjs";
+import { defineMain } from "@storybook/nextjs/node";
 
-export default {
+export default defineMain({
   framework: "@storybook/nextjs",
   stories: ["../app/**/*.stories.tsx"],
   core: { disableTelemetry: true },
-} satisfies StorybookConfig;
+});

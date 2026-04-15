@@ -1,17 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
+import preview from "../../../.storybook/preview";
 import { Dropdown } from ".";
 import { DropdownAction } from "./action";
 import { DropdownDivider } from "./divider";
 
-const meta = {
+const meta = preview.meta({
   component: Dropdown,
-} satisfies Meta<typeof Dropdown>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Dropdown>;
-
-export const Default = {
+export const Default = meta.story({
   render: () => (
     <Dropdown label="dropdown">
       <DropdownAction onClick={fn()}>foo</DropdownAction>
@@ -20,9 +17,9 @@ export const Default = {
       <DropdownAction onClick={fn()}>baz</DropdownAction>
     </Dropdown>
   ),
-} satisfies Story;
+});
 
-export const WithoutLabel = {
+export const WithoutLabel = meta.story({
   render: () => (
     <Dropdown>
       <DropdownAction onClick={fn()}>foo</DropdownAction>
@@ -31,4 +28,4 @@ export const WithoutLabel = {
       <DropdownAction onClick={fn()}>baz</DropdownAction>
     </Dropdown>
   ),
-} satisfies Story;
+});

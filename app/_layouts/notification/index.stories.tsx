@@ -1,16 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
 import { DispatchContext, StateContext } from "@/_contexts/notification";
+import preview from "../../../.storybook/preview";
 import { Notification } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: Notification,
-} satisfies Meta<typeof Notification>;
+});
 
-export default meta;
-type Story = StoryObj<typeof Notification>;
-
-export const Default = {
+export const Default = meta.story({
   decorators: [
     (Story) => (
       <>
@@ -22,9 +19,9 @@ export const Default = {
       </>
     ),
   ],
-} satisfies Story;
+});
 
-export const LongSentence = {
+export const LongSentence = meta.story({
   decorators: [
     (Story) => (
       <>
@@ -36,4 +33,4 @@ export const LongSentence = {
       </>
     ),
   ],
-} satisfies Story;
+});

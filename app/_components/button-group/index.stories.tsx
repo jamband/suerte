@@ -1,15 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import preview from "../../../.storybook/preview";
 import { Button } from "../button";
 import { ButtonGroup } from ".";
 
-const meta = {
+const meta = preview.meta({
   component: ButtonGroup,
-} satisfies Meta<typeof ButtonGroup>;
+});
 
-export default meta;
-type Story = StoryObj<typeof ButtonGroup>;
-
-export const Default = {
+export const Default = meta.story({
   render: () => (
     <ButtonGroup>
       <Button>foo</Button>
@@ -17,4 +14,4 @@ export const Default = {
       <Button>baz</Button>
     </ButtonGroup>
   ),
-} satisfies Story;
+});
