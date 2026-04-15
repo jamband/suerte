@@ -4,64 +4,40 @@ import styles from "./stories.module.css";
 
 const meta = preview.meta({
   component: Tooltip,
+  parameters: {
+    layout: "centered",
+  },
+  args: {
+    buttonStyle: styles.button,
+    tooltipStyle: styles.tooltip,
+    children: "placement on",
+  },
 });
 
 export const Top = meta.story({
-  render: () => (
-    <div className={styles.container}>
-      <Tooltip
-        placement="top"
-        title="top"
-        buttonStyle={styles.button}
-        tooltipStyle={styles.tooltip}
-      >
-        placement on
-      </Tooltip>
-    </div>
-  ),
+  args: {
+    placement: "top",
+    title: "top",
+  },
 });
 
 export const Right = meta.story({
-  render: () => (
-    <div className={styles.container}>
-      <Tooltip
-        placement="right"
-        title="right"
-        buttonStyle={styles.button}
-        tooltipStyle={styles.tooltip}
-      >
-        placement on
-      </Tooltip>
-    </div>
-  ),
+  args: {
+    placement: "right",
+    title: "right",
+  },
 });
 
 export const Bottom = meta.story({
-  render: () => (
-    <div className={styles.container}>
-      <Tooltip
-        placement="bottom"
-        title="bottom"
-        buttonStyle={styles.button}
-        tooltipStyle={styles.tooltip}
-      >
-        placement on
-      </Tooltip>
-    </div>
-  ),
+  args: {
+    placement: "bottom",
+    title: "bottom",
+  },
 });
 
 export const Left = meta.story({
-  render: () => (
-    <div className={styles.container}>
-      <Tooltip
-        placement="left"
-        title="left"
-        buttonStyle={styles.button}
-        tooltipStyle={styles.tooltip}
-      >
-        placement on
-      </Tooltip>
-    </div>
-  ),
+  args: {
+    placement: "left",
+    title: "left",
+  },
 });
