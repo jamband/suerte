@@ -9,7 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const storybookLinks = [{ slug: "icons-base--icons", text: "Icons" }];
+  const storybookLinks = [
+    { slug: "components-breadcrumb--on-foo-page", text: "Breadcrumb" },
+    { slug: "components-heading--default", text: "Heading" },
+    { slug: "icons-base--icons", text: "Icons" },
+  ];
 
   return (
     <>

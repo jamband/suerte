@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const storybookLinks = [
+    { slug: "components-breadcrumb--on-foo-page", text: "Breadcrumb" },
+    { slug: "components-heading--default", text: "Heading" },
     { slug: "components-button--default", text: "Button" },
     { slug: "components-button-group--default", text: "ButtonGroup" },
     { slug: "components-switch--default", text: "Switch" },
