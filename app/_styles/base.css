@@ -1,4 +1,5 @@
 html {
+  scroll-padding-top: 7em;
   scrollbar-gutter: stable;
   -webkit-text-size-adjust: 100%;
 }
