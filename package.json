@@ -16,17 +16,17 @@
     "clean": "node scripts/clean.mjs"
   },
   "dependencies": {
-    "@biomejs/biome": "2.4.14",
-    "@storybook/nextjs": "10.3.6",
-    "@storybook/react": "10.3.6",
-    "@types/node": "24.12.3",
-    "@types/react": "19.2.14",
+    "@biomejs/biome": "2.4.16",
+    "@storybook/nextjs": "10.4.1",
+    "@storybook/react": "10.4.1",
+    "@types/node": "24.12.4",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
-    "chromatic": "16.9.1",
+    "chromatic": "17.1.0",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6",
-    "storybook": "10.3.6",
+    "storybook": "10.4.1",
     "the-new-css-reset": "1.11.3",
     "typescript": "6.0.3"
   }
