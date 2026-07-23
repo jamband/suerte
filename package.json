@@ -3,7 +3,7 @@
   "engines": {
     "node": "24.x"
   },
-  "packageManager": "pnpm@11.6.0",
+  "packageManager": "pnpm@11.15.1",
   "scripts": {
     "postinstall": "next typegen",
     "dev": "next dev",
